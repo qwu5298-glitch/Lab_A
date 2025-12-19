@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲王新手指南</title>
+    <link rel="icon" href="./image/ygo-logo.png">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/ygocss.css">
+    <link rel="stylesheet" href="./css/左側列表.css">
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header sticky-top" style="text-align: center;">
+        <div class="container" onclick="myFunction(this)" data-bs-toggle="collapse" data-bs-target="#nav">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <a class="logo" href="#">
+            <img src="./image/ygo-logo.png">
+        </a>
+        <h3>遊戲王新手指南</h3>
+
+    </div>
+    <div>
+        <button id="butt" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#theMusic">音樂</button>
+        <div id="theMusic" class="collapse">
+            <div class="card" style="width: 15rem; text-align: center;">
+                <div class="card-body">
+                    <div id="mc1" class="music">
+                        <iframe width="200" height="120" src="https://www.youtube.com/embed/jFNfbY5iBmA"
+                            title="NORMAL RATE #1 Theme | Yu-Gi-Oh! Master Duel 遊戯王マスターデュエル" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div id="mc2" class="music" style="display: none;">
+                        <iframe width="200" height="120" src="https://www.youtube.com/embed/-hl_w4RsgUA"
+                            title="KEYCARD RATE #1 Theme | Yu-Gi-Oh! Master Duel 遊戯王マスターデュエル" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#mc1" class="previous round" onclick="showmusic('mc1')">&#8249;</a>
+                    <a href="#mc2" class="next round " onclick="showmusic('mc2')">&#8250;</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="aaa">
+            <a href="#"><img src="./image/top.png" style="width: 60px;"></a>
+        </div>
+
+
+        <div class="navBar collapse" id="nav">
+
+            <div class="row" style="text-align: center;">
+                <a href="#baserule" onclick="showPage('baserule')" class="col-12 col-sm-6 col-md-4 col-lg-2">基本規則介紹</a>
+                <a href="#handtrap" onclick="showPage('handtrap')" class="col-12 col-sm-6 col-md-4 col-lg-2">手坑特輯</a>
+                <a href="#bancard" onclick="showPage('bancard')" class="col-12 col-sm-6 col-md-4 col-lg-2">禁限卡表</a>
+                <a href="#tierdeck" onclick="showPage('tierdeck')" class="col-12 col-sm-6 col-md-4 col-lg-2">強勢牌組/餅圖</a>
+                <a href="#deck" onclick="showPage('deck')" class="col-12 col-sm-6 col-md-4 col-lg-2">牌組推薦</a>
+                <a href="#newplay" onclick="showPage('newplay')" class="col-12 col-sm-6 col-md-4 col-lg-2">新手常見誤區</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+        <div id="baserule" class="p-2 page">
+            <div class="sidenav">
+                <a href="#gameplay1">1. 組牌規則</a>
+                <a href="#gameplay2">2. 場地介紹</a>
+                <a href="#gameplay3">3. 卡片三大種類</a>
+                <a href="#gameplay4">4. 額外牌組</a>
+                <a href="#gameplay5">5. 連鎖</a>
+                <a href="#gameplay6">6. 回合流程</a>
+                <a href="#gameplay7">7. 認識現環境</a>
+            </div>
+
+            <div class="main">
+                <h3 id="gameplay1">
+                    1.組牌規則
+                </h3>
+                一副完整的牌組牌組由 40-60 張主要卡片(通常怪獸、效果怪獸、儀式怪獸、靈擺怪獸、魔法卡、陷阱卡) + 0-15
+                張額外卡片(融合怪獸、同調怪獸、超量怪獸、連接怪獸)組成，每張卡片最多只能投入三張，並且必須遵守禁限卡表<a href="#bancard"
+                    onclick="showPage('bancard')">(由此查看)</a>。
+                請注意，由「規則」指定的卡名同樣被視為相同的卡片，例如:
+                <div class="godbird p-2">
+                    <img src="./image/godbird0.jpg" class="img-fluid">
+                    <p>《神鷹女郎》<br>
+                        人長出羽毛的魔獸，表演華麗的舞蹈進行快攻。
+                    </p>
+                    <img src="./image/godbird1.jpg" class="img-fluid">
+                    <p>《神鷹女郎1》<br>
+                        此卡名在規則上當作「神鷹女郎」使用。<br>
+                        ①：只要此卡在怪獸區存在，場上風屬性怪獸的攻擊力上升300。
+                    </p>
+                    <img src="./image/godbird2.jpg" class="img-fluid">
+                    <p>《神鷹女郎2》<br>
+                        此卡名在規則上當作「神鷹女郎」使用。<br>
+                        ①：此卡以戰鬥破壞的反轉怪獸效果無效化。
+                    </p>
+                    <img src="./image/godbird3.jpg" class="img-fluid">
+                    <p>《神鷹女郎3》<br>
+                        此卡名在規則上當作「神鷹女郎」使用。<br>
+                        ①：和此卡進行過戰鬥的對方怪獸在以對方回合計算的2回合內不能進行攻擊宣言。
+                    </p>
+                </div>
+
+                <p>
+                    無論這四張卡牌出現在哪裡，它們都被視為相同的卡片，因此在主要牌組中，你只能投入其中三張卡牌。
+                </p>
+
+
+                </p>
+                <hr>
+                <h3 id="gameplay2">
+                    2.場地介紹
+                </h3>
+                <div class="p-2">
+                    <img src="./image/site.jpg" class="img-fluid">
+                </div>
+                <div class="p-2" id="site">
+                    <span>1.主要怪獸區</span>
+                    <br>
+                    這個區域用來放置召喚出來的怪獸。最多可放置五張卡片。怪獸可以三種形式放置：正面攻擊表示、正面守備表示和背面守備表示。垂直放置的卡牌為攻擊表示，水平放置的卡牌為守備表示。
+                    <br>
+                    <span>2.魔法陷阱區</span>
+                    <br>
+                    這個區域可以放置魔法卡和陷阱卡。與怪獸區區域類似，這裡最多可以放置五張卡片。你可以直接將卡片正面朝上放置以發動，也可以背面朝下放置之後再發動。靈擺怪獸卡可以作為魔法卡放置在最左側和最右側的區域，只要靈擺怪獸卡在該區域，相應的區域就會變成靈擺區域。
+                    <br>
+                    <span>3.墓地</span>
+                    <br>
+                    怪獸從場上離開以及魔法陷阱卡發動後，會正面朝上送入墓地。墓地中的所有卡片都是公開訊息，對手可以隨時查看墓地中的卡片。
+                    <br>
+                    <span>4.除外區</span>
+                    <br>
+                    卡牌除外時，會送至此處而非墓地。所有被除外的卡牌（除背面朝上的卡牌外）均為公開訊息，對手可隨時查看。只有您自己才能查看背面朝上的除外卡牌。
+                    <br>
+                    <span>5.主卡組區</span>
+                    <br>
+                    主卡組面朝下放置於此。決鬥過程中，從牌組頂部抽牌，如果你的牌組耗盡，立刻敗北。如果你發動任何需要你展示卡牌、查看牌組（即使你沒有查看）或加入/移除卡牌的卡牌或效果，你必須洗牌。
+                    <br>
+                    <span>6.場地區</span>
+                    <br>
+                    你的場地區用於放置場地魔法，可以正面朝上或背面朝上放置。每位玩家只能維持一張場地魔法卡。從手牌發動場地魔法卡時，你必須將場地區域中所有卡牌送入墓地。
+                    <br>
+                    <span>7.額外卡組區</span>
+                    <br>
+                    你的額外牌組以背面朝上的方式放置於此。遊戲期間，你可以隨時查看你的額外牌組。遊戲過程中，額外牌組中的怪獸可以使用其對應的召喚方式從此處特殊召喚至額外怪獸區或主要怪獸區。原本會從場上送入墓地的靈擺怪獸，會改為正面朝上放置於此。
+                    <br>
+                    <span>8.額外怪獸區</span>
+                    <br>
+                    額外怪獸區是你可以將額外牌組中的怪獸特殊召喚到場上的地方。如果特殊召喚的是連結怪獸或靈擺怪獸，則必須將其放置到額外怪獸區或連結怪獸箭頭方向的己方怪獸區。
+                </div>
+                <hr>
+
+
+
+                <h3 id="gameplay3">
+                    3.卡片三大種類
+                </h3>
+                由於篇幅關係與簡化複雜度，暫不介紹儀式與靈擺卡片。
+                <br>
+                卡片三大種類:分為怪獸卡，魔法卡與陷阱卡。
+                <br>
+                <span class="monster">怪獸卡</span>
+                <div class="p-2">
+                    <img src="./image/monster.png" class="img-fluid">
+                </div>
+                <div>
+                    <span>1.卡片名稱</span>
+                    <br>
+                    又稱為"卡名"，每副卡組最多能投入三張同卡名卡牌。
+                    <br>
+                    <span>2.等級</span>
+                    <br>
+                    星星數量代表怪獸的等級。不是超量的階級!
+                    <br>
+                    通常/升級召喚根據這裡來決定需要的祭品數量。
+                    <br>
+                    每個玩家每回合可以進行1次通常/升級召喚，4星以下無須怪獸作為祭品，5-6星需1個怪獸作為祭品，7星以上需2個怪獸作為祭品。
+                    <br>
+                    守備放置時怪獸不能以表側表示進行通常/升級召喚，只能以裡側守備表示放置在場上。
+                    <br>
+                    可以放在主要怪獸區，但不能放在額外怪獸區。
+                    <br>
+                    <span>3.屬性</span>
+                    <br>
+                    代表怪獸的屬性，某些效果需要特定的屬性才能生效。
+                    <br>
+                    <span>4.類型和效果</span>
+                    <br>
+                    代表怪獸的類型，某些效果需要特定的類型才能生效。通常表示通常怪獸，效果表示效果怪獸。
+                    <br>
+                    <span>5.卡號</span>
+                    <br>
+                    此號碼僅與實體卡相關，為了分類和收集的目的。
+                    <br>
+                    <span>6.攻擊力和防禦力</span>
+                    <br>
+                    這些數字代表怪獸的攻擊力和防禦力。
+                    <br>
+                    <span>7.卡牌描述</span>
+                    <br>
+                    所有卡片效果都寫在這個方框裡，包括如何使用以及何時可以使用。
+                    <br>
+                    通常怪獸沒有效果，只有卡片背景描述。
+                    某些怪獸無需通常召喚或蓋放，即可透過自身效果或其他卡片的效果特殊召喚到場上。
+                </div>
+
+                <span class="magic">魔法卡</span><span style="font-size: 40px; background-color:transparent;">與</span><span
+                    class="trap">陷阱卡</span>
+                <div class="p-2">
+                    <img src="./image/magictrap.png" class="img-fluid">
+                </div>
+
+                <div>
+                    <span>1.卡片名稱</span>
+                    <br>
+                    與怪獸卡一樣，又稱為"卡名"，每副卡組最多能投入三張同卡名卡牌。
+                    <br>
+                    <span>2.類型</span>
+                    <br>
+                    不要將卡片上的"類型"與"怪獸類型"混淆。卡片類型與卡片顏色可以區分魔法卡和陷阱卡。魔法卡會寫"魔"，陷阱卡會寫"罠"。
+                    <br>
+                    <span>3.圖示</span>
+                    <br>
+                    魔法/陷阱卡旁邊的符號會標示該魔法或陷阱卡的特殊類型（如有）。
+                    <br>
+                    <span class="span2">(1)通常魔法(沒有圖示)</span>
+                    <br>
+                    將卡片正面朝上放置於場上並宣告發動。效果處理完畢後，將卡片送入墓地。
+                    <div>
+                        <img src="./image/magictrap-icon.png" class="img-fluid">
+                    </div>
+                    <span class="span2">(2)裝備魔法</span>
+                    <br>
+                    為1隻你選擇的表側表示怪獸（可以是己方或對手的怪獸）賦予額外效果。發動後，它們會留在場上。裝備魔法卡只會影響1隻怪獸，但仍會佔用你1個魔法陷阱區域。如果裝備怪獸被破壞、翻轉為裡側表示或從場上移除，其裝備的卡片也會被破壞。
+                    <br>
+                    <span class="span2">(3)場地魔法</span>
+                    <br>
+                    場地魔法放置於你的場地區並持續生效。雙方玩家的場上只能放置一張場地魔法卡。若要使用另一張場地魔法卡，則需將正在生效的場地魔法卡送入墓地。
+                    <br>
+                    <span class="span2">(4)速攻魔法(2速)</span>
+                    <br>
+                    可以在自己回合的任何階段發動。如果你將卡片覆蓋，也可以在對手的回合發動，但你不能在覆蓋的同一回合發動該卡片。
+                    <br>
+                    <span class="span2">(5)儀式魔法</span>
+                    <br>
+                    用於進行儀式召喚。用法與使用普通魔法卡相同。
+                    <br>
+                    <span class="span2">(6)永續魔法/永續陷阱</span>
+                    <br>
+                    永續魔法/永續陷阱發動後不會送墓，而是留在場上持續發揮作用。但對手在你使用瞬間之前用任何方式將其從場上離開，效果會失效。
+                    <br>
+                    用於進行儀式召喚。用法與使用普通魔法卡相同。
+                    <br>
+                    <span class="span2">(7)反制陷阱(3速)</span>
+                    <br>
+                    通常會在其他卡片發動時觸發，因為速度的關係，反制陷阱很難被阻止，通常只能被其他反擊陷阱卡連鎖發動。
+                    <br>
+                    <span>4.卡牌描述</span>
+                    <br>
+                    所有卡片效果都寫在這個方框裡，包括如何使用以及何時可以使用。
+                    <br>
+                    魔法卡通常只能在你的主要階段發動，陷阱卡可以在對手的回合發動。
+                    <br>
+                    發動陷阱卡之前，必須先將其蓋放到場上。你不能在蓋放陷阱卡的同一回合發動，但下一個回合開始後可以隨時發動。
+                    <br>
+                    <span>5.卡號</span>
+                    <br>
+                    此號碼僅與實體卡相關，為了分類和收集的目的。
+                </div>
+                <hr>
+                <h3 id="gameplay4">
+                    4.額外牌組
+                </h3>
+                從額外牌組入場的怪獸都是特殊召喚。
+                除了靈擺(不介紹)與連結怪獸，其他額外特殊召喚皆可放在所有主要怪獸區與額外怪獸區。
+                <br>
+                <span>融合怪獸</span>
+                <br>
+                融合怪獸的顏色為紫色。
+                <br>
+                使用帶有融合效果的卡片(包含牌組專用融合和怪獸效果融合)卡片上指定的素材從場上或手牌送入墓地，然後從額外牌組特殊召喚選擇的融合怪獸。
+                <br>
+                是效果召喚，將素材送墓也算是效果。
+                <br>
+                EX:
+                <br>
+                <img src="./image/fusion.jpg" class="img-fluid">
+                <br>
+                《青眼究極龍》
+                <br>
+                「青眼白龍」＋「青眼白龍」＋「青眼白龍」
+                <br>
+                <br>
+                <span class="span2">PS:接觸融合</span>
+                <br>
+                這種牌是融合卡，但不算融合召喚，不需要使用帶有融合效果的卡片，可以不入連鎖直接特殊召喚。
+                <br>
+                EX:
+                <br>
+                <img src="./image/fusion-2.jpg" class="img-fluid">
+                <br>
+                「電子龍」＋機械族怪獸一體以上
+                <br>
+                此卡不能作為融合素材。
+                <br>
+                把我方﹒對方場上上述所記述的卡送去墓地才能從額外牌組特殊召喚。（不需要「融合」）
+                <br>
+                ①：此卡的原攻擊力變成作為此卡的融合素材的怪獸數量×1000。
+                <br>
+                <br>
+                <span>同步怪獸</span>
+                <br>
+                同步怪獸怪獸的顏色為白色。
+                <br>
+                素材相加的星數「剛好」等於同步怪獸的星數送去墓地，可以從額外牌組同步召喚。
+                <br>
+                有些同步怪獸會要求特定的素材(通常最少會要求其中一隻是協調怪獸)。
+                <br>
+                被裡側覆蓋的怪獸不能成為同步素材。
+                <br>
+                EX:
+                <br>
+                <img src="./image/sync.jpg" class="img-fluid">
+                <br>
+                《星塵龍》
+                <br>
+                協調＋協調以外的怪獸一體以上
+                <br>
+                ①：要讓場上之卡破壞的魔法‧陷阱‧怪獸效果發動時，把此卡解放才能發動。該發動無效並破壞。
+                <br>
+                ②：因此卡①的效果適用的回合結束階段才能發動。為讓那個效果發動而解放的此卡從墓地特殊召喚。
+                <br>
+                <br>
+                <span>超量怪獸(xyz怪獸)</span>
+                <br>
+                超量怪獸怪獸的顏色為黑色。
+                <br>
+                素材怪獸星數相同，可以疊放在超量怪獸下方，超量召喚階級與素材星數相同的卡片。
+                <br>
+                被裡側覆蓋的怪獸和衍生物不能成為超量素材。
+                <br>
+                被作為素材的卡片不當作卡片，不會成為效果對象。
+                <br>
+                有些超量怪獸會要求特定的素材。
+                <br>
+                超量怪獸的星星不是等級，而是階級。
+                <br>
+                EX:
+                <br>
+                <img src="./image/xyz.jpg" class="img-fluid">
+                <br>
+                《No.39　希望皇霍普》
+                <br>
+                等級四怪獸二體
+                <br>
+                ①：我方或對方攻擊宣言時，取除此卡1個超量素材才能發動。該怪獸的攻擊無效。
+                <br>
+                ②：沒有超量素材的此卡被選為攻擊對象的場合發動。此卡破壞。
+                <br>
+                <br>
+                <span>連結怪獸</span>
+                <br>
+                連結怪獸怪獸的顏色為藍色。
+                <br>
+                連結素材相當寬鬆，依連結怪獸link數量將怪獸送墓即可連結召喚。
+                <br>
+                以包含連結怪獸作為素材時，可以依照連結怪獸的Link值作為多數素材。
+                <br>
+                被裡側覆蓋的怪獸不能成為連結素材。
+                <br>
+                有些超量怪獸會要求特定的素材。
+                <br>
+                連結怪獸沒有等級和階級，沒有守備力，不能變成守備表示。
+                <br>
+                連結怪獸連結召喚時，只能佔據額外怪獸格和連結指向的格子(包含對手的連結指向)。
+                <br>
+                EX:
+                <br>
+                <img src="./image/link.jpg" class="img-fluid">
+                <br>
+                《解碼語者》
+                <br>
+                效果怪獸二體以上
+                <br>
+                ①：此卡的攻擊力上升此卡所連結區的怪獸數量×500。
+                <br>
+                ②：以我方場上的卡為對象的對方的魔法﹒陷阱﹒怪獸的效果發動時，可以把此卡所連結區1體我方的怪獸解放發動。那個發動無效並破壞。
+                <br>
+                <br>
+                參考影片:
+                <br>
+                <div class="video-container">
+                    <iframe width="666" height="375" src="https://www.youtube.com/embed/sdwsd_BwCtQ?mute=1"
+                        title="【公式】遊戯王OCG デュエルモンスターズ「新マスタールール 実践編」/KONAMI" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+                <h3 id="gameplay5">
+                    5.連鎖
+                </h3>
+                <span>什麼是連鎖?</span>
+                <br>
+                連鎖是判斷多張卡牌效果生效「順序」的方法。
+                <br>
+                當多張卡牌的效果同時發動，雙方想要在卡牌打出後，但在卡牌效果生效前發動效果，就會用到連鎖。
+                <br>
+                若一方選擇連鎖發動效果，另一方可接續連鎖發動，直到雙方都不想再連鎖為止。
+                <br>
+                效果處理時，由最後一次連鎖先處理，然後按相反的順序結算(俗稱逆解連鎖)(後發先至)。
+                <br>
+                <img src="./image/lock.png" class="img-fluid p-2">
+                <img src="./image/lock-2.png" class="img-fluid p-2">
+                <br>
+                <span>卡片速度</span>
+                <br>
+                每張卡片效果的速度都在1~3之間。如果你想連鎖發動卡片，必須使用速度為2以上的效果，而且該效果的速度不能比上一個連鎖效果低。
+                <br>
+                <span>速度1卡片(1速)</span>
+                <br>
+                1.非速攻所有魔法卡
+                <br>
+                2.效果怪獸的效果
+                <br>
+                3.墓地裡的魔法效果
+                <br>
+                這是所有卡片速度中最慢的，通常無法連鎖發動效果。除非有誘發效果，否則通常只能在己方主要階段發動。
+                <br>
+                <span>速度2卡片(2速)</span>
+                <br>
+                1.速攻魔法卡
+                <br>
+                2.非反制陷阱的所有陷阱卡
+                <br>
+                3.墓地裡的陷阱效果
+                <br>
+                3.有寫明可在在對方回合發動，或符合誘發即時條件，效果怪獸的效果。
+                <br>
+                可以用來連鎖發動速度為 1 或 2 的效果，通常可以在任何階段發動。
+                <br>
+                <span>速度3卡片(3速)</span>
+                <br>
+                1.反制陷阱
+                <br>
+                可以用來連鎖發動所有速度的效果，通常只能被反制陷阱連鎖。
+
+
+                <hr>
+                <h3 id="gameplay6">
+                    6.回合流程
+                </h3>
+                雙方玩家初始手牌均為五張，生命值為 8000。
+                回合玩家具有效果發動的優先權。
+                <br>
+                決鬥每回合分為六個階段:
+                <br>
+                抽牌階段 -> 準備階段 -> 主要階段 1 -> 戰鬥階段 -> 主要階段 2 -> 結束階段
+                <br>
+                <img src="./image/turn.png" class="img-fluid">
+                <br>
+                這些回合會重複進行，直到滿足勝利條件之一為止：
+                <br>
+                1.一方的生命值降至0。
+                <br>
+                2.一方必須抽一張或多張牌，牌庫耗盡無法抽牌時。
+                <br>
+                3.一方特殊勝利時。
+                <br>
+                <span>抽牌階段</span>
+                <br>
+                這是第一階段。回合玩家從牌頂抽一張卡片。牌組沒有卡片而無法抽牌的玩家輸掉決鬥。抽卡後，可以在進入準備階段前發動陷阱卡或速攻魔法卡。
+                <br>
+                重要提示：先手玩家第一回合抽牌階段不能抽牌。
+                <br>
+                <span>準備階段</span>
+                <br>
+                有些卡牌的效果會在準備階段發動。你仍然可以在進入主要階段1之前發動陷阱卡或速攻魔法卡。
+                <br>
+                <span>主要階段1</span>
+                <br>
+                這是你使用大部分卡牌的時候：你可以通常召喚、蓋放或改變怪獸的攻守狀態，發動卡牌效果，以及蓋放魔法和陷阱卡。
+                <br>
+                但是不能改變本回合登場或重複改變怪獸的攻守狀態。
+                <br>
+                <span>戰鬥階段</span>
+                <br>
+                選擇己方場上一隻怪獸進行攻擊，並選擇對方場上一隻怪獸作為攻擊目標，然後宣告攻擊。如果對方場上沒有怪獸，你可以直接攻擊。
+                <br>
+                你場上所有表側攻擊表示的怪獸每回合都可以進行一次攻擊。如果你不想用怪獸攻擊，也可以不攻擊。
+                <br>
+                即使場上有怪獸，你也不需要每回合都進行戰鬥階段。
+                <br>
+                重要提示：先手玩家第一回合不能進行戰鬥階段。
+                <br>
+                <span>主要階段2</span>
+                <br>
+                如果你已經進行了戰鬥階段，你的回合將進入主要階段2。玩家在該階段可以執行的操作與主要階段1相同，但是無法執行玩家在主要階段1中已經執行過次數有限制的操作。
+                <br>
+                <span>結束階段</span>
+                <br>
+                宣布你的回合結束，如果在本階段結束時你的手牌超過六張，請選擇一些牌並將其送至墓地，直到你的手牌只剩下六張為止。只有回合玩家需要將手牌送至墓地。
+
+
+                <hr>
+                <h3 id="gameplay7">
+                    7.認識現環境
+                </h3>
+                過去大家認識的遊戲，可能是召喚怪獸，覆蓋卡片，結束這回合，但是現行遊戲王的環境完全不一樣:
+                <br>
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/YIWhR2eGAfo"
+                        title="大家以為的遊戲王與現實中的遊戲王 | ABULAE" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+                <br>
+                如同以上的影片，才是現在的遊戲王的環境。現在遊戲王的遊戲王的環境講求連續的特召以及戰術的執行度，每副牌組都有不同的戰術要執行，所以後攻沒手坑被對手演爆也是非常正常的事。
+                <br>
+                因此，先手的優勢往往大過後手。
+                <br>
+                不過，你還是能夠獲得良好的遊戲體驗。一方面，官方會針對環境調整，公布最新的禁卡表打壓過強的主題，放寬強度合理的主題。
+                <br>
+                另一方面，也有許多卡片，可以在第一回合阻止對手展開，這些阻止對手的卡片，就是所謂的「手坑」。
+
+            </div>
+
+        </div>
+
+
+        <div id="handtrap" class="page p-2" style="display: none;">
+            <div class="sidenav">
+                <a href="#hd1">1. 增殖的g</a>
+                <a href="#hd2">2. 灰流麗</a>
+                <a href="#hd3">3. 無限泡影</a>
+                <a href="#hd4">4. 多多迷寶．軟綿雀精</a>
+                <a href="#hd5">5. 小丑與封鎖鳥</a>
+                <a href="#hd6">6. 原始生命態尼比魯</a>
+                <a href="#hd7">7. 靈主王之波動</a>
+                <a href="#hd8">8. 墓穴指名者</a>
+                <a href="#hd9">9. 抹殺指名者</a>
+                <a href="#hd10">10. 三戰之才</a>
+            </div>
+
+            <div class="main">
+                <h3>
+                    手坑是什麼?
+                </h3>
+                「坑」在遊戲王代表著干擾對手的卡片，手坑顧名思義就是從手牌發動可以干擾對手的卡片。
+                <br>
+                隨著環境的演變，先攻越來越強，手坑也越來越多不同種類，應對不同情形干擾對手做事的卡片。
+                <br>
+                由於篇幅關係，只列上幾個目前最常見的手坑來讓新手認識環境。
+                <hr>
+                <h3 style="color: blue;">手坑介紹</h3>
+                <h3 id="hd1">
+                    1.增殖的g
+                </h3>
+                <img src="./image/maxx-g.jpg" class="img-fluid">
+                <br>
+                《增殖的G》
+                <br>
+                此卡名的①效果1回合僅能使用1次。
+                <br>
+                ①：把此卡從手牌送去墓地才能發動。此回合，以下效果適用。此效果在對方回合也能發動。
+                <br>
+                ●每次對方對怪獸的特殊召喚成功，我方必須從牌組抽1張卡。
+                <br>
+                <br>
+                <h4>實用星數:5/5</h4>
+                <h4>投入率:95.5%</h4>
+                遊戲王的底層代碼，毫無爭議的最強的手坑。
+                <br>
+                在這所有牌組幾乎都必須特殊召喚的時代，一旦效果通過，就能逼迫對手做出妥協。
+                <br>
+                是後攻時最強大的靠山，也是先攻時讓對手更難獲勝的幫兇。
+                <br>
+                幾乎所有的牌組都會帶滿。大部分牌組也會針對此卡帶牌。
+                <hr>
+                <h3 id="hd2">
+                    2. 灰流麗
+                </h3>
+                <img src="./image/spring.jpg" class="img-fluid">
+                <br>
+                《灰流麗》
+                <br>
+                此卡名的①效果1回合僅能使用1次。
+                <br>
+                ①：包含以下效果的魔法．陷阱．怪獸效果發動時，可以從手牌捨棄此卡發動。該效果無效。此效果也可以在對方回合發動。
+                <br>
+                ●從牌組將卡片加入手牌的效果。
+                <br>
+                ●從牌組將怪獸特殊召喚的效果。
+                <br>
+                ●從牌組將卡片送入墓地的效果。
+                <br>
+                <br>
+                <h4>實用星數:5/5</h4>
+                <h4>投入率:85.8%</h4>
+                <br>
+                能對牌組的堆墓、特召、以及檢索無效化。
+                <br>
+                大部分的牌組都免不了做這些動作，最重要的是能無效增殖的G。
+                <br>
+                灰流麗的管轄範圍很寬，只要效果包含上述一條，即使無法做出上述舉動，仍然可以被灰流麗無效。
+                <hr>
+                <h3 id="hd3">
+                    3. 無限泡影
+                </h3>
+                <img src="./image/infinite.jpg" class="img-fluid">
+                <br>
+                《無限泡影》
+                <br>
+                我方場上沒有卡存在的場合，此卡也能從手牌發動。
+                <br>
+                ①：以對方場上1體表側表示怪獸為對象才能發動。該怪獸的效果直到回合結束時無效。那之後，若是以覆蓋發動的場合，此回合和此卡相同縱列其它魔法．陷阱卡的效果無效化。
+                <br>
+                <br>
+                <h4>實用星數:4/5</h4>
+                <h4>投入率:54.5%</h4>
+                <br>
+                限定自己空場的手坑，能指定無效對手場上的怪獸。
+                <br>
+                自己場上有怪獸後被抽到會暫時無用，但先手也能蓋下去做為單純陷阱卡使用。
+                <br>
+                由於是陷阱卡，不會吃墓穴指名者、三戰之才等反手坑卡片。
+                <hr>
+                <h3 id="hd4">
+                    4. 多多迷寶．軟綿雀精
+                </h3>
+                <img src="./image/fuwalos.jpg" class="img-fluid">
+                <br>
+                《多多迷寶．軟綿雀精》
+                <br>
+                此卡的效果發動的整回合中，我方只能發動1次此卡以外的「多多迷寶」怪獸的效果。
+                <br>
+                ①：我方．對手回合，我方場上沒有卡存在的場合，將此卡從手牌捨棄才能發動。這個回合中，適用以下效果。
+                <br>
+                ●每次對方從牌組．額外牌組將怪獸特殊召喚，我方抽1張卡。
+                <br>
+                ●結束階段中，我方的手牌高於對方場上的卡片數量+6張的場合，依照那個相差數量將我方的手牌隨機放回牌組。
+                <br>
+                <br>
+                <h4>實用星數:4/5</h4>
+                <h4>投入率:64%</h4>
+                <br>
+                下位版增殖的g，在現代遊戲王極度依賴額外的環境下對上大部分卡組都有用。
+                <br>
+                由於限定自己空場，先手此卡完全無用，但在後手相當強勢，使此卡仍然是熱門的選擇。
+                <hr>
+                <h3 id="hd5">
+                    5. 小丑與封鎖鳥
+                </h3>
+                <img src="./image/lockbird.jpg" class="img-fluid">
+                <br>
+                《小丑與封鎖鳥》
+                <br>
+                ①：對方在抽牌階段以外從牌組將卡加入手牌的場合，把此卡從手牌送去墓地才能發動。此回合，以下效果適用。此效果在對方回合也能發動。
+                <br>
+                ●雙方不能從牌組將卡加入手牌。
+                <br>
+                <br>
+                <h4>實用星數:3.5/5</h4>
+                <h4>投入率:71.1%</h4>
+                <br>
+                相對看環境和自身牌組的卡片，對其他卡組的干擾程度不一。
+                <br>
+                有些牌組可以在g或多多迷寶成功抽牌後使用此卡來阻止對手繼續抽牌。
+                <br>
+                請注意，這張卡對雙方都有影響，你也無法繼續檢索與抽卡。
+                <hr>
+                <h3 id="hd6">
+                    6. 原始生命態尼比魯
+                </h3>
+                <img src="./image/rock.jpg" class="img-fluid">
+                <br>
+                《原始生命態尼比魯》
+                <br>
+                此卡名的①效果1回合僅能使用1次。
+                <br>
+                ①：對方對5體以上怪獸召喚．特殊召喚成功的回合之主要階段才能發動。我方．對方場上的表側表示怪獸全部解放，此卡從手牌特殊召喚。那之後，在對方場上把1體「原始生命態衍生物」（岩石族．光．等級11．攻／守？）特殊召喚。此衍生物的攻擊力．守備力變成此效果解放之怪獸的原本攻擊力．守備力各自合計數值。此效果在對方回合也能發動。
+                <br>
+                <br>
+                <h4>實用星數:4/5</h4>
+                <h4>投入率:59.1%</h4>
+                <br>
+                對付大量特招的卡片，只要使用這張卡就能使場面化為灰燼。
+                <br>
+                缺點是對付少量特招的牌無用，不過大部分的牌都需要大量特招，投入隕石仍然是相當好的選擇。
+                <br>
+                需要注意此卡無法在主要階段以外發動，使用此卡也會把自己場面清空。
+
+                <hr>
+                <h3 id="hd7">
+                    7. 靈主王之波動
+                </h3>
+                <br>
+                <img src="./image/dominus.jpg" class="img-fluid">
+                <br>
+                《靈主王之波動》
+                <br>
+                此卡名的卡1回合僅能發動1張。
+                <br>
+                對方場上有卡存在的場合此卡也能從手牌發動。
+                <br>
+                ①：包含把怪獸特殊召喚的效果在內之魔法．陷阱．怪獸效果發動時才能發動。該效果無效。我方墓地有陷阱卡存在的場合，再將被無效的該卡破壞。此卡從手牌發動的場合，發動後我方在這場決鬥中不能將光．地．風屬性怪獸的效果發動。
+                <br>
+                <br>
+                <h4>實用星數:3.5/5</h4>
+                <h4>投入率:28.3%</h4>
+                <br>
+                能無效包含從任何地方特殊召喚的效果，效果相當強力。
+                <br>
+                但是從手上使用後不能發動特定屬性怪獸的效果，對牌組的限制也相對高，而且不能再使用最強的手坑增殖的G。
+                <br>
+                由於是陷阱卡，不會吃墓穴指名者、三戰之才等反手坑卡片。
+                <hr>
+                <h3 style="color: blue;">反手坑卡片</h3>
+                <h3 id="hd8">
+                    8. 墓穴指名者
+                </h3>
+                <img src="./image/callbydrave.jpg" class="img-fluid">
+                <br>
+                《墓穴的指名者》
+                <br>
+                ①：以對方墓地1體怪獸為對象才能發動。該怪獸除外。直到下個回合的結束時，因此效果除外的怪獸以及原本卡名和該怪獸相同的怪獸的效果無效化。
+                <br>
+                <br>
+                <h4>實用星數:4.5/5</h4>
+                <h4>投入率:80.1%</h4>
+                <br>
+                手坑大部分發動時都會送至墓地，使用此卡阻止對手手坑是最有效的方法。
+                <br>
+                也可以拿來清除對手墓地較麻煩的卡片。
+                <br>
+                請注意，這張卡無效的是兩個回合，當你指了對手的手坑，自己相同的手坑也會無效。
+                <hr>
+                <h3 id="hd9">
+                    9. 抹殺指名者
+                </h3>
+                <img src="./image/crossout.jpg" class="img-fluid">
+                <br>
+                《抹殺的指名者》
+                <br>
+                此卡名的卡1回合僅能發動1張。
+                <br>
+                ①：宣言1個卡名才能發動。宣言的1張卡從我方牌組除外。直到回合結束時，因此效果除外之卡以及原卡名和該卡相同的卡效果無效化。
+                <br>
+                <br>
+                <h4>實用星數:4/5</h4>
+                <h4>投入率:64%</h4>
+                <br>
+                只要你的牌組有攜帶相同手坑，能防止任何手坑，包含手坑型陷阱卡。
+                <br>
+                也可以用來打內戰。
+                <br>
+                缺點是外戰基本上只能拿來阻擋手坑。
+
+                <hr>
+                <h3 id="hd10">
+                    10. 三戰之才
+                </h3>
+                <img src="./image/triple.jpg" class="img-fluid">
+                <br>
+                《三戰之才》
+                <br>
+                此卡名的卡1回合僅能發動1張。
+                <br>
+                ①：此回合我方主要階段對方有把怪獸效果發動的場合，可以從以下效果選擇1個發動。
+                <br>
+                ●我方從牌組抽2張卡。
+                <br>
+                ●選擇對方場上1體怪獸直到回合結束階段獲得控制權。
+                <br>
+                ●確認對方手牌，從那之中選擇1張卡回到牌組。
+                <br>
+                <br>
+                <h4>實用星數:4/5</h4>
+                <h4>投入率:34.8%</h4>
+                <br>
+                對手使用手坑以後，可以選擇三個強力效果。
+                <br>
+                即使對手手坑未成功通過，只要發動了就滿足條件。
+                <br>
+                限定在主要階段開效果才有效，所以有些人會在準備階段就丟手坑防止對手使用此卡。
+
+            </div>
+        </div>
+        <div id="bancard" class="page p-2" style="display: none;">
+            <div class="sidenav">
+                <a href="#bc0">什麼是禁限卡表?</a>
+                <a href="#bc1">1.2025/12/5</a>
+                <a href="#bc2">2.2025/11/7</a>
+                <a href="#bc3">3.2025/10/8</a>
+                <a href="#bc4">4.2025/9/10</a>
+                <a href="#bc5">5.2025/8/4</a>
+                <a href="#bc6">6.2025/7/4</a>
+                <a href="#bc7">7.2025/6/1</a>
+                <a href="#bc8">禁卡表總表</a>
+            </div>
+            <div class="main">
+                <h3 id="bc0">
+                    什麼是禁限卡表?
+                </h3>
+                遊戲王並沒有退環境之說。因此，為了避免一些太過強大的卡片影響環境，官方有時會在月底公布禁卡表，打壓強度過高的卡片，釋放強度相對目前環境已無過於強勢的卡片。
+                <br>
+                ●禁止卡(不能放)：不能投入主要牌組、額外牌組的卡牌。
+                <br>
+                ●限制卡(限1)：主要牌組、額外牌組合計最多只能投入1張的卡牌。
+                <br>
+                ●準限制卡(限2)：主要牌組、額外牌組合計最多只能投入2張的卡牌。
+                <br>
+                禁限卡表有三種卡表:OCG禁卡表(O表)(亞洲)、TCG禁卡表(T表)(歐洲)、MD禁卡表(電子遊戲)。
+                <br>
+                此文以新手最易上手的Master Duel(簡稱MD)禁卡表為準。
+                <hr>
+                <h3 style="color: blue;">近半年禁限卡片</h3>
+
+                <h3 id="bc1">
+                    1.2025/12/5適用
+                </h3>
+                <img src="./image/bc20251205.jpg" class="img-fluid">
+                <br>
+                禁止:
+                <br>
+                大天使&nbsp克利斯蒂亞(3->0)
+                <br>
+                碼麗絲&lt后&gt赤色勒贖(3->0)
+                <br>
+                放寬限制:
+                <br>
+                霸王眷龍&nbsp兇餓猛毒(1->3)
+                <hr>
+                <h3 id="bc2">
+                    2.2025/11/7適用
+                </h3>
+                <img src="./image/bc20251107.jpg" class="img-fluid">
+                <img src="./image/bc20251107-2.jpg" class="img-fluid">
+                <br>
+                禁止:
+                <br>
+                召命之神弓-阿波羅薩(3->0)
+                <br>
+                邪蝕&nbsp銜尾蛇(3->0)
+                <br>
+                魔封之芳香(1->0)
+                <br>
+                古遺物-雷神鎚(3->0)
+                <br>
+                限制:
+                <br>
+                劍極&nbsp雷熱渦爐(3->1)
+                <br>
+                超燃&nbsp雷熱渦爐(2->1)
+                <br>
+                墓穴的指名者(2->1)
+                <br>
+                碼麗絲&lt兵&gt柴郡貓(3->1)
+                <br>
+                準限制:
+                <br>
+                小丑與鎖鳥(3->2)
+                <br>
+                放寬限制:
+                <br>
+                拉比麗斯的龍燈飾(2->3)
+                <br>
+                拉比麗斯的吹火爐(2->3)
+                <hr>
+                <h3 id="bc3">
+                    3.2025/10/8適用
+                </h3>
+                <img src="./image/bc20251008.jpg" class="img-fluid">
+                <img src="./image/bc20251008-2.jpg" class="img-fluid">
+                <br>
+                禁止:
+                <br>
+                No.41泥睡魔獸&nbsp睡夢貘(3->0)
+                <br>
+                限制:
+                <br>
+                碼麗絲&lt兵&gt睡鼠(3->1)
+                <br>
+                封印的黃金櫃(2->1)
+                <br>
+                碼麗絲夢遊深界(3->1)
+                <br>
+                放寬限制:
+                <br>
+                落雷(2->3)
+                <br>
+                夢魘王座(2->3)
+                <br>
+                青色眼眸的賢士(2->3)
+                <br>
+                暗黑招來神(2->3)
+                <br>
+                七精解門(2->3)
+                <br>
+                皮爾莉&nbsp美好回憶(1->3)
+                <hr>
+                <h3 id="bc4">
+                    4.2025/9/10適用
+                </h3>
+                <img src="./image/bc20250910.jpg" class="img-fluid">
+                <br>
+                放寬限制:
+                <br>
+                明亮融合(1->3)
+                <br>
+                積木龍(1->3)
+                <hr>
+                <h3 id="bc5">
+                    5.2025/8/4適用
+                </h3>
+                <img src="./image/bc20250804.jpg" class="img-fluid">
+                <br>
+                準限制:
+                <br>
+                超燃&nbsp雷熱渦爐(2)
+                <hr>
+                <h3 id="bc6">
+                    6.2025/7/4適用
+                </h3>
+                <img src="./image/bc20250704.jpg" class="img-fluid">
+                <img src="./image/bc20250704-2.jpg" class="img-fluid">
+                <br>
+                禁止:
+                <br>
+                蛇眼．橡木(3->0)
+                <br>
+                限制:
+                <br>
+                守護仟年珍寶的魔像(3->1)
+                <br>
+                放寬限制:
+                <br>
+                宙讀陣魔術士(1->3)
+                <br>
+                斬機&nbsp直徑(1->3)
+                <hr>
+                <h3 id="bc7">
+                    7.2025/6/1適用
+                </h3>
+                <img src="./image/bc20250601.jpg" class="img-fluid">
+                <img src="./image/bc20250601-2.jpg" class="img-fluid">
+                <br>
+                限制:
+                <br>
+                篝火(2->1)
+                <br>
+                原罪寶-蛇眼(3->1)
+                <br>
+                準限制:
+                <br>
+                白之少女(3->2)
+                <br>
+                烙印融合(1->2)
+                <br>
+                青色眼眸的賢士(3->2)
+                <br>
+                放寬限制:
+                <br>
+                電光閃靈．藍(2->3)
+                <br>
+                天底的使徒(2->3)
+                <br>
+                迅捷河狸(1->3)
+                <br>
+                電光閃靈．噴流(2->3)
+                <hr>
+                <h3 id="bc8">
+                    禁卡表總表
+                </h3>
+                <br>
+                禁止:
+                <br>
+                <img src="./image/bcall-b1.png" class="img-fluid">
+                <img src="./image/bcall-b2.png" class="img-fluid">
+                <br>
+                限制:
+                <br>
+                <img src="./image/bcall-o1.png" class="img-fluid">
+                <img src="./image/bcall-o2.png" class="img-fluid">
+                <br>
+                準限制:
+                <br>
+                <img src="./image/bcall-t.png" class="img-fluid">
+            </div>
+        </div>
+
+        <div id="tierdeck" class="page p-2" style="display: none;">
+            <div class="sidenav">
+                <a href="#tl0">t表介紹</a>
+                <a href="#tl1">1.星辰</a>
+                <a href="#tl2">2.瑪麗絲</a>
+                <a href="#tl3">3.雷熱</a>
+                <a href="#tl4">4.利希德</a>
+                <a href="#tl5">5.閃刀姬</a>
+                <a href="#tl6">6.寶石騎士</a>
+                <a href="#tl7">餅圖</a>
+            </div>
+
+            <div class="main">
+                <h3 id="tl0">
+                    t表介紹
+                </h3>
+                「T表」通常是指 Tier List（階級列表）的簡稱。這是一種用來評估遊戲中不同牌組或策略強度排名的列表。
+                <br>
+                T表會按照其在當前環境版本中的表現和強度進行分級。
+                <br>
+                牌組由強到弱排序為t0~t3，排名僅供參考。
+                <br>
+                請注意，未上榜的牌組並非較弱或無法遊玩，而是非主流牌組或熱門度較低。
+                <br>
+                此文以新手最易上手的Master Duel(簡稱MD)t表為準。
+                <hr>
+                <h3 style="color: blue;">t0牌組</h3>
+                <h3 id="tl1">
+                    星辰(星宿/降交龍)
+                </h3>
+                <img src="./image/tl-Dracotail.png" class="img-fluid">
+                <br>
+                牌組代碼:2fvybqb
+                <br>
+                特色:
+                <br>
+                ★龍族與魔法使族的融合召喚，做為融合素材後可以調度魔陷資源
+                <br>
+                ★具有強妥協、易攜帶手坑、不依賴前場做阻抗的特性
+                <br>
+                ★能和各種適合融合召喚的強力系統進行混搭
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/zmVjzdqGHbI"
+                        title="[遊戲王Master Duel] 降交龍來了！新時代最強融合卡組！| 星辰/烙印星辰 介紹/教學 | 我不是工程師" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+                <h3 style="color: blue;">t1牌組</h3>
+                <h3 id="tl2">
+                    瑪麗絲(M∀LICE)
+                </h3>
+                <img src="./image/tl-malice.png" class="img-fluid">
+                <br>
+                牌組代碼:3735k1d
+                <br>
+                特色:
+                <br>
+                ★將自身除外來獲得場上優勢的電子界族怪獸，可以從除外區特殊召喚自身
+                <br>
+                ★陷阱可以除外場上本家怪能馬上發動
+                <br>
+                ★可以使用如諧碼語者和連碼語者等強大的通用電子界族怪獸
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/9kIPy17WXKA"
+                        title="【游戏王MD】[红皇后禁止]12月的码丽丝（M∀LICE）攻略 - 展开路线 参考构筑 - 新禁卡表后的码丽丝依然能战" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <h3 id="tl3">
+                    雷熱(雷熱渦爐)
+                </h3>
+                <img src="./image/tl-RAIZEOL.png" class="img-fluid">
+                <br>
+                牌組代碼:7psa89q
+                <br>
+                特色:
+                <br>
+                ★這套牌組有大量的4星雷屬性和炎屬性怪獸，可以輕鬆召喚4階超量怪獸
+                <br>
+                ★內建回收且帶無效的場地，無效具有高貴的不入連鎖
+                <br>
+                ★雷熱卡組本身佔空間不大，可以容納更多手坑和干擾手段
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/J4zOkBbTqfk"
+                        title="[遊戲王Master Duel] 雷火大人來了！簡單卻強大的新主流！| 雷熱渦爐 介紹/教學 | 我不是工程師" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <hr>
+                <h3 style="color: blue;">t2牌組</h3>
+                <h3 id="tl4">
+                    利希德(王家的神殿)
+                </h3>
+                <img src="./image/tl-TempleoftheKings.png" class="img-fluid">
+                <br>
+                牌組代碼:8mgqe3u
+                <br>
+                特色:
+                <br>
+                ★主打各式陷阱怪獸的妨礙及聖獸的進攻
+                <br>
+                ★手坑兼容程度高
+                <br>
+                ★反擊陷阱比其他牌組更強力，不單能無效對手效果，還能全場破壞
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="1332" height="749" src="https://www.youtube.com/embed/NXygL1S78Ho"
+                        title="[Master Duel遊戲王] 利希德牌組教學-操控陷阱的男人" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3 id="tl5">
+                    閃刀(閃刀姬)
+                </h3>
+                <img src="./image/tl-SkyStriker.png" class="img-fluid">
+                <br>
+                牌組代碼:68fk5f4
+                <br>
+                特色:
+                <br>
+                ★怪獸數量少而魔法卡數量多，利用各種魔法卡掌握戰局。
+                <br>
+                ★墓地的魔法卡超過3張時，可以獲得額外效果，進一步擴大優勢。
+                <br>
+                ★高人氣牌組
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/hcVGG3UjZ_A"
+                        title="[Master Duel] FCG RJay 閃刀姬牌組教學! 時隔已久再度強勢衝擊環境! 牌組構築 運作思路 實戰講解! 一次全部帶你看過!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3 id="tl6">
+                    寶石騎士
+                </h3>
+                <img src="./image/tl-Gem-Knight.png" class="img-fluid">
+                <br>
+                牌組代碼:2usz9gx
+                <br>
+                特色:
+                <br>
+                ★寶石騎士擅長融合召喚怪獸，這些怪獸可以用來召喚其他強力怪獸。
+                <br>
+                ★常與封鎖系卡牌搭配，使對手難以反制。
+                <br>
+                ★可以攜帶天使族專屬手坑「珠光宣告者」，且與手坑「古遺物-聖槍」相性佳。
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/ptjjg4XbFck"
+                        title="【遊戲王Master Duel】大天使被禁怎麼辦？改放虛無的統括者就解決啦！｜先攻型寶石騎士繼續搞封鎖，就是要讓對手沒有遊戲體驗！？『寶石騎士/ジェムナイト/Gem-Knight』"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <hr>
+                <h3 style="color: blue;">餅圖</h3>
+                <h3 id="tl7">
+                    2025年9月DC二階段前百上位餅圖
+                </h3>
+                <img src="./image/tl-cookie.jpg" class="img-fluid">
+
+
+
+
+
+
+            </div>
+
+        </div>
+        <div id="deck" class="page p-2" style="display: none;">
+            <div class="sidenav">
+                <a href="#d1">1. 原石白龍</a>
+                <a href="#d2">2. 天盃龍</a>
+                <a href="#d3">3. 白銀城</a>
+                <a href="#d4">4. 相劍</a>
+                <a href="#d5">bonus:NR牌組推薦</a>
+            </div>
+
+            <div class="main">
+                <h3 style="color: blue;">推薦牌組</h3>
+                <h3 id="d1">
+                    第一推薦:原石青眼白龍
+                </h3>
+                <img src="./image/d-BlueEyes.jpg" class="img-fluid">
+                <br>
+                牌組代碼:7ec0sbx
+                <br>
+                <br>
+                <h4>推薦指數:5/5</h4>
+                推薦原因:
+                <br>
+                大部分的新手都是小時候看過動畫的玩家，對於青眼白龍的印象最為深刻且熟悉。
+                <br>
+                那麼作為動畫黨裡最強的牌組，青眼白龍毫無疑問是最佳首選。
+                <br>
+                且這副牌組於半年前獲得大加強，搭配外掛系統「原石」更是將強度推上頂端。
+                <br>
+                剛從主流退出，對於手坑的耐性佳，對上當前主流也毫不遜色。
+                <br>
+                展開方面僅需9星青眼精靈龍同步即合格，作招相當簡單。
+                <br>
+                <span style="background-color: black; color: transparent;">你說黑魔導?抱歉，法老王沒錢印卡。</span>
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/vIoOYRC2xEk"
+                        title="[遊戲王Master Duel] 原石大強化！白龍重返主流！又魂又強的版本解答！| 原石青眼白龍 介紹/教學 | 我不是工程師" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <hr>
+
+                <h3 id="d2">
+                    第二推薦:天盃龍
+                </h3>
+                <img src="./image/d-TENPAI DRAGON.png" class="img-fluid">
+                <br>
+                牌組代碼:4ppnw8n
+                <br>
+                <br>
+                <h4>推薦指數:4/5</h4>
+                推薦原因:
+                <br>
+                以麻將為主題的牌組，是少數的後攻牌組。
+                <br>
+                展開方式類似於俄羅斯套娃，將對手的干擾除去後，只要場上有一隻紅中龍，幾乎是必定斬殺。
+                <br>
+                特色是可以在戰鬥階段同步召喚，造成可以打了又打，打了又打的局面。
+                <br>
+                展開相當簡單且固定，大部分用不到本家牌組以外的額外怪獸。
+                <br>
+                缺點是這副牌經過多次削弱，本家卡片的濃度過低，造成不好上手本家卡片，運氣成分較高。
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/DpBfT8q64oI"
+                        title="[遊戲王Master Duel] 叮打打咚！大三元！最強後攻牌登場！為什麼不帶大熱波？| 天盃龍 介紹/教學 | 我不是工程師" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <hr>
+                <h3 id="d3">
+                    第三推薦:白銀城
+                </h3>
+                <img src="./image/d-Labrynth.png" class="img-fluid">
+                <br>
+                牌組代碼:4png91f
+                <br>
+                <br>
+                <h4>推薦指數:3.5/5</h4>
+                推薦原因:
+                <br>
+                白銀城是一副以陷阱為主的牌組，無須任何展開，也基本上不會使用額外牌組。
+                <br>
+                陷阱卡也相當直接且強大，有一些通常陷阱卡的效果相當暴力，一卡就直接掀翻全場。
+                <br>
+                可以直接調度任何通常陷阱卡，可以說只要出了新的通常陷阱卡，就是間接性補強白銀城。
+                <br>
+                適合新手在打牌的同時，有充足的時間觀察對手的牌組來適應環境。
+                <br>
+                缺點是陷阱牌通病，即便白銀城有幾張蓋放回合能立即使用的卡牌，必須蓋放一個回合才能使用速度偏慢，後攻仍略顯尷尬。
+                <br>
+                另外組牌成本偏高且不泛用。
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/dve_EAZPbfI"
+                        title="【游戏王MD】白银城新手必看 涵盖展开方式、操作技巧、参考构筑的最新白银城完全攻略" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <hr>
+                <h3 id="d4">
+                    第四推薦:相劍
+                </h3>
+                <img src="./image/d-Swordsoul.png" class="img-fluid">
+                <br>
+                牌組代碼:8cyneqw
+                <br>
+                <br>
+                <h4>推薦指數:2/5</h4>
+                推薦原因:
+                <br>
+                相劍是以同步為主的主題，沒有什麼特色，樸實無華的8+10同步牌組。
+                <br>
+                曾經最推薦新手遊玩的牌組，號稱「奶奶都會玩」的牌組最佳典範。
+                <br>
+                如今終端強度不夠，且沒有續行，加上無法單卡啟動的問題，相劍非常不耐手坑。
+                <br>
+                優點只剩下便宜好組，一旦過了新手期，就只能放進倉庫。
+                <br>
+                寫進文章裡是因為幾年前的古文會推薦相劍，組牌需三思。
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/Lyr55T7BJLM"
+                        title="《 遊戲王 Master Duel 》人手一套 現在入坑或回坑就能取得! 便宜好組 操作簡單 「相劍」（相剣 / Swordsoul )【小宇】" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <hr>
+                <h3 id="d5">
+                    bonus:NR牌組推薦
+                </h3>
+                <img src="./image/d-bonus.jpg" class="img-fluid">
+                <br>
+                牌組代碼:1wkvpry
+                <br>
+                <br>
+                <h4>推薦指數:??</h4>
+                推薦原因:
+                <br>
+                如果你真的真的很窮，沒有任何資源，那我建議你可以組這副主打次元的牌組。
+                <br>
+                但是只有NR的牌組事實上是難以組成一副好牌的。
+                <br>
+                勝率也不能有所期待，建議盡早選擇並組出上方一副牌，才可能獲得比較良好的遊戲體驗。
+                <br>
+                參考影片:
+                <div class="video-container">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/Gd1oo-AxduE"
+                        title="整套牌組只有N卡跟R卡?! 我組出了一套最適合新手拿寶石獎勵的平民牌組! 《 遊戲王 Master Duel 牌組介紹》【小宇】" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+        <div id="newplay" class="page p-2" style="display: none;">
+            <div class="sidenav">
+                <a href="#np1">新手常見誤區</a>
+                <a href="#np2">實戰影片</a>
+                <a href="#np3">留言區</a>
+            </div>
+            <div class="main">
+                <h3 id="np1">
+                    新手常見誤區
+                </h3>
+                <span>速攻魔法的發動場合</span>
+                <br>
+                Q：我的對手先手，為什麼我無法發動我的速攻魔法？
+                <br>
+                A：速攻魔法卡必須先蓋放在場上才能在對手的回合中使用。
+                <br>
+                <span>破壞不等於無效</span>
+                <br>
+                Q:為什麼對手使用死者甦醒，我方連鎖發動旋風，無法阻止對手發動效果 ？
+                <br>
+                A:因為破壞不等於無效，死者甦醒是通常魔法，效果仍然生效(永續魔法和場地魔法會失效)。
+                <br>
+                <span>灰流麗適用範圍</span>
+                <br>
+                Q:為什麼我沒有使用牌組送墓的效果，對手卻可以使用「灰流麗」無效我 ？
+                <br>
+                A：灰流麗可以無效任何「包含」將卡組中的卡片送入墓地的效果，只要效果包含牌組送墓，即便未使用也視為使用條件成立。
+                <br>
+                <span>墓穴指名者持續時間</span>
+                <br>
+                Q:為什麼我發動了「增殖的g」，對手沒有做任何事情效果卻無效了?
+                <br>
+                A：墓穴指名者的無效時間是兩個回合，請確認上一回合是否用墓穴指名者指了增殖的g。
+                <hr>
+                <h3 id="np2">
+                    實戰影片
+                </h3>
+                25455
+                <hr>
+                <div id="np3" class="message">
+                    <h2>發表留言</h2>
+                    <form id="messageForm">
+                        <input type="text" id="username" placeholder="您的名字" required>
+                        <textarea id="message" placeholder="想說的話..." required></textarea>
+                        <button type="submit">送出留言</button>
+                    </form>
+                    <hr>
+                    <h2>留言列表</h2>
+                    <div id="messageList">
+                        <!-- 留言會顯示在這裡 -->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="footer">
+        參考網址
+        <div class="row">
+
+            <div class="col-6">
+                <a href="https://ntucgm.blogspot.com/" target="_blank">開拓卡研</a>
+            </div>
+            <div class="col-6">
+                <a href="https://www.masterduelmeta.com/" target="_blank">master duel meta</a>
+            </div>
+            <div class="col-6">
+                <a href="https://theygopedia.blogspot.com/" target="_blank">「潮落夜江斜月」</a>
+            </div>
+            <div class="col-6">
+                <a href="https://ocg-rule.readthedocs.io/zh-cn/latest/" target="_blank">OCG Rule</a>
+            </div>
+        </div>
+        <script src="./js/ygojs.js"></script>
+</body>
+
+</html>

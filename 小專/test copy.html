@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的留言板</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        .post {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .post strong {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>發表留言</h2>
+        <form id="messageForm">
+            <input type="text" id="username" placeholder="您的名字" required>
+            <textarea id="message" placeholder="想說的話..." required></textarea>
+            <button type="submit">送出留言</button>
+        </form>
+
+        <hr>
+
+        <h2>留言列表</h2>
+        <div id="messageList">
+            <!-- 留言會顯示在這裡 -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('username').value;
+            const msg = document.getElementById('message').value;
+            const time = new Date().toLocaleString();
+
+            const post = document.createElement('div');
+            post.classList.add('post');
+            post.innerHTML = `<strong>${name}</strong> <small>於 ${time}</small><p>${msg}</p>`;
+
+            document.getElementById('messageList').prepend(post);
+
+            // 清空欄位
+            this.reset();
+        });
+
+    </script>
+</body>
+
+</html>

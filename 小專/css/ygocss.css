@@ -1,0 +1,274 @@
+.navBar {
+    /* overflow: hidden; */
+    background-image: url(../image/titlebackground.jpg);
+}
+
+.navBar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    color: white;
+}
+
+.navBar a:hover {
+    background-color: #656565;
+}
+
+
+
+#theMusic {
+    position: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+
+}
+
+#butt {
+    position: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 20px;
+    bottom: 0;
+    z-index: 11;
+}
+
+#aaa {
+    position: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 20px;
+    bottom: 0;
+    z-index: 11;
+}
+
+/* 置頂 */
+.header img {
+    width: 80px;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    background-color: darkslategray;
+}
+
+.header h3 {
+    display: flex;
+    width: 100%;
+    line-height: 25px;
+    font-size: 20px;
+    color: #eee;
+}
+
+/* 選單 */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: lightsalmon;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* yt自適應 */
+.video-container {
+
+    position: relative;
+
+    padding-bottom: 56.25%;
+
+    padding-top: 30px;
+
+    height: 0;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 1;
+
+}
+
+/* 左下 */
+.content-item {
+    display: none;
+    /* 預設隱藏 */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.content-item.active {
+    display: block;
+    /* 僅顯示 active 項目 */
+}
+
+#theMusic a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+#theMusic a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: cadetblue;
+    color: white;
+}
+
+.next {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+
+/*1*/
+
+.godbird {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+span {
+    font-size: 20px;
+    background-color: chartreuse;
+}
+
+.span2 {
+    font-size: 18px;
+    background-color: lightskyblue;
+}
+
+.monster {
+    font-size: 40px;
+    background-color: lightcoral;
+}
+
+.magic {
+    font-size: 40px;
+    background-color: LimeGreen;
+}
+
+.trap {
+    font-size: 40px;
+    background-color: IndianRed;
+}
+
+
+/* 留言板 */
+
+#newplay.container {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#newplay input,
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+#newplay textarea {
+    height: 100px;
+}
+
+#newplay button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#newplay button:hover {
+    background: #218838;
+}
+
+#newplay.post {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+#newplay.post strong {
+    color: #333;
+}
+
+.message {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* 頁尾 */
+.footer {
+    text-align: center;
+    padding: 2px;
+    background-color: darkcyan;
+}
+
+.footer a{
+    color: darkred;
+    text-decoration: none;
+}
+
+.footer a:visited{
+    color: purple;
+    text-decoration: none;
+}
