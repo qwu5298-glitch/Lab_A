@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>指定的秒數，做指定的事情</h4>
+    <p><a
+            href="https://www.w3schools.com/jsref/met_win_setinterval.asp">https://www.w3schools.com/jsref/met_win_setinterval.asp</a>
+    </p>
+
+    <script>
+        var cnt = 0;
+
+        function apple() {
+            cnt += 1;
+            console.log(` 伊布2 ==>  ${cnt} `);
+        }
+
+        // 10. 放入  apple    -> (O)
+        // 請機器人一秒鐘執行一次apple函式
+        // setInterval(apple,1000)
+
+        // 20. 放入 'apple()' -> (O)
+        // 實測 ok 但是 Vscode 跟 w3school 說的不同
+
+        // 30. 放入  apple()  -> (X)
+
+        // 我執行了apple函式, 機器人一秒後執行了 空
+        setInterval(apple(), 1000);
+
+        // Q:parseInt 先執行 還是 log 先執行?
+        // A1:parseInt --> 數字5566
+        console.log(parseInt("5566"));
+
+        // Q:alert 先執行 還是 log 先執行?
+        // A1:alert
+        // log 會看見什麼?
+        // 空
+        console.log(alert("皮卡"));
+
+
+        // 40. 呼叫 setInterval 時改為直接放入 function 
+        setInterval(function() {
+            console.log("貓咪大戰爭");
+            console.log("十周年");
+        }, 5000)
+
+    </script>
+</body>
+
+</html>

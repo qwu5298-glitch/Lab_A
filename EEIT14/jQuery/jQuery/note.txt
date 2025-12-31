@@ -1,0 +1,31 @@
+$(CSS Selector).action();
+
+CSS Selector ==> div .className #id
+
+action:
+  .text
+  .html()
+  .append()
+  .prop()
+  .css()
+  .addClass()   .removeClass()  .toggleClass()
+
+  .click()  .mouseleave()    .mouseenter(), ....
+  .on("click",           function (){...})
+  .on("mouseenter",      function (){...})
+  ....
+  .off()
+
+---------------------------------------------------
+  .data()
+  .fadeIn()  .fadeOut()  .fadeTo()
+
+  .not()
+  .eq()
+  .each()
+
+  .appendTo()
+  .remove()
+  .detach()
+  .empty()
+  .index

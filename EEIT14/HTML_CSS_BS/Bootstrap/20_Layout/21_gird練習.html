@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21_gird練習</title>
+
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+        div[class^="col"] {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-4">A</div>
+        <div class="col-4">B</div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12">C</div>
+                <div class="col-12">D</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- emmet寫法 -->
+    <!-- div.row>div.col-4*2+div.col-4>div.col-12*2 -->
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="col-12"></div>
+            <div class="col-12"></div>
+        </div>
+    </div>
+
+    <!-- 方法2 -->
+    <div class="row">
+        <div class="col-4">A</div>
+        <div class="col-4">B</div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12">C</div>
+            </div>
+            <div class="row">
+                <div class="col-12">D</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 練習二 -->
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                <div class="col-4">A</div>
+                <div class="col-4">B</div>
+                <div class="col-4">C</div>
+                <div class="col-4">D</div>
+                <div class="col-4">E</div>
+                <div class="col-4">F</div>
+            </div> 
+        </div> 
+        <div class="col-3">G</div>        
+    </div>
+</body>
+
+</html>

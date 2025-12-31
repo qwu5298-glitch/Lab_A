@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習02</title>
+
+    <style>
+        label[for^=yoption]:hover{
+            background-color: yellow;
+        }
+
+        input[type="radio"]:checked+label[for$=b]{
+            color: blue;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 參照 練習02.png，完成以下需求:
+         1. 在表單中加入三個單選框及選項文字
+         2. 滑鼠經過選項文字時，文字底色改為黃色
+         3. 點選單選框後，選項文字改成藍色 -->
+    <input type="radio" id="option1" name="choose1">
+    <label for="option1">選項1</label>
+    <input type="radio" id="option2" name="choose1">
+    <label for="option2">選項2</label>
+    <input type="radio" id="option3" name="choose1">
+    <label for="option3">選項3</label>
+
+    <br>
+    <input type="radio" id="yoption1" name="choose2">
+    <label for="yoption1">選項1</label>
+    <input type="radio" id="yoption2" name="choose2">
+    <label for="yoption2">選項2</label>
+    <input type="radio" id="yoption3" name="choose2">
+    <label for="yoption3">選項3</label>
+    
+    <br>
+    <input type="radio" id="yoption1b" name="choose3">
+    <label for="yoption1b">選項1</label>
+    <input type="radio" id="yoption2b" name="choose3">
+    <label for="yoption2b">選項2</label>
+    <input type="radio" id="yoption3b" name="choose3">
+    <label for="yoption3b">選項3</label>
+
+
+
+    <!-- 虛擬類別的參考文件: -->
+    <!-- https://www.w3schools.com/cssref/css_ref_pseudo_classes.php -->
+
+</body>
+
+</html>

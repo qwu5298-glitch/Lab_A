@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 10. 請設計一個介面，讓使用者輸入頻道代碼後，網頁可以顯示對應的頻道名稱 -->
+    <label for="apple">請輸入頻道代碼:</label>
+    <input id="apple" type="text">
+    <button onclick="query()">查詢</button>
+    <p>目前只有20、65、66 這三台可以查詢</p>
+    <h1 id="bee"></h1>
+
+    <script>
+        // 20. 透過 switch case 設定底下對應項目
+        //     20 ==> TLC 旅遊生活頻道
+        //     65 ==> HBO
+        //     66 ==> 東森洋片台
+        //     非上述 ==> 頻道尚未建立
+        function query() {
+            let cat = document.getElementById('apple').value;
+            console.log(cat);
+            
+            
+            // 型態必須一致: 一致的字串 or 一致的數字
+            switch (parseInt(cat)) {
+                case 20:
+                    document.getElementById('bee').innerText = "TLC 旅遊生活頻道"
+                    break;
+                case 65:
+                    document.getElementById('bee').innerText = "HBO"
+                    break;
+                case 66:
+                    document.getElementById('bee').innerText = "東森洋片台"
+                    break;
+                default:
+                    document.getElementById('bee').innerText = "頻道尚未建立"
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

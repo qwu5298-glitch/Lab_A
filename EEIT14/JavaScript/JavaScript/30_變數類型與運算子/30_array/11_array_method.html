@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Array Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_array_methods.asp">http://www.w3schools.com/js/js_array_methods.asp</a></p>
+
+    <script>
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        // 10. 陣列的取值和長度
+        console.log( weekList[1]);
+        console.log( weekList.length);
+
+        // 12. 陣列.toString()
+        // 13. 陣列.join("#")
+        console.log(weekList);
+        console.log(weekList.toString());
+        console.log(weekList.join("#"));
+
+        
+        // 14. 移除陣列中第一份資料
+        // 15. 移除陣列中最後一份資料
+        
+        // shift()的回傳值是 陣列本人     (X)
+        // shift()的回傳值是 丟掉了哪一個 (O)
+        
+        let cat = weekList.shift();
+        console.log(cat);        //這是shift執行後的結果
+        console.log(weekList);   //查看現在的陣列有哪些
+        
+        let dog = weekList.pop();
+        console.log(dog);        //這是pop執行後的結果
+        console.log(weekList);   //查看現在的陣列有哪些
+        
+        // 16. 有哪三種方式可以加入資料到陣列中?
+        weekList.unshift("皮卡丘");
+        console.log(weekList);
+
+        weekList.push("比比鳥");
+        console.log(weekList);
+
+        //我想要改變 陣列指定位置 的值
+        //陣列指定位置 我使用了陣列的強度
+        //-> 取得陣列當前有幾個 當作索引值使用
+        weekList[weekList.length] = "卡比獸";
+        console.log(weekList);
+
+
+
+        // 20. 二維陣列的長度
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        console.log(poker.length);
+        console.log(poker[0].length);
+
+
+    </script>
+</body>
+
+</html>

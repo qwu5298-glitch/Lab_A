@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        // 10. undefined 是一個關鍵字
+        // --> 有宣告 沒給值
+        
+        // 20. not defined 是一項錯誤訊息描述 (XXX is not defined)
+        // --> 沒宣告
+        let apple;
+        console.log(apple);
+
+        // 30. undefined 和 null 的比較
+        
+        // 講中文: 
+        // 講法A: 宣告變數x 把underfined設定給x
+        // 講法B: 在宣告變數x的當下 也把underfined設定進去
+        // 講法C: (你自己的)(宣告)( = 設定|給值|賦值)
+        let x = undefined; //沒定義
+
+        // 講中文:
+        let y = null;      //沒有
+        console.log( x == y ); // true真(一樣)
+        console.log( x === y ); // false假(不一樣)
+
+    </script>
+</body>
+
+</html>

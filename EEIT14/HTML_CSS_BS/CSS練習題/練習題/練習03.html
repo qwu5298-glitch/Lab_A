@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習03</title>
+
+    <style>
+        input[type=checkbox]:checked+label[for^=buy]{
+           text-decoration: line-through; 
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 參照 練習03.png，製作待辦清單。完成待辦事項時，文字要加入刪除線。 -->
+
+    <input type="checkbox" id="buyticket" name="thing">
+    <label for="buyticket">訂車票</label>
+    <br>
+    <input type="checkbox" id="buypresent" name="thing">
+    <label for="buypresent">買伴手禮</label>
+</body>
+
+</html>

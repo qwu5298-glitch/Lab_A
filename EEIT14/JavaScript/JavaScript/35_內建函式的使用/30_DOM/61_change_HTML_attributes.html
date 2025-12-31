@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+        1. 圖片有事件 onclick
+        2. JavaScript 抓下來 -> 抓下來才能夠改變
+        3. 變HTML元素的屬性 -> 從現在的貓咪變成小狗
+    </pre>
+
+    <h3>點選圖片後，置換成另外一張圖片</h3>
+
+    <!-- 10. 設定一張圖片 -->
+    <img id="apple" onclick="changeAttr()" src="../../_image/cat.png">
+   
+    <script>
+        
+        // 11. 取得上一個步驟的圖片
+        // 20. 設定點選圖片後，換成另外一張圖片
+        //  -> 12/11 10:15 只能點一次
+        //  -> 12/11 11:52 可以點很多次!
+function changeAttr(){
+    let elem = document.getElementById("apple");
+    console.log(elem.src);
+
+    // if 版本
+    // if (elem.src == "http://127.0.0.1:5500/JavaScript/_image/cat.png"){
+    //     elem.src ="../../_image/dog.png";
+    // }
+    // else{
+    //      elem.src ="../../_image/cat.png";
+    // }
+
+    // 三元版本
+    elem.src = (elem.src == "http://127.0.0.1:5500/JavaScript/_image/cat.png" ) ?
+       "../../_image/dog.png" : "../../_image/cat.png"
+    
+    
+}
+
+    </script>
+
+</body>
+
+</html>

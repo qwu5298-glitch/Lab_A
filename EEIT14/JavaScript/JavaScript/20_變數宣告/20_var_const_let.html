@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+        Q:JS 使用 var let const 這三者宣告變數差異在哪裡?
+        A:使用var可以宣告相同的變數名稱, let不行
+          使用const不可修改變數數值
+          (12/05)
+    </pre>
+
+    
+    <h3>JavaScript Versions：<a href="https://www.w3schools.com/js/js_versions.asp">https://www.w3schools.com/js/js_versions.asp</a></h3>
+    <h3>ECMAScript 5 - 2009：<a href="https://www.w3schools.com/js/js_es5.asp">https://www.w3schools.com/js/js_es5.asp</a></h3>
+    <h3>ECMAScript 6 - 2015：<a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a></h3>
+    
+    <h3>JavaScript Let：<a href="https://www.w3schools.com/js/js_let.asp">https://www.w3schools.com/js/js_let.asp</a></h3>
+    <h3>JavaScript Const：<a href="https://www.w3schools.com/js/js_const.asp">https://www.w3schools.com/js/js_const.asp</a></h3>
+    
+    <script>
+        // 10. var(1999)、let(2015)、const(2015) 宣告變數的方法
+        
+        //相同: 都可以宣告 給值 查看
+        var x=1;
+        let y=2;
+        const z=3;
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        
+        //不同
+        // 20. const 變數宣告並給值後是否還能修改?
+        // A. (12/5 雅婷老師說不能改..下星期 object 和 array 加入後會改變說法)
+        x=10;
+        y=20;
+        // z=30;
+        console.log(x);
+        console.log(y);
+        console.log(z);
+
+        // 30. 在 if 判斷句中，透過 var、let 宣告兩個變數，並觀察他們的作用域
+        
+        //if的詳細說明在 40號資料夾裡面
+        if(true){
+            //底下有中文(為了說明方便)
+            var 蘋果 = 100;
+            let 香蕉 = 33;
+            console.log(蘋果);
+            console.log(香蕉);
+
+        }
+
+        console.log(蘋果);
+        // console.log(香蕉);
+        // 40. 測試 var 宣告相同的變數名 ->後蓋前
+        var 滑鼠 = 699;
+        var 滑鼠 = 1299;
+        console.log(滑鼠); // 699? 1299?
+
+
+        // 50. 測試 let 宣告相同的變數名稱 
+        let 鍵盤 = 500;
+        // let 鍵盤
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <button onclick="apple()">統計飲料金額</button>
+    <h1 id="result"></h1>
+
+    <script>
+        // * 使用 do.. while 完成底下練習
+
+        // 10. 設計網頁上應該要有的元素
+
+        // 20. 透過 prompt 讓使用者輸入資料
+
+        // 30. 若使用者輸入 0 表示不再輸入
+        //     畫面顯示 全部輸入過的資料 和 總金額
+
+        let cat = []; //每個人的飲料錢
+        let dog = 0;  //總金額
+        let userInput
+
+        do {
+            userInput = prompt("您的飲料金額");
+            cat.push(userInput);
+            dog = dog + parseInt(userInput);
+        } while ( userInput != "0");
+
+        cat.pop();
+
+        document.getElementById('result').innerText =
+        `大家的飲料錢50:${cat.join("+")} ==> 總金額:${dog}`
+
+
+
+    </script>
+
+</body>
+
+</html>

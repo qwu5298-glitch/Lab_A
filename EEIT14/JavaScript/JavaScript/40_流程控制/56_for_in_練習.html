@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+
+        // 10. 使用 for in，逐一尋覽"物件"屬性
+        let x ={ apple:100, bee:200}
+        for(let cat in x){
+            console.log(cat);
+        }
+        // 20. 使用 for in，逐一尋覽"陣列"資料(空的會排除)
+        // -> index
+        // -> (空的會排除) 你自己寫的 null underfined (X)
+        // -> (空的會排除) 你叫機器人製造的 (O)
+        let y=[99,88,null,77];
+        y[10]=5566;
+        for(let dog in y){
+            console.log(dog);
+        }
+
+    </script>
+</body>
+
+</html>

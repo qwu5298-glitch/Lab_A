@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        我有三隻貓，我想要 "記錄" 這三隻貓的資訊
+        string number boolean array[] object{貓}
+
+        ->[{},{},{}]
+        ->JSON
+        -> 紀錄資訊|交換資訊
+        -> 如果 JSON 用來記錄資訊，那資料庫呢?
+
+        網頁 和 伺服器 之間傳輸結構化資料
+    </pre>
+    <script>
+        let catA = {
+            名字:"菜菜",
+            生日:"2023/12/12",
+            體重: 6.3,
+            技能:["兇壁虎","握手"]
+        }
+        let catB = {
+            名字:"咪咪",
+            生日:"2023/1/1",
+            體重: 6,
+            技能:["撒嬌","翻肚"]
+        }
+        let catC = {
+            名字:"啤酒",
+            生日:"2023/3/3",
+            體重: 2.3,
+            技能:["無視","睡覺"]
+        }
+
+        let 我家的貓=[catA, catB, catC];
+        console.log(我家的貓);
+        console.log(我家的貓[1]);
+        console.log(我家的貓[1].體重);
+        console.log(我家的貓[1]["體重"]);
+
+    </script>
+</body>
+</html>

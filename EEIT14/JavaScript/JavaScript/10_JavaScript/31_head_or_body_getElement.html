@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 10. 底下有兩段被註解掉的程式碼
+             請分別取消註解，並觀察
+             <p> 標籤的內容是否會被改變？ -->
+
+    
+    
+   
+
+</head>
+
+<body>
+    <pre>
+        寫在head標籤裡面 或者
+        寫在body標籤裡面
+        -> 在這個檔案有差異, 
+           差異在: 如果你的js需要 改變元素, 就必須放在 < / b o d y> 的前一行
+    </pre>
+
+    <p id="demo"> 測試文字 </p>
+
+    
+    <script>
+        document.getElementById('demo').innerText = "測試二號";
+    </script> 
+   
+
+</body>
+
+</html>

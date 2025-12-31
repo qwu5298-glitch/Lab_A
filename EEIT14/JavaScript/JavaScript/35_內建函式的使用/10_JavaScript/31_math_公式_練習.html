@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // let max = 5;
+    // let min = 0;
+    // let 我的亂數 = Math.floor( Math.random() * (max-min+1) ) + min
+    // console.log(cat);
+
+    let list = [
+        {名稱:"五十嵐",品項:["四季春青茶","波霸紅茶拿鐵"]},
+        {名稱:"清心",品項:["琥珀黑糖奶茶","仙草凍奶茶"]},
+        {名稱:"A",品項:["B","C","D","E"]},
+        {名稱:"可不可",品項:["熟成紅茶","胭脂紅茶","麗春紅茶"]},
+    ]
+    let max = list.length-1;
+    let min = 0;
+    let cat = Math.floor( Math.random() * (max-min+1) ) + min
+    console.log(cat);
+    console.log(list[cat]);
+    console.log(list[cat].品項);
+
+    let maxMenu = list[cat].品項.length - 1;
+    let minMenu = 0;
+    let dog = Math.floor(Math.random()*(maxMenu-minMenu+1));
+    console.log(`今天我們喝${list[cat].名稱}的${list[cat].品項[dog]}`);
+
+    /* list[cat] -> 飲料店 -> 物件
+     -> 我想要 取得 物件裡面的東西
+     -> list[cat].品項
+
+     list[cat].品項 -> 陣列
+     -> 我想要 取得 陣列裡面的東西
+     -> list[cat].品項[0]
+     */
+
+    //  let maxmenu   //
+    //  let max_menu  // ->學校
+    //  let maxMenu   // ->工作
+
+
+
+
+</script>    
+</body>
+</html>

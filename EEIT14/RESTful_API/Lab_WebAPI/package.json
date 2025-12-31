@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "mssql": "^12.2.0",
+    "tedious": "^19.2.0"
+  }
+}

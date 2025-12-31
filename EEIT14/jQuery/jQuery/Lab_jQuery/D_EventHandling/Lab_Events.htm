@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+        function report(obj) {
+            $("#report").append(obj + "<br>");
+        }
+
+        $(document).ready(function () {
+            // 在這裏寫程式
+
+            var obj = document.getElementById("btnTry");
+
+            // $("#btntry")
+            $(obj).click(
+                function () {
+                    report("btnTry clicked 2");
+                }
+            );
+
+             $("#report").on(
+                "click",
+                function () { 
+                    $("#report").html("Report:<br>");  
+                }  
+            );
+
+
+            $("#panda").on({
+                "mouseenter":function(){
+                    $("#panda").prop("src","panda2.jpg");
+                    report("mouse enter");
+                },
+                "mouseleave":function(){
+                    $("#panda").prop("src","panda1.jpg")
+                    report("mouse leave");
+                },
+            })
+
+          $("#btnOff").on("click",function(){
+            $("#btnTry").off("click");
+            $("#btnTry").on("click",function(){
+                alert("OK 10");
+            });
+          })  
+
+
+            // $("#btnTry").click(
+            //     function () {
+            //         report("btnTry clicked");
+            //     }
+            // );
+
+
+            // $("#betaRibbon").addClass("beta-ribbon");
+
+
+
+
+
+
+        });
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <img id="panda" src="panda1.jpg">
+
+    <div id="report">Report:<br></div>
+    <hr>
+    <form action="" method="put" onsubmit="return false;">
+        <button type="button" id="btnTry">Try</button>
+        <button type="button" id="btnOff">Off</button>
+    </form>
+    <!-- <script>
+    // $("select").action()
+
+   $("#btnTry").click(function(){
+    alert("OK 4");
+   })
+</script> -->
+</body>
+
+</html>

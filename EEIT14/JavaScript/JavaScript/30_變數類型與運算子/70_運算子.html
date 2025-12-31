@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Operators</h4>
+    <p><a href="https://www.w3schools.com/js/js_operators.asp">https://www.w3schools.com/js/js_operators.asp</a></p>
+
+    <script>
+
+        // 算術運算子：四則運算、取餘數 (%) 等
+        var a = 10;
+        var b = 3;
+
+        // 10. 取餘數 % (mod)
+        let apple = a % b;
+        console.log(apple); //1
+
+        console.clear();
+        // 11. ++變數  和  變數++ 
+        let bee = 50;
+        // 需求: 變數+1
+        // bee = bee + 1;  //成功A
+        // bee += 1;       //成功B
+        // bee++;             //成功C (比較常看見)
+
+        //(請學生描述中文)(老師有口述)先顯示bee後++
+        // console.log(bee++);  //30
+        // console.log(bee);    //我想要知道++後來到底有沒有被執行
+
+        //(請學生描述中文)(老師有口述)先++後顯示bee
+        console.log(++bee);
+        console.log(bee);
+
+
+        // 比較運算子：評估條件，回傳 true 或者 false 值
+        var x = 10;
+        var y = "10";
+        var z = 5;
+
+        // 20. == 和 === 的差異在?
+        // Q: 多了一個等於 多比較了?
+        // A:  資料型態|
+        let catA = x === y;
+        console.log(catA);
+
+        console.clear();
+        // 21. 測試 2 > 1
+
+        // 22. 測試 1 < 2 < 3 和 3 > 2 > 1
+
+        // 23. 測試 true == 1 還有 false == 0 
+        console.log( 2 > 1     );  //true
+        console.log( 1 < 2 < 3 );  //true
+        console.log( 3 > 2 > 1 );  //3>2時，得到ture=1，1>1時，得到false
+        // --------------------------------------------
+        console.log( true == 1  );  //
+        console.log( false == 0 );  //
+        
+
+        // 邏輯運算子
+        // 30. 不等於的寫法 (!=)
+
+        // 這堆蘋果跟那堆蘋果的價錢 一樣  嗎? -> 蘋果A == 蘋果B -> false
+        // 這堆蘋果跟那堆蘋果的價錢 不一樣 嗎? -> 蘋果A != 蘋果B -> true
+        let catB = 5 != 3;
+        console.log(catB);
+
+        // 40. and (&&) 條件需要同時成立的時候
+        // 50. or (||) 條件擇一成立
+        let 午餐價錢 = 100;
+        let 午餐種類 = "火雞肉飯";
+
+        if( 午餐價錢>50 || 午餐種類=="火鍋" ){
+            console.log("皮卡丘 3");
+        }
+
+
+        // 70. 三元運算子 (condition) ? value1:value2
+
+    </script>
+
+</body>
+
+</html>

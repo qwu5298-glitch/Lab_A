@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button onclick="changeContent()">Click Me!</button>
+
+    <script>
+        // 10. 透過 console.log 先確認事件是否有綁定成功
+        function changeContent(){
+            // 第一天
+            // document.getElementById('demo').innerText = "皮卡丘"
+            
+            // 結合昨天
+            // document.getElementById('demo').innerText = prompt('您的名字')
+            
+            // Q: 你的字串有沒有包含 html 標籤?
+            //    ->  有的話要使用 innerHTML 才會呈現標籤應該要有的樣子
+            document.getElementById('demo').innerHTML = "<i>皮卡丘2</i>"
+        }
+        // 20. 用 id 取得網頁上面的元素
+
+        // 30. 修改元素的網頁內容
+    </script>
+
+</body>
+
+</html>

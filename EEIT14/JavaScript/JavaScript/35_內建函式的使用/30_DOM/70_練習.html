@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="pokemonName">請輸入您捕獲的寶可夢:</label>
+    <input id="pokemonName" type="text">
+    <button onclick="pokemon()">建檔</button>
+
+    <script>
+        function pokemon(){
+            let elem = document.createElement('p');
+            let temp = document.getElementById('pokemonName').value;
+            elem.innerHTML = `恭喜你捕獲 <b>${temp}</b> !!`
+            document.body.appendChild(elem)
+        }
+    </script>
+</body>
+</html>

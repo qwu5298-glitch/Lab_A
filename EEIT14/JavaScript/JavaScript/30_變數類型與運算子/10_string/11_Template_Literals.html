@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+        Q: 你的小專是否會想要在字串裡放變數的值?
+        A: Y, 做法有底下的 20 跟 30 兩種, 請挑選喜歡的
+    </pre>
+
+    <script>
+        // 10. 產生字串，並顯示到控制台
+        let msg1 = "1. 今天我想吃漢堡當作晚餐"
+        console.log(msg1);
+       
+        // 20. 透過加號(+)串接變數和字串，並顯示到控制台
+        let food = "漢堡";
+        
+        //               字串       取得變數的值      字串
+        let msg2 = "2. 今天我想吃" +     food    + "當作晚餐"
+        console.log(msg2);
+        
+        // 21. `` Template Literals：中文翻譯為 樣板字面值、模板字串等，用 「` `」組成
+        let msg3 = `3. 今天我想吃${food}當作晚餐`;
+        console.log(msg3);
+    </script>
+
+</body>
+
+</html>

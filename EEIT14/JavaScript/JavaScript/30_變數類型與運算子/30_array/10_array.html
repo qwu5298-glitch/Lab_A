@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Arrays</h4>
+    <p><a href="http://www.w3schools.com/js/js_arrays.asp">http://www.w3schools.com/js/js_arrays.asp</a></p>
+
+    <p>陣列使用時機：相同的資料型態（雖然 JavaScript 可以不需要相同，但還是盡量避免）</p>
+    <p>具有一致的意義、需要參與同樣的運算</p>
+    <p>陣列就像置物櫃一樣，透過index，可以存放物品，可以取出</p>
+
+    <script>
+            
+        // 10. 什麼時候我們需要一個陣列？
+        // -> 我使用了很多變數在存放資料(具有一致的意義)
+        let s1 = "皮卡丘";
+        let s2 = "超夢";
+        // ..
+       
+        // 20. 該怎麼樣宣告一個陣列？
+        // 25. 該怎麼把東西放進去？
+        let EEIT14 = ["皮卡丘","超夢","耿鬼"]
+        console.log(EEIT14);
+
+        // 取得指定的某一個 ->[索引值|index] -> 從0開始
+        console.log(EEIT14[0]);
+
+        // 情境: 皮卡丘 改名 叫做 雷丘
+        EEIT14[0] = "雷丘";
+        console.log(EEIT14);
+
+        // 30. 陣列中的陣列
+        // 情境: 18樓有五間教室，每一間教室有不同的上課學生
+        let iSpan = [["皮卡丘","超夢","耿鬼"],["小新"],["魯夫","喬巴"]]
+        console.log(iSpan);
+        console.log(iSpan[2]);
+        console.log(iSpan[2][1]);
+        console.log(iSpan[0][2]);
+
+        // 40. 如果要取得 poker陣列 裡面的13，要如何取得?
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+        console.log(poker[0][12])
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <p id="memo">點選圖片後，放大圖片和文字</p>
+
+    <!-- 10. 設定一張圖片 -->
+    <img id="apple" onclick="changeStyle()" src="../../_image/butterfly.png" alt="">
+
+    <script>
+        // 20. 網頁的 圖片的 樣式的 寬度 改變
+        // 21. 網頁的 圖片的 樣式的 高度 改變
+        // 22. 網頁的 memo的 樣式的 字型 改變
+
+        function changeStyle(){
+            // CSS樣式: width , height , fontsize
+            document.getElementById("apple").style.width = "300px";
+            document.getElementById("apple").style.height = "50px";
+            document.getElementById("memo").style['fontSize'] = "36px";
+            document.getElementById("memo").style['background-color'] = "blue";
+
+            // . 的出現表示 物件的出現 -> 取得 | 新增 -> []
+        } 
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <script>
+
+        // 10. 計算從1加到10數值為多少
+        let 存錢筒 = 0;
+        let n = 1;
+        while(n<=10){
+            // 方法A:
+            // 存錢筒 = 存錢筒 + n;
+            // 方法B:
+            存錢筒+=n;
+
+            n++;
+            console.log(`存錢筒現況: ${存錢筒}`);
+        }
+        console.log(`存錢筒最終: ${存錢筒}`);
+
+        // 20. 網頁必須輸入通關密碼1234才會停止
+        // -> prompt
+        // -> 有一件事情再反覆地做 -> while
+        // -> while(){}
+
+        // 方法1:
+        // let x = prompt("A 輸入通關密碼1234")
+        // while(x != "1234"){
+        //    x = prompt("A 輸入通關密碼1234")
+        // }
+
+        // 方法2:
+        while(prompt("C 通入通關密碼1234") != "1234"){}
+        
+
+    </script>
+</body>
+
+</html>

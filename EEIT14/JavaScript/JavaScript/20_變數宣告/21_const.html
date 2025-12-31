@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 12/5 - 不能改
+        // const x = 5;
+        // console.log(x);
+        // x = 500;
+        // console.log(x); 
+
+        // 12/10
+        // Q: const 可不可以改?
+        // A1: 可以   改陣列裡面的值或物件的屬性值
+        // A2: 不可以 數字不能改, 如果本來是陣列不能設定成另外一個陣列
+        const y = ["皮卡","超夢"];
+        console.log(y);
+        y[0] = "耿鬼";
+        console.log(y);
+
+        const z = { apple:100, bee:200 }
+        console.log(z);
+        z.apple = 777;
+        console.log(z);
+
+    </script>
+</body>
+
+</html>

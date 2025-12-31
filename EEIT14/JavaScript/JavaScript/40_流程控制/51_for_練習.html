@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 顯示效果的地方 -->
+    <div id="pSquare"></div>
+    <hr>
+    <div id="pTriangle"></div>
+    <hr>
+    <pre id="pTimes"></pre>
+
+    <script>
+        // 10. 使用 for 迴圈，在 console 呈現 這個月1號 到 目前系統日
+        let d = new Date();
+
+        for(let k=1 ; k<= d.getDate() ; k++){
+            console.log(`這個月:${d.getMonth()+1}/${k}`);
+        }
+
+
+        // 20. 使用 for 迴圈，逐一取得陣列裡面的元素
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        for (let k = 0; k < weekList.length; k++){
+            console.log(weekList[k]);
+        }
+
+        // 30. 使用 for 迴圈，計算從 1 加到 10
+        let total = 0;
+        for(let k = 1; k <= 10; k++){
+            total +=k;
+         }
+
+         console.log(`計算 1 加到 10: ${total}`);
+        
+        
+        // 40. 雙層迴圈 - 長方型星星 #pSquare
+        // --------->重複4次
+        // | **** 
+        // | **** 
+        // | **** 
+        // | **** 
+        // | **** 
+        // | ****
+        // V
+        // 重複6次
+
+        let apple = "";
+        // y: 重複6次
+        for (let y=1; y<=6; y++){
+            // x: 重複4次
+            for(let x=1; x<=4; x++){
+                apple+="*"
+            }
+            apple +="<br>"
+        }
+        document.getElementById('pSquare').innerHTML = apple;
+
+
+        // 50. 雙層迴圈 - 三角形 #pTriangle
+        // * 
+        // ** 
+        // *** 
+        // **** 
+        apple = "";
+        for (let y=1; y<=4; y++){
+            for(let x=1; x<=y; x++){
+                apple+="*"
+            }
+            apple +="<br>"
+        }
+        document.getElementById('pTriangle').innerHTML = apple;
+
+
+        // 60. 九九乘法表 (tab為 "&#9;") + <pre> 標籤 #pTimes
+        // ->請下午練習
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body> 
+    <pre>
+        1. 可以直接在 onclick 後方直接寫 js (?!)
+            -> 可以寫，但不常見
+    </pre>
+
+    <!-- 10. 於網頁放置一顆 按鈕(A) -->
+
+    <!-- 15. 測試加入滑鼠點擊事件，並直接呼叫 console.log() -->
+    <button onclick="console.log(5566)">按鈕(A)</button>
+    <p id="dog"> 測試文字 </p>
+    <!-- 20. 於網頁放置一顆 按鈕(B) ，也加入點擊事件，事件中執行指定的 function: btnClick -->
+
+    <!-- 25. function 內容：在 console 顯示一段文字 -->
+    
+    <!-- 
+        apple()
+        -> 說法A: apple函是被執行了 ->
+        -> 說法B: 執行apple函式     ->
+    
+    -->
+    <button onclick="apple()">按鈕(B)</button>
+    <script>
+        // 宣告一個 函式/方法/副程式
+        // SQL 取得資料 指令結構: select 資料行名稱 from 資料表名稱
+        // JS 宣告一個 函式結構: function 名稱(){}
+        //    ->原則上是你喜歡就可以.. 但是不要跟保留字一樣
+        //    ->() 是 宣告
+        function apple(){
+            // console.log('皮卡丘')
+            document.getElementById('dog').innerText = "皮卡丘";
+        }
+
+    </script>
+</body>
+
+</html>

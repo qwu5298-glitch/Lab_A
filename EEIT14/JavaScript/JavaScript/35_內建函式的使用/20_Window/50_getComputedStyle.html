@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+
+    </pre>
+
+    <!-- 10. 畫面上設定一張圖片 -->
+    <img id="apple" src="../../_image/cat.png">
+
+   
+    <script>
+        let elem = document.getElementById("apple");
+        console.log(elem);
+       
+        // 20. 透過 元素.style.top 取得 樣式 top 值
+        let x = elem.style.top;
+        console.log(x); // " "
+
+        // 30. 透過 window.getComputedStyle(元素).getPropertyValue(樣式屬性));
+        let y =window.getComputedStyle(elem).getPropertyValue("top");
+        console.log(y); // auto
+
+        // 40. 觀察上述兩者差異
+        // 你自己有定義    ->兩個沒差
+        // 你自己沒有定義  ->兩個有差
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <button onclick="apple()">接收輸入，並顯示結果apple</button>
+    <button onclick="dog()">接收輸入，並顯示結果dog</button>
+
+    <script>
+        
+        // 10. 透過 prompt 接收使用者輸入的值，並記錄下來
+        // 20. 將記錄到的資訊 alert 出來
+        function apple(){
+            let x = prompt("請輸入x: ");
+            let y = prompt("請輸入y: ");
+
+            let a = parseInt(x);
+            let b = parseInt(y);
+
+            let z = a + b; //此處的 + 是..串接? 四則運算?
+            let msg = `您好，您的x跟y相加後結果是:${z}`;
+            alert(msg);
+        }
+        
+        function dog(){
+            let z = parseInt(prompt("請輸入x: ")) + parseInt(prompt("請輸入y: ")); //此處的 + 是..串接? 四則運算?
+            let msg = `您好，您的x跟y相加後結果是:${z}`;
+            alert(msg);
+        }
+    </script>
+
+</body>
+
+</html>

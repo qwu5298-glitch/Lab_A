@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+        1.物件|Object : 屬性 跟 方法 的集合
+        2.什麼時候可以知道我需要一個物件?
+          -> 我用了「很多變數」在記錄某個「東西」; 使用不同的面相|角度; 特徵值
+
+        let name = ""
+        let phone = ""
+        let 生日 = ""
+        let 緊急聯絡人 = ""
+
+        什麼時候可以知道我需要一個陣列?
+          -> 我用了「很多變數」在記錄某個「東西」，具有一致的意義
+    </pre>
+
+    <h4>JavaScript Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_object_definition.asp">https://www.w3schools.com/js/js_object_definition.asp</a></p>
+
+    <script>
+        // 10. 使用 {} create object
+        //      object 可以包含屬性和方法
+
+        // 陣列的結構: [value1, value2, value3, ...]
+        // 陣列的結構: { key1:value1, key2:value2.. }
+        let s = {
+            chinese: 100,
+            math: 90,
+            english: 80,
+        }
+
+        // 30. 透過 .  取得 | 新增 object 的屬性
+        console.log(s);
+        console.log(s.math);
+        s.math = 93; //打錯->新增
+        console.log(s);
+
+        // 40. 透過 [] 取得 | 新增 object 的屬性
+        console.log(  s["english"]  ); //80
+        s["english"] = 87;
+        console.log(s);
+
+    </script>
+
+</body>
+
+</html>
