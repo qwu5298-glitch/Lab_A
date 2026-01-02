@@ -34,7 +34,7 @@ var sql = require('mssql');
 // 準備連線參數
 var config = {
     user:'sa',
-    password:'Pa$$w0rd',
+    password:'P@ssw0rd',
     server:'127.0.0.1\\SQLEXPRESS',
     port:1433,
     database:'newsDb',

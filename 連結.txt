@@ -6,3 +6,5 @@ Teams 會議室連結: https://reurl.cc/vL947e
 班級課程:https://reurl.cc/XaWd13
 12/22小專發表
 \\10.0.101.187
+Java:
+https://github.com/bradchao/eeit14
