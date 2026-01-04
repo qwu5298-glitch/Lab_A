@@ -1,0 +1,6 @@
+https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy80YzEwNDA2MDg1MTdkNDBiL0lnQ01BY1AwZU8wa1Q1VkgweDM5a3lXaUFUa1h5X1A0Rm4zYnFQc3NBTmpxRDJnP2U9Q3lEbmtp&id=4C1040608517D40B%21sf4c3018ced784f249547d31dfd9325a2&cid=4C1040608517D40B
+eeit8427
+根據ER，產出DDL(sql server)，並且使用sp將欄位說明存入資料
+AI10題:單一*3，關聯*3，子資料*4
+2019年每季帳單金額總和
+2019年上半年和下半年帳單金額總和

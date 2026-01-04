@@ -39,7 +39,7 @@
         $.get(`http://localhost:3000/todo/item/${id}`,
             function (dataFromServer) {
                 let todoItem = dataFromServer;
-                // console.log(todoItem);
+                console.log(todoItem);
                 $("#Name").text(todoItem.title);
                 $("#isComplete").prop("checked", todoItem.isComplete);
             }
