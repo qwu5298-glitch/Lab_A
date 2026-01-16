@@ -32,11 +32,12 @@ public class TWId {
 		this.id = id;
 	}
 	
-	public static TWId createTWId(String id) {
+	public static TWId createTWId(String id) throws Exception {
 		if(isRight(id)) {
 			return new TWId(id);
 		}else {
-			return null;
+//			return null;
+			throw new Exception("");
 		}
 		
 	}
