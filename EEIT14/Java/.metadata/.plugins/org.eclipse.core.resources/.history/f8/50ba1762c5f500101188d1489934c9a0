@@ -1,0 +1,21 @@
+package tw.brad.apis;
+
+public class RestockTask implements Task{
+	private static final
+	final int qty;
+	
+	
+	
+	@Override
+	public void execute() {
+		this.qty = qty;
+		
+	}
+
+	@Override
+	public String label() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

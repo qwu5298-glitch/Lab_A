@@ -1,20 +1,99 @@
 package pra.tutor;
 
+import java.awt.*;
+import javax.swing.*;
+import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class pra01 {
+public class pra01 extends JFrame {
+    private JTextField txtTotalTrials; // 輸入模擬次數
+    private JTextArea txtResult;       // 顯示結果區域
+    private JButton btnStart;          // 開始按鈕
+    private JLabel lblStatus;          // 狀態提示
 
-	public static void main(String[] args) {
-		 int year =2300;
-		 boolean isleap = true;
-		 
-		 if(year%400==0||(year%4==0&&year%100!=0)) {
-			isleap=true; 
-		 }else {
-			isleap=false;
-			 }
-		 System.out.printf("%d年為%s年",year,isleap?"潤":"平");
+    public pra01() {
+        setLayout(new BorderLayout());
+
+        // --- 上方輸入區 ---
+        JPanel top = new JPanel(new FlowLayout());
+        top.add(new JLabel("模擬次數:"));
+        txtTotalTrials = new JTextField("10000", 10);
+        btnStart = new JButton("開始模擬");
+        top.add(txtTotalTrials);
+        top.add(btnStart);
+        add(top, BorderLayout.NORTH);
+
+        // --- 中間結果顯示區 ---
+        txtResult = new JTextArea();
+        txtResult.setEditable(false);
+        txtResult.setFont(new Font("Monospaced", Font.PLAIN, 16));
+        add(new JScrollPane(txtResult), BorderLayout.CENTER);
+
+        // --- 下方狀態列 ---
+        lblStatus = new JLabel(" 準備就緒");
+        add(lblStatus, BorderLayout.SOUTH);
+
+        // 按鈕事件綁定 (使用 Lambda)
+        btnStart.addActionListener(e -> startSimulation());
+
+        setSize(500, 400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // 視窗置中
+        setVisible(true);
+    }
+
+    private void startSimulation() {
+        String input = txtTotalTrials.getText();
+        int total;
+        try {
+            total = Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "請輸入有效的數字");
+            return;
+        }
+
+        btnStart.setEnabled(false);
+        lblStatus.setText(" 模擬中...");
+        txtResult.setText("正在運算中，請稍候...\n");
+
+        // 使用執行緒池處理運算，避免視窗卡死 (UI Freezing)
+        ExecutorService pool = Executors.newSingleThreadExecutor();
+        pool.submit(() -> {
+            int stayWins = 0;
+            int switchWins = 0;
+            Random random = new Random();
+
+            for (int i = 0; i < total; i++) {
+                int carDoor = random.nextInt(3);    // 車子在哪
+                int chosenDoor = random.nextInt(3); // 玩家選哪
+
+                if (chosenDoor == carDoor) {
+                    stayWins++; // 堅持不換會贏
+                } else {
+                    switchWins++; // 換了必贏
+                }
+            }
+
+            // 回到 UI 執行緒更新畫面
+            final int sWins = stayWins;
+            final int swWins = switchWins;
+            SwingUtilities.invokeLater(() -> {
+                txtResult.append("==========================\n");
+                txtResult.append(String.format("總次數: %d\n", total));
+                txtResult.append(String.format("堅持不換勝率: %.2f%%\n", (double) sWins / total * 100));
+                txtResult.append(String.format("選擇換門勝率: %.2f%%\n", (double) swWins / total * 100));
+                txtResult.append("==========================\n");
+                txtResult.append("結論：換門的勝率穩定維持在 2/3。\n");
+                lblStatus.setText(" 模擬完成");
+                btnStart.setEnabled(true);
+            });
+        });
+        pool.shutdown();
+    }
+
+    public static void main(String[] args) {
+        // 在 2026 年，啟動 Swing 務必使用此標準方式確保執行緒安全
+        SwingUtilities.invokeLater(ThreeDoors::new);
     }
 }
-	
-
-

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
+	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-21"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
+	<item key="SearchScopeActionGroup.search_scope_type" value="1"/>
+	<item key="CallHierarchyViewPart.call_mode" value="0"/>
+	<item key="CallHierarchyViewPart.field_mode" value="2"/>
+	<item key="CallHierarchyViewPart.ratio3" value="500"/>
+	<item key="CallHierarchyViewPart.orientation" value="3"/>
+	<item key="CallHierarchyViewPart.ratio1" value="500"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\User\eclipse-workspace\BradJava\dir3"/>
+	<section name="JavaProjectWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="746"/>
+		<item key="DIALOG_HEIGHT" value="799"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="NewPackageCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="139"/>
+		<item key="DIALOG_Y_ORIGIN" value="394"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="434"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="NewClassCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="187"/>
+		<item key="DIALOG_Y_ORIGIN" value="305"/>
+		<item key="DIALOG_WIDTH" value="599"/>
+		<item key="DIALOG_HEIGHT" value="659"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item key="create_constructor" value="false"/>
+		<item key="create_unimplemented" value="true"/>
+	</section>
+	<section name="completion_proposal_size">
+		<item key="contextSelector.size.x" value="331"/>
+		<item key="contextSelector.size.y" value="221"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="false"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="renameSubpackages" value="false"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;"/>
+	</section>
+	<section name="DialogBounds_SuperInterfaceSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="113"/>
+		<item key="DIALOG_Y_ORIGIN" value="-37"/>
+		<item key="DIALOG_WIDTH" value="373"/>
+		<item key="DIALOG_HEIGHT" value="549"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="SelfEncapsulateFieldWizard">
+		<item key="GenerateJavadoc" value="false"/>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="false"/>
+		<item key="LimitElements" value="false"/>
+		<item key="IgnoreDefault" value="true"/>
+		<item key="StringStyle" value="0"/>
+		<item key="LimitValue" value="10"/>
+		<item key="SkipNull" value="false"/>
+		<item key="ToStringTemplateSelected" value="0"/>
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item key="SortOrdering" value="false"/>
+		<item key="RemoveFinal" value="false"/>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="214"/>
+		<item key="DIALOG_Y_ORIGIN" value="-20"/>
+		<item key="DIALOG_WIDTH" value="564"/>
+		<item key="DIALOG_HEIGHT" value="696"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="SearchInDialog">
+		<item key="SearchInSources" value="true"/>
+		<item key="SearchInProjects" value="true"/>
+		<item key="SearchInJRE" value="true"/>
+		<item key="SearchInAppLibs" value="true"/>
+	</section>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="DialogBounds_GenerateToStringDialog">
+		<item key="DIALOG_X_ORIGIN" value="229"/>
+		<item key="DIALOG_Y_ORIGIN" value="-50"/>
+		<item key="DIALOG_WIDTH" value="516"/>
+		<item key="DIALOG_HEIGHT" value="691"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="FatJarPackageWizard">
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\Users\User\eclipse-workspace"/>
+		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="MySign (1) - BradSign"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="C:\Users\User\Desktop\白板.jar"/>
+		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\User\Desktop\白板.jar"/>
+		</list>
+		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value=".xml"/>
+		</list>
+		<section name="FatJarPackageWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="225"/>
+			<item key="DIALOG_Y_ORIGIN" value="37"/>
+			<item key="DIALOG_WIDTH" value="525"/>
+			<item key="DIALOG_HEIGHT" value="550"/>
+			<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+		</section>
+	</section>
+	<section name="NewEnumCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="204"/>
+		<item key="DIALOG_Y_ORIGIN" value="36"/>
+		<item key="DIALOG_WIDTH" value="567"/>
+		<item key="DIALOG_HEIGHT" value="517"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="0"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.wizards.buildpaths.NewVariableEntryDialog">
+		<item key="DIALOG_X_ORIGIN" value="184"/>
+		<item key="DIALOG_Y_ORIGIN" value="13"/>
+		<item key="DIALOG_WIDTH" value="577"/>
+		<item key="DIALOG_HEIGHT" value="398"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="NewInterfaceCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="214"/>
+		<item key="DIALOG_Y_ORIGIN" value="165"/>
+		<item key="DIALOG_WIDTH" value="607"/>
+		<item key="DIALOG_HEIGHT" value="543"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item key="showtypes" value="true"/>
+	</section>
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item key="DIALOG_X_ORIGIN" value="195"/>
+		<item key="DIALOG_Y_ORIGIN" value="377"/>
+		<item key="DIALOG_WIDTH" value="561"/>
+		<item key="DIALOG_HEIGHT" value="513"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+</section>

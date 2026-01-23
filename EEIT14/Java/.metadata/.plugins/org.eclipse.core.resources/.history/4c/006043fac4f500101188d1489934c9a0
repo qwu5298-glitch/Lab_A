@@ -1,0 +1,6 @@
+package tw.brad.apis;
+
+public class StoreService {
+	void excute(StoreService service) throws Exception;
+	String label();
+}

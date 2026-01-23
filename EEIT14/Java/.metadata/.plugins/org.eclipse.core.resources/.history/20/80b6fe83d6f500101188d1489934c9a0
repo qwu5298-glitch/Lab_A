@@ -1,0 +1,21 @@
+package tw.brad.apis;
+
+public class PurchaseTask implements Task{
+	private static final int PRODUCT_ID =1;
+	final int qty;
+	
+	public PurchaseTask(int qty) {
+		this.qty = qty;
+	}
+	
+	@Override
+	public void execute(StoreService service) throws Exception {
+		service.purchase(PRODUCT_ID, qty);
+	}
+
+	@Override
+	public String label() {
+		return "OUT :" + qty;
+	}
+
+}

@@ -1,0 +1,33 @@
+package tw.brad.servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.imageio.ImageIO;
+
+@WebServlet("/Brad14")
+public class Brad14 extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
+		String source ="";
+		
+		response.setContentType("image/jpeg");
+//		ImageIO.write(img, "JPEG", response.getOutputStream());
+		
+		
+		response.flushBuffer();
+	}
+
+}

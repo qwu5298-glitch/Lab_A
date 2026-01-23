@@ -1,0 +1,17 @@
+package tw.brad.tutor;
+
+import java.lang.reflect.Member;
+
+import tw.brad.apis.MemberDAOIpml;
+
+public class Bard18 {
+
+	public static void main(String[] args) {
+		Member dao = new MemberDAOIpml();
+		
+		Member member = new Member();
+		
+
+	}
+
+}

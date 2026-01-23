@@ -14,7 +14,7 @@ public class Brad57 {
 			BufferedOutputStream bout = new BufferedOutputStream(socket.getOutputStream());
 			
 			BufferedInputStream bin = 
-				new BufferedInputStream(new FileInputStream("dir1/coffee.jpg"));
+				new BufferedInputStream(new FileInputStream("dir1/brad.jpg"));
 			byte[] buf = new byte[4*1024*1024];
 			int len;
 			while ( (len = bin.read(buf)) != -1) {
@@ -25,7 +25,7 @@ public class Brad57 {
 			bout.flush();
 			bout.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 }

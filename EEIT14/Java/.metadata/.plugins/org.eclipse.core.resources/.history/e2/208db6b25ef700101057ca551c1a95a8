@@ -1,0 +1,8 @@
+package pra.apis;
+
+public class doors {
+	private int doornumber;
+	public doors(int doornumber){
+		this.doornumber = doornumber;
+	}
+}

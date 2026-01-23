@@ -1,0 +1,10 @@
+package tw.brad.apis;
+
+public class JdbcTool {
+	private static final String URL = "jdbc:mysql://localhost:3306/iii";
+	private static final String USER = "root";
+	private static final String PASSWD = "root";
+	
+	public <T>List<T> query(String sql, RowMapper<T> rowMapper, Object... args) {}
+		return null;
+}

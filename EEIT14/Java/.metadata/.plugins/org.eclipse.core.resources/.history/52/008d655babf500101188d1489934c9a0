@@ -1,0 +1,41 @@
+package tw.brad.apis;
+
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class GiftTable extends JTable{
+	private GiftModel giftModel;
+	private GiftDAO dao;
+	
+	public GiftTable() {
+		
+		try {
+			dao = new GiftDAO();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		giftModel = new GiftModel();
+		setModel(giftModel);
+	}
+
+	
+	private class GiftModel extends DefaultTableModel {
+
+		@Override
+		public int getRowCount() {
+			return dao.getRows();
+		}
+
+		@Override
+		public int getColumnCount() {
+			return dao.getCols();
+		}
+
+		@Override
+		public Object getValueAt(int row, int column) {
+			return dao.getData(row, column);
+		}
+		
+	}
+}

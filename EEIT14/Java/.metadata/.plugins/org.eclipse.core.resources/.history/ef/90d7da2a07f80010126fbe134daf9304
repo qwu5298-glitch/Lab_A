@@ -1,0 +1,43 @@
+package tw.brad.viewer;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+
+@WebServlet("/GiftViewer")
+public class GiftViewer extends HttpServlet {
+	private static final String TEMPLATE_PATH = "/WEB-INF/views/view1.html";
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String template = readTemplate(TEMPLATE_PATH);
+		System.out.println(template);
+		
+		String html = template
+				.replace("{{TITLE}}", "Brad Big company")
+				.replace("{{PREV}}", "1")
+				.replace("{{PAGE}}", "1")
+				.replace("{{NEXT}}", "1");
+		
+		response.setContentType("text/html; charset=UTF-8");
+		response.getWriter().write(html);
+		response.flushBuffer();
+	}
+	private String readTemplate(String path){
+		System.out.println(getServletContext().getContextPath());
+		try(InputStream in = getServletContext().getResourceAsStream(path);
+				BufferedInputStream bin = new BufferedInputStream(in)){
+			if(bin != null)
+		}
+		
+		return "";
+	}
+	
+
+}

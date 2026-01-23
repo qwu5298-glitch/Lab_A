@@ -1,0 +1,98 @@
+package tw.brad.apis;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.concurrent.Callable;
+
+public class StoreService {
+	private final String url, user, passwd;
+	
+	public StoreService(String url, String user, String passwd) {
+		this.url = url; this.user = user; this.passwd = passwd;
+	}
+	
+	public void restock(int productId, int qty)  throws Exception{
+		withRetry(() -> {
+			try(Connection conn = DriverManager.getConnection(url, user, passwd)){
+				conn.setAutoCommit(false);
+				conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+				
+				int stock = selectStockForUpdate(conn, productId);
+				updateStock(conn, productId, stock + qty);
+				// TODO log
+				
+				conn.commit();
+			}
+			return null;
+		});
+	}
+	public void purchase(int productId, int qty) throws Exception{
+		withRetry(() -> {
+			try(Connection conn = DriverManager.getConnection(url, user, passwd)){
+				conn.setAutoCommit(false);
+				conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+				
+				int stock = selectStockForUpdate(conn, productId);
+				if (stock < qty) {
+					conn.rollback();
+					throw new NotEnoughException("況存量不足");
+				}
+				updateStock(conn, productId, stock - qty);
+				// TODO log
+				conn.commit();
+			}
+			return null;
+		});		
+	}
+	
+	private int selectStockForUpdate(Connection conn, int productId) throws SQLException{
+		String sql = """
+				SELECT stock
+				FROM mytest
+				WHERE id = ?
+				FOR UPDATE
+				""";
+		try(PreparedStatement pstmt = conn.prepareStatement(sql)){
+			pstmt.setInt(1, productId);
+			try(ResultSet rs = pstmt.executeQuery()){
+				if (!rs.next()) throw new SQLException();
+				return rs.getInt(1);
+			}
+		}
+	}
+
+	private void updateStock(Connection conn, int productId, int newstock) throws Exception{
+		String sql = """
+				UPDATE mytest
+				SET stock = ?
+				WHERE id = ?
+				""";
+		try(PreparedStatement pstmt = conn.prepareStatement(sql)){
+			pstmt.setInt(1, newstock);
+			pstmt.setInt(2, productId);
+			pstmt.executeUpdate();
+		}		
+	}
+	
+	
+	// retry 框架
+	private <T> T withRetry(Callable<T> action) throws Exception {
+		int max = 3;
+		int backoff = 10;
+		for (int i = 0; i<max; i++) {
+			try {
+				return action.call();
+			}catch(Exception e) {
+				// Deadlock, Lock
+				if (i==max) throw e;
+				Thread.sleep(backoff);
+				backoff *= 2;
+			}
+		}
+		
+		throw new IllegalStateException("ERROR(1)");
+	} 
+}

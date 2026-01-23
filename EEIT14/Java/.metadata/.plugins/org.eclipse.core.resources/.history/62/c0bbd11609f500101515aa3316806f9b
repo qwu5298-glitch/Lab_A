@@ -1,0 +1,43 @@
+SELECT `Title`,`FirstName`,`LastName` 
+FROM `employees` 
+ORDER BY Title ASC, FirstName DESC
+-------------------------------------------
+SELECT `Title`,`FirstName`,`LastName` 
+FROM `employees` 
+WHERE Title <> 'Sales Representative'
+ORDER BY Title ASC, FirstName DESC
+------------------------------------------
+SELECT `FirstName`,`LastName`,`Region` 
+FROM `employees` 
+WHERE `Region` IS NOT NULL
+--------------------------------------------
+SELECT `ProductID`,`ProductName`,`UnitsInStock`,`UnitsOnOrder`,`ReorderLevel` 
+FROM `products` 
+WHERE `UnitsInStock`-`UnitsOnOrder` <= `ReorderLevel`
+--------------------------------------------
+SELECT `OrderID`,`CustomerID`,`EmployeeID`,`RequiredDate`,`ShippedDate`
+FROM `orders` 
+WHERE `ShippedDate` > `RequiredDate`
+ORDER BY `CustomerID`
+---------------------------------------------
+SELECT `City`, COUNT(`EmployeeID`) count
+FROM `employees` 
+GROUP BY `City`
+HAVING count >= 2
+----------------------------------------------
+SELECT ...
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+LIMIT
+-----------------------------------------------
+
+
+
+
+
+
+
+

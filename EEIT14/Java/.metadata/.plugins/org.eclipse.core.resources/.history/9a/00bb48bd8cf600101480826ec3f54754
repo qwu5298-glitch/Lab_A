@@ -1,0 +1,39 @@
+package tw.brad.servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.charset.Charset;
+
+@WebServlet("/Brad08")
+public class Brad08 extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
+		//--------------------------
+		response.setContentType("text/html; charset=UTF=8");
+		PrintWriter out = response.getWriter();
+		
+		BufferedInputStream bin = new BufferedInputStream(
+			new FileInputStream("C:\\Users\\User\\eclipse-workspace\\BradWeb\\src\\main\\webapp\\brad06.html"));
+		byte[] data = bin.readAllBytes();
+		String html = new String(data);
+		
+		out.print(html);
+		
+		response.flushBuffer();
+		
+	}
+
+}

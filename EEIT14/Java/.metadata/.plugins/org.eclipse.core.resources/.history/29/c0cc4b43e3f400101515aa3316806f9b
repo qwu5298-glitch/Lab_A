@@ -1,0 +1,17 @@
+package tw.brad.tutor;
+
+public class Brad16 {
+
+	public static void main(String[] args) {
+		private static final String URL = "jdbc:mysql://localhost:3306/iii";
+		private static final String USER = "root";
+		private static final String PASSWD = "root";
+		private static final String SQL_UPDATE = """
+				UPDATE member
+				SET icon = ?
+				WHERE id = ?
+				""";
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package tw.brad.apis;
+
+public class RestockTask implements Task{
+	private static final int PRODUCT_ID;
+	final int qty;
+	
+	public RestockTask(int qty) {
+		this.qty = qty;
+	}
+	
+	@Override
+	public void execute(StoreService service) {
+		service.pu
+		
+	}
+
+	@Override
+	public String label() {
+		return "OUT:" + qty;
+	}
+
+}

@@ -1,0 +1,8 @@
+package tw.brad.apis;
+
+public class Gift {
+	private long id;
+	private String name, feature, add, tel;
+	private double lat,lng;
+	
+}

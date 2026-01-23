@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="Brad08">
+			<input name="x" />
+			<select>
+				<option>+</option>
+				<option>-</option>
+				<option>x</option>
+				<option>/</option>
+			</select>
+			<input name="y" />
+			<input type="submit" value="=" />
+		</form>	
+	</body>
+</html>

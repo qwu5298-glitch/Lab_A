@@ -1,0 +1,30 @@
+window.onload = function(){
+	let start= document.getElementById("start");
+	let chatDiv= document.getElementById("chatDiv");
+	let mesg= document.getElementById("mesg");
+	let send= document.getElementById("send");
+	let log= document.getElementById("log");
+	
+	let webSocket;
+	
+	start.style.display = "block";
+	chatDiv.style.display = "none";
+	
+	start.addEventListener("click",function(){
+		connect("ws://10.0.101.93:8080/BradWab/myserver");
+	})
+	
+	function connect (url){
+		webSocket = new webSocket(url);
+		webSocket.onopen = function(){
+			console.log("onOpen");
+		}
+		webSocket.onmessage = function(){}
+		webSocket.onclose = function(){
+			console.log("onClose");
+		}
+		webSocket.onerror = function(){
+			console.log("onError:" + event);
+		}
+	}
+}

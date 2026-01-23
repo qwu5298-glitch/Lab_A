@@ -22,7 +22,7 @@ public class Brad58 {
 			
 			InetAddress ip = socket.getInetAddress();
 			//----------------------------------
-			String filename = String.format("upload/b%s.jpg", ip.getHostAddress().replace(':', '.'));
+			String filename = String.format("dir2/b%s.jpg", ip.getHostAddress().replace(':', '.'));
 			BufferedOutputStream bout = 
 				new BufferedOutputStream(
 					new FileOutputStream(filename));

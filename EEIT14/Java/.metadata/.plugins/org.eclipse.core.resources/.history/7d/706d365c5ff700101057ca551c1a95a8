@@ -1,0 +1,11 @@
+package pra.apis;
+
+public class doors {
+	private String doornumber;
+	public doors(String doornumber){
+		this.doornumber = doornumber;
+	}
+}
+	public int getobj() {
+		return obj;
+	}

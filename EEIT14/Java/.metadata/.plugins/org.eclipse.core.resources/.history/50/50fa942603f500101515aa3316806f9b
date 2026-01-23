@@ -1,0 +1,9 @@
+SELECT `Title`,`FirstName`,`LastName` 
+FROM `employees` 
+ORDER BY Title ASC, FirstName DESC
+-------------------------------------------
+SELECT `Title`,`FirstName`,`LastName` 
+FROM `employees` 
+WHERE Title <> 'Sales Representative'
+ORDER BY Title ASC, FirstName DESC
+------------------------------------------

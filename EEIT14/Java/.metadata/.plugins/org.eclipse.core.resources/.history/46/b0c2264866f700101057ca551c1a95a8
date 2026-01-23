@@ -1,0 +1,41 @@
+package pra.tutor;
+
+import java.awt.BorderLayout;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import pra.apis.Doors;
+import tw.brad.apis.MyClock;
+import tw.brad.apis.MyDrawer;
+
+public class ThreeDoors extends JFrame{
+	private JButton doorstotal,totalTrials;
+	private MyClock myClock;
+	
+	Doors doors = new doors();
+	setLayout(new BorderLayout());
+	add(, BorderLayout.CENTER);
+	
+	public ThreeDoors() {
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+        int stayWins = 0;          
+        int switchWins = 0;
+    
+        
+        Random random = new Random();
+        
+        for (int i = 0; i < totalTrials; i++) {
+            int carDoor = random.nextInt(doorstotal);
+
+        
+        }
+	}
+
+}

@@ -1,0 +1,18 @@
+package pra.apis;
+
+public class doors {
+	private String doornumber;
+	private String[] giftlist = new String[3];
+	private 
+	
+	public doors(String doornumber){
+		this.doornumber = doornumber;
+	public String getgift(String doornumber) {
+		return gift[x];
+	}
+	
+	
+	
+	}
+}
+	

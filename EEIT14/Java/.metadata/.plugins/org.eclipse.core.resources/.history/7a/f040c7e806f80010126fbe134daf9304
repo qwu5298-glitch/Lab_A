@@ -1,0 +1,26 @@
+package tw.brad.viewer;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+
+@WebServlet("/GiftViewer")
+public class GiftViewer extends HttpServlet {
+	private static final String TEMPLATE_PATH = "/WEB-INF/views/view1.html";
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String template = readTemplate(TEMPLATE_PATH);
+	}
+	private String readTemplate(String path){
+		System.out.println(getServletContext().getContextPath());
+		getServletContext().getResourceAsStream(path);
+		
+		return "";
+	}
+	
+
+}

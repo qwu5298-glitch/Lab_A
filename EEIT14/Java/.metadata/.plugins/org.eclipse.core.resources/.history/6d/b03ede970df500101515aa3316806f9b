@@ -1,0 +1,20 @@
+package tw.brad.tutor;
+
+public class Brad20 {
+	private static final String URL = "jdbc:mysql://localhost:3306/brad";
+	private static final String USER = "root";
+	private static final String PASSWD = "root";
+	private static final String SQL_QUERY = """
+			SELECT o.EmployeeID id, e.LastName name, SUM(od.UnitPrice*od.Quantity) sum
+			FROM `orders` o
+				JOIN employees e ON o.EmployeeID = e.EmployeeID
+				JOIN orderdetails od ON o.OrderID = od.OrderID
+			GROUP BY o.EmployeeID
+			ORDER BY sum DESC
+			""";
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

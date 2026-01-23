@@ -1,0 +1,17 @@
+package tw.brad.apis;
+
+public class StoreService {
+	private final String url, user, passwd;
+	
+	public StoreService(String url, String user, String passwd) {
+		this.url = url; this.user = user; this.passwd = passwd;
+	}
+	
+	
+	public void restock(int productId, int qty) {
+		
+	}
+	public void purchase(int productId, int qty) {
+			
+	}
+}

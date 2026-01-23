@@ -1,0 +1,64 @@
+package tw.brad.apis;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.concurrent.Callable;
+
+public class StoreService {
+	private final String url, user, passwd;
+	
+	public StoreService(String url, String user, String passwd) {
+		this.url = url; this.user = user; this.passwd = passwd;
+	}
+	
+	
+	public void restock(int productId, int qty) throws Exception{
+		withRetry(() -> {
+			try(Connection conn = DriverManager.getConnection(url, user, passwd)){
+				conn.setAutoCommit(false);
+				conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+				
+				
+				conn.commit();
+			}
+		});
+	}
+	public void purchase(int productId, int qty) {
+		withRetry(() -> {
+			try(Connection conn = DriverManager.getConnection(url, user, passwd)){
+				conn.setAutoCommit(false);
+				conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+				
+				
+				conn.commit();
+			}
+		});
+	}
+	
+	
+	
+	
+    // retry 框架	
+	private <T> T withRetry(Callable<T> action) throws Exception{
+		int max = 3;
+		int backoff = 10;
+		for(int i = 0; i<max; i++) {
+			try {
+				return action.call();
+			} catch (Exception e) {
+				// Deadlock, Lock
+				if(i==max) throw e;
+				Thread.sleep(backoff);
+				backoff *=2;
+			}
+			
+		}
+		
+		throw new IllegalStateException("ERROR(1)");
+	}
+	
+	
+	
+}
+
+

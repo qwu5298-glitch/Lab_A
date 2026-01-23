@@ -1,0 +1,12 @@
+package tw.brad.apis;
+
+public class GiftDAO {
+	private static final String URL = "jdbc:mysql://localhost:3306/iii";
+	private static final String USER = "root";
+	private static final String PASSWD = "root";
+	private static final String SQL_FIND_ALL = """
+			SELECT id, name, feature, addr, tel
+			FROM gift
+			order By id
+			""";
+}

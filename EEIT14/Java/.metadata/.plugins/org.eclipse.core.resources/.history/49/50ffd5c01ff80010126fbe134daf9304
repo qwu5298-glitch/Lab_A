@@ -1,0 +1,29 @@
+package websocket;
+
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.server.ServerEndpoint;
+
+@ServerEndpoint("/myserver")
+public class MyServer {
+
+	public MyServer() {}
+	
+	@OnOpen
+	public void onOpen() {
+		
+	}
+	
+	@OnMessage
+	public void onMessage() {}
+	
+	@OnClose
+	public void onClose() {}
+	
+	@OnError
+	public void onError() {
+		
+	}
+}

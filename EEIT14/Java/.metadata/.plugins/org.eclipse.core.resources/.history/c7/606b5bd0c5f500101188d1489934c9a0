@@ -1,0 +1,6 @@
+package tw.brad.apis;
+
+public class PurchaseTask {
+	private static final int PRODUCT_ID;
+	final int qty;
+}

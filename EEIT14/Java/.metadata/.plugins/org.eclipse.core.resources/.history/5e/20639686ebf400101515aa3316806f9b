@@ -1,0 +1,5 @@
+package tw.brad.tutor;
+
+public class MemberDAOImpl {
+
+}
