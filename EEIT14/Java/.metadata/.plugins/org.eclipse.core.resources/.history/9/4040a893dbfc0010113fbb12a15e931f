@@ -1,0 +1,39 @@
+package pra.apis;
+
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JPanel;
+
+public class Doors extends JPanel {
+    private boolean haveCar = false; // 這扇門是否有車
+    private boolean isOpen = false;  // 門是否已經打開
+
+    public Doors(boolean hasCar) {
+        this.haveCar = hasCar;
+        setBackground(Color.YELLOW); // 沒開門前是黃色
+
+        // 加上滑鼠監聽器
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                isOpen = true;
+            }
+        });
+    }
+
+    public void showContent() {
+        this.isOpen = true;
+        if (haveCar) {
+            setBackground(Color.RED);   // 車子
+        } else {
+            setBackground(Color.GRAY);  // 山羊
+        }
+        repaint();
+    }
+
+    public boolean isHaveCar() { return haveCar; }
+    public boolean isOpen() { return isOpen; }
+
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		function op(){
+			let url = "brad33.jsp";
+			$.post(url,{
+				x: $('#x').val(),
+				y: $('#y').val(),
+			},function(data,status){
+				if (status == 'success'){
+					$('#result').html(data.result)
+				}
+			});					
+		}
+	</script>
+	
+	</head>
+	<body>
+		<input id="x" />
+		+
+		<input id="y" />
+		<input type="button" onclick="op()" value="=" />
+		<span id="result"></span>
+	</body>
+</html>

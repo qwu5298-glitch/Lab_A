@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		function op(){
+			let url = "brad35.jsp";
+			$.ajax({
+				url : url,
+				type: "post", 		// 
+				contentType: "application/json; charset=UTF-8",
+				dataType: "json",
+				data: JSON.stringify({
+					op: $('#op').val(),
+					params:{
+						x: $('#x').val(),
+						y: $('#y').val(),
+					}
+				}),
+				success: function(data){
+					$('#result').html(data.result)
+				},
+				error: function(xhttp){
+					$('#result').html(xhttp.status + ":" + xhttp.responseText)
+				}
+			});
+		}
+	</script>
+	
+	</head>
+	<body>
+		<input id="x" />
+		<select id="op">
+			<option value="1">+</option>
+			<option value="2">-</option>
+			<option value="3">x</option>
+			<option value="4">/</option>
+		</select>
+		<input id="y" />
+		<input type="button" onclick="op()" value="=" />
+		<span id="result"></span>
+	</body>
+</html>

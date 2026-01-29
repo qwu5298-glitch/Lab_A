@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String x= request.getParameter("x");
+	String y= request.getParameter("y");
+	String op = request.getParameter("op");
+	String result = "";
+	int r=0, r1=0;
+	if (x != null){
+		switch(op){
+			case"1":
+				r = Integer.parseInt(x) +Integer.parseInt(y);
+			case"2":
+				r = Integer.parseInt(x) -Integer.parseInt(y);
+			case"3":
+				r = Integer.parseInt(x) *Integer.parseInt(y);
+			case"4":
+				r = Integer.parseInt(x) /Integer.parseInt(y);
+				r1 = Integer.parseInt(x) %Integer.parseInt(y);
+			break;	
+		}
+		
+		result += r;
+	}else{
+		x = y = "";
+	}
+%>    
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="brad27.jsp">
+			<input name="x" value="<%= x %>" />
+			<select name="op">
+				<option value="1">+</option>
+				<option value="2">-</option>
+				<option value="3">x</option>
+				<option value="4">/</option>
+			</select>
+			<input name="y" value="<%= x %>" />
+			<input type="submit" value="=" />
+			<span><%= result %></span>
+		</form>				
+	</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;tw.brad.apis.Bike.java&apos;&#x0D;&#x0A;- Original project: &apos;JDBC&apos;&#x0D;&#x0A;- Destination element: &apos;tw.brad.apis.Bike.java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     tw.brad.apis.GiftDAO.java&#x0D;&#x0A;     tw.brad.apis.MemberDAO.java" description="Copy compilation units" destination="=BradWeb/src\/main\/java&lt;tw.brad.apis{Bike.java" element1="/src&lt;tw.brad.apis{GiftDAO.java" element2="/src&lt;tw.brad.apis{MemberDAO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1769391777225" units="2" version="1.0"/>
+</session>

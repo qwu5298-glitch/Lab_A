@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function test1(){
+				let url = "Brad32";
+				$.get(url,function(data,status){
+					if (status == 'success'){
+						console.log(data);
+						console.log(data.x);
+						console.log(data.y);
+						console.log(data.names[2]);
+					}
+				});				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="test1()" value="Test1" /><br />
+	
+	</body>
+</html>

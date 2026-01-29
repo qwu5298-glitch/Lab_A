@@ -1,0 +1,1 @@
+<%@ tag pageEncoding="UTF-8" %>資策會, 中文測試

@@ -1,0 +1,58 @@
+package tw.brad.servlet;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import org.json.JSONObject;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/Brad35")
+public class Brad35 extends HttpServlet {
+	@Override
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
+	    byte[] json = new BufferedInputStream(request.getInputStream()).readAllBytes();
+	    String data = new String(json, "UTF-8");
+	    //System.out.println(json);
+		    
+	    JSONObject root = new JSONObject(data);
+	    JSONObject params = root.getJSONObject("params");    
+	    
+	    String op = root.getString("op");
+	    String x = params.getString("x");
+	    String y = params.getString("y");
+	    
+		//-----------------------------    
+	    int result = 0, mod = 0;
+	    switch(op){
+	    	case "1":
+	    		result = Integer.parseInt(x) + Integer.parseInt(y);
+	    		break;
+	    	case "2":
+	    		result = Integer.parseInt(x) - Integer.parseInt(y);
+	    		break;
+	    	case "3":
+	    		result = Integer.parseInt(x) * Integer.parseInt(y);
+	    		break;
+	    	case "4":
+	    		result = Integer.parseInt(x) / Integer.parseInt(y);
+	    		mod = Integer.parseInt(x) % Integer.parseInt(y);
+	    		break;
+	    }
+	    
+	    JSONObject obj = new JSONObject();
+		obj.put("result", result + (mod == 0?"":" ...... " + mod));
+		
+	    response.setContentType("application/json; charset=UTF-8");
+	    var out = response.getWriter();
+		out.print(obj);
+		response.flushBuffer();
+	}
+}

@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Runnable"/>
-    <fullyQualifiedTypeName name="tw.brad.apis.PurchaseTask"/>
-    <fullyQualifiedTypeName name="tw.brad.apis.RestockTask"/>
-    <fullyQualifiedTypeName name="tw.brad.tutor.Brad26.Producer"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicBoolean"/>
-    <fullyQualifiedTypeName name="tw.brad.apis.StoreService"/>
-    <fullyQualifiedTypeName name="java.io.Writer"/>
-    <fullyQualifiedTypeName name="tw.brad.tutor.Brad26.wirter"/>
-    <fullyQualifiedTypeName name="java.util.Enumeration"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.MultipartConfig"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.awt.Image"/>
@@ -56,8 +42,22 @@
     <fullyQualifiedTypeName name="jakarta.websocket.OnMessage"/>
     <fullyQualifiedTypeName name="jakarta.websocket.OnClose"/>
     <fullyQualifiedTypeName name="jakarta.websocket.OnError"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Throwable"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="jakarta.websocket.Session"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
+    <fullyQualifiedTypeName name="tw.brad.dao.MemberDAO"/>
+    <fullyQualifiedTypeName name="tw.brad.apis.Member"/>
+    <fullyQualifiedTypeName name="tw.brad.apis.Student"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.JsonArray"/>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="java.util.TreeSet"/>
+    <fullyQualifiedTypeName name="java.util.TreeMap"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.SortedMap"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
 </qualifiedTypeNameHistroy>

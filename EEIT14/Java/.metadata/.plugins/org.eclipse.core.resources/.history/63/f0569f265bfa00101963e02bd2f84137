@@ -1,0 +1,29 @@
+package tw.brad.servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/Brad21")
+public class Brad21 extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
+		String email = request.getParameter("email");
+		String passwd = request.getParameter("passwd");
+		if (email != null && passwd != null) {
+			
+		}else {
+			response.sendRedirect("brad21.html");
+//			response.sendError(405);
+//			response.sendError(405, "xxxxxx");
+		}
+		
+		
+	}
+
+}

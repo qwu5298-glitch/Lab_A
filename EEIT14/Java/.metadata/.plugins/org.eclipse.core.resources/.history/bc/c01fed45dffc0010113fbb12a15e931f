@@ -1,0 +1,30 @@
+package pra.tutor;
+
+import javax.swing.JFrame;
+
+import pra.apis.Doors;
+
+import java.awt.GridLayout;
+import java.util.Random;
+
+public class ThreeDoors {
+    public static void main(String[] args) {
+        // 1. 建立遊戲視窗
+        JFrame frame = new JFrame("蒙提霍爾遊戲");
+        frame.setSize(600, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new GridLayout(1, 3, 10, 10)); // 橫向排三扇門
+
+        // 2. 隨機決定哪一扇門有車 (0, 1, 2)
+        int carLocation = new Random().nextInt(3);
+
+        // 3. 迴圈建立三扇門
+        for (int i = 0; i < 3; i++) {
+            boolean hasCar = (i == carLocation); // 如果索引等於隨機數，這扇門就有車
+            Doors door = new Doors(hasCar);
+            frame.add(door);
+        }
+
+        frame.setVisible(true);
+    }
+}

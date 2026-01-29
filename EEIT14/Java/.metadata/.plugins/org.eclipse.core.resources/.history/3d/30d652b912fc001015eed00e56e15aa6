@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Northwind Big Company</h1>
+		<hr />
+		<div>
+			<label>Order ID</label>
+			<input id="orderId" />
+			<input type="button" onclick="search()" value="Search" />
+		</div>
+	</body>
+</html>

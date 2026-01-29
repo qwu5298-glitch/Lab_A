@@ -1,0 +1,5 @@
+<%@ attribute name="pname" required="true" type="java.lang.String" %>
+<%@ attribute name="price" required="false" type="java.lang.Number" %>
+<%
+	String pname = jspContext.getAttribute("pname");	
+%>

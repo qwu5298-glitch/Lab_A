@@ -1,55 +1,62 @@
 package pra.tutor;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.im.InputContext;
-import java.util.Random;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 import pra.apis.Doors;
-import tw.brad.apis.MyClock;
-import tw.brad.apis.MyDrawer;
-import tw.brad.tutor.MySign;
 
-public class ThreeDoors extends JFrame{
-	private Doors doors;
-	private JTextField doorstotal,totalTrials;
-	private MyClock myClock;
-	
-	
-	
-	
-	public ThreeDoors() {
-		super("Three doors");
-		doors = new Doors();
-	
-		setLayout(new BorderLayout());
-		add(doors,BorderLayout.CENTER);
-	
-		JPanel top = new JPanel(new FlowLayout());
-		doorstotal = new JTextField("3",10);
-		totalTrials = new JTextField("1",10);
-		top.add(new JLabel("門的數量:"));
-		top.add(doorstotal);
-		top.add(new JLabel("選擇次數:"));
-		top.add(totalTrials);
-		add(top, BorderLayout.NORTH);
-		
-		
-		setSize(500, 400);
-	    setDefaultCloseOperation(EXIT_ON_CLOSE);
-	    setVisible(true);
-		
-	}
-	
-	
-	public static void main(String[] args) {
-		new ThreeDoors();
-	}
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.*;
 
+public class ThreeDoors {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("蒙提霍爾遊戲 - 終極抉擇");
+        frame.setSize(600, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new GridLayout(1, 3, 10, 10));
+
+        java.util.List<Doors> doorList = new ArrayList<>();
+        int carLocation = new Random().nextInt(3);
+
+        // 1. 建立三扇門並存入清單
+        for (int i = 0; i < 3; i++) {
+            Doors door = new Doors(i == carLocation);
+            doorList.add(door);
+            frame.add(door);
+
+            // 2. 點擊邏輯
+            door.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    // 點擊後，主持人先開一扇山羊門
+                    for (Doors d : doorList) {
+                        if (!d.isHaveCar() && d != door) {
+                            d.checkDoor(); // 打開一扇山羊門
+                            break;
+                        }
+                    }
+
+                    // 3. 彈出對話框問：你要換嗎？
+                    int choice = JOptionPane.showConfirmDialog(frame, 
+                        "我開了一扇山羊門！你要「更換」另一扇關著的門嗎？", 
+                        "你要換嗎？", JOptionPane.YES_NO_OPTION);
+
+                    if (choice == JOptionPane.YES_OPTION) {
+                        // 換門：找最後一扇沒開的門
+                        for (Doors d : doorList) {
+                            if (!d.isOpen() && d != door) {
+                                d.checkDoor();
+                                break;
+                            }
+                        }
+                    } else {
+                        // 不換：開原本這扇
+                        door.checkDoor();
+                    }
+                }
+            });
+        }
+        frame.setVisible(true);
+    }
 }

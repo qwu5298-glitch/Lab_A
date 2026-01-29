@@ -1,0 +1,8 @@
+package tw.brad.apis;
+
+public class Member {
+	private Long id;
+	private String email, passwd, name;
+	private byte[] icon;
+	private byte[] bike;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+			const xhttp = new XMLHttpRequest();
+			
+			function test1() {
+				xhttp.open("GET", "brad29.jsp", true);
+				xhttp.send();				
+			}
+		 
+			function callback() {
+				console.log
+			}
+		</script>
+		
+	</head>
+	<body>
+	
+	</body>
+</html>

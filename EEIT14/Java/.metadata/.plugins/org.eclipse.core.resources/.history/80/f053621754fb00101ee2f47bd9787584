@@ -1,0 +1,10 @@
+package tw.brad.apis;
+
+public class Student {
+	private String name;
+	private Bike bike;
+	
+	public Student() {
+		
+	}
+}

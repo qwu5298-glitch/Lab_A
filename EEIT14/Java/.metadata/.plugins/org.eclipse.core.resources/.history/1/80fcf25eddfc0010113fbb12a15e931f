@@ -1,0 +1,59 @@
+package pra.tutor;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+import pra.apis.Doors;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ThreeDoors extends JFrame {
+ private List<Doors> allDoors = new ArrayList<>();
+
+ public void handleDoorClick(Doors selectedDoor) {
+     // 1. 玩家選定一扇門，主持人打開一扇「有山羊」的門
+     for (Doors door : allDoors) {
+         if (door != selectedDoor && !door.isHaveCar()) {
+             door.showContent(); // 打開一扇山羊門
+             break; // 只開一扇
+         }
+     }
+
+     // 2. 彈出對話框問玩家
+     int choice = JOptionPane.showConfirmDialog(this, 
+         "我已經為你開啟了一扇山羊門，請問你要「換」另一扇門嗎？", 
+         "蒙提霍爾抉擇", 
+         JOptionPane.YES_NO_OPTION);
+
+     // 3. 處理抉擇結果
+     if (choice == JOptionPane.YES_OPTION) {
+         // 玩家決定換門：找出最後一扇還關著的門並打開它
+         for (Doors door : allDoors) {
+             if (!door.isOpen() && door != selectedDoor) {
+                 door.showContent();
+                 checkWin(door);
+                 break;
+             }
+         }
+     } else {
+         // 玩家不換：打開原本選的那扇
+         selectedDoor.showContent();
+         checkWin(selectedDoor);
+     }
+ }
+
+ private void checkWin(Doors d) {
+     if (d.isHaveCar()) {
+         JOptionPane.showMessageDialog(this, "恭喜中獎！🚗");
+     } else {
+         JOptionPane.showMessageDialog(this, "可惜，是山羊...🐐");
+     }
+ }
+ // 必須包含這段，Eclipse 才能執行它
+ public static void main(String[] args) {
+     // 這裡呼叫你的視窗類別
+     new ThreeDoors(); 
+ }
+}
+

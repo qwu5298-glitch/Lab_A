@@ -1,0 +1,31 @@
+package pra.apis;
+
+import java.awt.Color;
+import javax.swing.JPanel;
+
+public class Doors extends JPanel {
+    private boolean havecar;
+    private boolean isOpen = false;
+
+    // 建構子：建立門的時候，直接告訴這扇門「你有沒有車」
+    public Doors(boolean hasCar) {
+        this.havecar = hasCar;
+        setBackground(Color.YELLOW);
+    }
+
+    public void checkDoor() {
+    	if (isOpen) return;
+    	isOpen = true;
+    	
+        if (this.havecar) {
+            System.out.println("恭喜！這扇門後面有車！");
+            setBackground(Color.RED); // 中獎變紅色
+        } else {
+            System.out.println("可惜，這只是頭山羊。");
+            setBackground(Color.GRAY); // 沒中變灰色
+        }
+        repaint();
+    }
+}
+
+	

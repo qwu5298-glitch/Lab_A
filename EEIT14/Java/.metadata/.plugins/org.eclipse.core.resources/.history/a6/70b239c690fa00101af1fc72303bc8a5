@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript"></script>
+		<script>
+			let url = "brad33.jsp";
+			$.post(){
+				x:$('#x').val,
+				y:$('#y').val;
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
