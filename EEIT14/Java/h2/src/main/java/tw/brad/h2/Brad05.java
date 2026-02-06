@@ -1,0 +1,55 @@
+package tw.brad.h2;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+import tw.brad.h2.entity.Employee;
+import tw.brad.h2.util.HibernateUtil;
+
+/*
+ * Criteria : 標準查詢
+ * 	CriteriaBuilder : EntityManager or Session 取得
+ * 	CriteriaQuery<Employee> : 查詢物件<Entity>
+ *  Root<Employee>:查詢實體
+ */
+public class Brad05 {
+	public static void main(String[] args) {
+		try(Session session = HibernateUtil.getSessionFactory().openSession()){
+			CriteriaBuilder cb = session.getCriteriaBuilder();
+			CriteriaQuery<Employee> cq = cb.createQuery(Employee.class);
+			Root<Employee> root = cq.from(Employee.class);
+			
+			cq.multiselect(root.get("employeeId"),
+					root.get("lastName"),
+					root.get("firstName").alias("fname"),
+					root.get("title")
+					);
+			
+			cq.orderBy(
+					cb.asc(root.get("title")),
+					cb.desc(root.get("lastName"))
+					);
+			
+			List<Employee> employees = session.createQuery(cq).getResultList();
+			System.out.println(employees.size());
+			System.out.println("---");
+			for (Employee e  : employees) {
+				System.out.printf("%d:%s:%s:%s\n",
+						e.getEmployeeId(),
+						e.getFirstName(),
+						e.getLastName(),
+						e.getTitle());
+			}			
+			
+			
+			
+					
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+}

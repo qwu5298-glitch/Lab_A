@@ -1,0 +1,5 @@
+package tw.brad.h1.entity;
+
+public class Order {
+
+}

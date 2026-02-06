@@ -1,0 +1,17 @@
+package tw.brad.h1.tutor;
+
+import java.lang.reflect.Member;
+
+import tw.brad.h1.dao.MemberDao;
+
+public class Brad09 {
+
+	public static void main(String[] args) {
+		MemberDao dao = new MemberDao();
+		
+		Member member = dao.findById(3);
+		if
+
+	}
+
+}

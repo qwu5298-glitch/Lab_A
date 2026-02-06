@@ -1,0 +1,7 @@
+package com.example.spring1.apis;
+
+public class Brad01 {
+	public Brad01() {
+		System.out.println("Brad01()");
+	}
+}

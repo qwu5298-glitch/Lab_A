@@ -135,7 +135,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
 				<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 				<Context docBase="C:\Users\User\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\User\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\BradWeb" path="/BradWeb" reloadable="true" source="org.eclipse.jst.jee.server:BradWeb">
-	<Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdel="10" maxTotal="20" minIdel="5" name="jdbc/mysql" password="root" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/iii" username="root"/>
+	<Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdel="10" maxTotal="20" minIdel="5" name="jdbc/mysql" password="root" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/brad" username="root"/>
 	<Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdel="10" maxTotal="20" minIdel="5" name="northwind" password="root" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/northwind" username="root"/>
 </Context>
 			</Host>

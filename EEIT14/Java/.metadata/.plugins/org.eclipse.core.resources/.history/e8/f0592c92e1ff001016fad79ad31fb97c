@@ -1,0 +1,23 @@
+package tw.brad.filter;
+
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpFilter;
+import java.io.IOException;
+import java.util.Set;
+
+@WebFilter("/AuthFilter")
+public class AuthFilter extends HttpFilter implements Filter {
+    private static final Set<String> WHITE_LIST = Set.of(
+    		"/login", "/public", "/css", "/js", "/imgs"
+    		);
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		chain.doFilter(request, response);
+	}
+
+}

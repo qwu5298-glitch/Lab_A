@@ -1,0 +1,8 @@
+package tw.brad.h2.entity;
+
+public class Employee {
+	private int employeeId;
+	private String lastName;
+	private String firstName;
+	private String title;
+}

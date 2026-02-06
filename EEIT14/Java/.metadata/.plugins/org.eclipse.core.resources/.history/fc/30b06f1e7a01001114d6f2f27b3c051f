@@ -1,0 +1,6 @@
+package tw.brad.h2.entity;
+
+public class OrderDetailPK {
+	private int orderId;
+	private int productId;
+}

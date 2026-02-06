@@ -1,0 +1,13 @@
+package tw.brad.h1.tutor;
+
+import org.hibernate.Session;
+
+import tw.brad.h1.utils.HibernateUtil;
+
+public class Brad02 {
+
+	public static void main(String[] args) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+	}
+
+}

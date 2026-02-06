@@ -1,0 +1,30 @@
+package tw.brad.h1.tutor;
+
+import java.util.List;
+import java.util.Scanner;
+
+import tw.brad.h1.dao.SCDao;
+import tw.brad.h1.entity.Course;
+import tw.brad.h1.entity.Student;
+
+public class Brad16 {
+
+	public static void main(String[] args) {
+		SCDao dao = new SCDao();
+		Student s1;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Student ID:");
+		long sid = scanner.nextLong();
+		
+		s1 = dao.getStudentById(sid);
+		System.out.printf("Welcome, %s", s1.getSname());
+		
+		List<Course> courses = dao.getAllCourse();
+		for(Course course:courses) {
+			System.out.println();
+		}
+		System.out.println();
+		System.out.println(S);
+	}
+
+}

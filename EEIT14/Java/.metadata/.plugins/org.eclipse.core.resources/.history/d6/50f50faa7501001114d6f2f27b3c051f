@@ -1,0 +1,68 @@
+package tw.brad.h2.entity;
+
+public class User {
+	private int id;
+	private String name;
+	private boolean gender;
+	private int age;
+	
+	//public User() {}
+	private User(UserBuilder builder) {
+		this.id = builder.id;
+		this.name = builder.name;
+		this.gender = builder.gender;
+		this.age = builder.age;
+	}
+	
+	public static UserBuilder builder(String name) {
+		return new UserBuilder(name);
+	}
+	
+	public static class UserBuilder {
+		private int id;
+		private final String name;	// final => require
+		private boolean gender;
+		private int age;	
+		
+		public UserBuilder(String name) {
+			this.name = name;
+		}
+		
+		public UserBuilder id(int id) {this.id=id; return this;}
+		public UserBuilder gender(boolean gender) {this.gender=gender; return this;}
+		public UserBuilder age(int age) {this.age=age; return this;}
+		
+		public User build() {
+			return new User(this);
+		}
+		
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public boolean isGender() {
+		return gender;
+	}
+	public void setGender(boolean gender) {
+		this.gender = gender;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+	
+}

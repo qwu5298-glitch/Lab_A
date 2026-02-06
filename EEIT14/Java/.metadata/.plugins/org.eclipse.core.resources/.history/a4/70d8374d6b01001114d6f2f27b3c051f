@@ -1,0 +1,18 @@
+package tw.brad.h2;
+
+import org.hibernate.Session;
+
+import jakarta.persistence.criteria.CriteriaBuilder;
+import tw.brad.h2.util.HibernateUtil;
+
+public class Brad05 {
+
+	public static void main(String[] args) {
+		try(Session session = HibernateUtil.getSessionFactory().openSession()){
+			 CriteriaBuilder cb = session.getCriteriaBuilder();
+		}catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+package tw.brad.h2.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "employees")
+public class Employee {
+	private int employeeId;
+	private String lastName;
+	private String firstName;
+	private String title;
+}

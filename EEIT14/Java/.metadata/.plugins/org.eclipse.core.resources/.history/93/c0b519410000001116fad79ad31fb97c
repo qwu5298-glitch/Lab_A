@@ -1,0 +1,30 @@
+package tw.brad.h1.tutor;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import tw.brad.h1.utils.HibernateUtil;
+
+public class Brad02 {
+
+	public static void main(String[] args) {
+		try(Session session = HibernateUtil.getSessionFactory().openSession()){
+			Transaction transaction = session.beginTransaction();
+			
+			String sql = """
+					INSERT INTO member
+						(email,passwd,name)
+					VALUES
+						(:email, :passwd, :name)
+					""";
+			
+			
+			session.createNativeQuery(sql);
+			
+			
+			transaction.commit();
+			
+		}
+	}
+
+}

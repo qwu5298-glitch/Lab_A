@@ -1,0 +1,10 @@
+package tw.brad.h1.service;
+
+import java.util.List;
+
+import tw.brad.h1.entity.OrderItem;
+
+public interface OrderService {
+	Long createOrder(String customer);
+	Long createOrderWithItems(String customer, List<OrderItem> items)
+}

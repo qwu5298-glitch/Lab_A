@@ -1,0 +1,8 @@
+package com.example.spring1.apis;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController   // =>Bean =>IoC =>Server Starting
+public class Brad03 {
+
+}

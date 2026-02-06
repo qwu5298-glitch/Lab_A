@@ -1,0 +1,10 @@
+package tw.brad.h1.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="member")
+public class Member {
+
+}

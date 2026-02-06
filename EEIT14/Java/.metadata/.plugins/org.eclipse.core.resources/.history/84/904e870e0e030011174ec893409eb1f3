@@ -1,0 +1,13 @@
+package com.example.spring1.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyConfig {
+	public MyConfig() {System.out.println("MyConfig()");}
+	
+	public void m1() {System.out.println("MyConfig():m1");}
+	
+	@Bean
+	public void m2() {System.out.println("MyConfig():m2");}
+}

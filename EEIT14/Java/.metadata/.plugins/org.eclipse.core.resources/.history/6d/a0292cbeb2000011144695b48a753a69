@@ -1,0 +1,12 @@
+package tw.brad.h1.dao;
+
+import java.util.Optional;
+
+import org.hibernate.Session;
+
+import tw.brad.h1.entity.Order;
+
+public interface OrderDao {
+	Long save(Session session, Order order);
+	Optional<Order> findById(Session session, Long id);
+}

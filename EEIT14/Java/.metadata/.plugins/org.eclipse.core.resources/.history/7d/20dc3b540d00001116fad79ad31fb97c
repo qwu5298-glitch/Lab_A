@@ -1,0 +1,13 @@
+package tw.brad.h1.tutor;
+
+import tw.brad.h1.entity.Member;
+
+public class Brad06 {
+
+	public static void main(String[] args) {
+		Member m1 = new Member();
+		m1.setPasswd(BC);
+
+	}
+
+}

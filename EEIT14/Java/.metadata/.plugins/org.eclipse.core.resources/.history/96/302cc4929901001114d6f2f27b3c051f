@@ -1,0 +1,12 @@
+package tw.brad.h2;
+
+import tools.jackson.databind.ObjectMapper;
+
+public class Brad09 {
+
+	public static void main(String[] args) {
+		// Java Object -> JSON String
+		ObjectMapper mapper = new ObjectMapper();
+	}
+
+}

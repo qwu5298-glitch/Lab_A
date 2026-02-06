@@ -5,8 +5,14 @@ public class Member {
 	private String email, passwd, name;
 	private byte[] icon;
 	private byte[] bike;
+	private String iconBase64;
 	
-	
+	public String getIconBase64() {
+		return iconBase64;
+	}
+	public void setIconBase64(String iconBase64) {
+		this.iconBase64 = iconBase64;
+	}
 	public Long getId() {
 		return id;
 	}

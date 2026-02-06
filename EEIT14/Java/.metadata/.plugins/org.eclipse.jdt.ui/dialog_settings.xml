@@ -31,8 +31,8 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewPackageCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="139"/>
-		<item key="DIALOG_Y_ORIGIN" value="394"/>
+		<item key="DIALOG_X_ORIGIN" value="-31"/>
+		<item key="DIALOG_Y_ORIGIN" value="529"/>
 		<item key="DIALOG_WIDTH" value="525"/>
 		<item key="DIALOG_HEIGHT" value="434"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
@@ -41,10 +41,10 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="178"/>
-		<item key="DIALOG_Y_ORIGIN" value="305"/>
+		<item key="DIALOG_X_ORIGIN" value="-12"/>
+		<item key="DIALOG_Y_ORIGIN" value="323"/>
 		<item key="DIALOG_WIDTH" value="599"/>
-		<item key="DIALOG_HEIGHT" value="659"/>
+		<item key="DIALOG_HEIGHT" value="653"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
@@ -103,8 +103,8 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="214"/>
-		<item key="DIALOG_Y_ORIGIN" value="-20"/>
+		<item key="DIALOG_X_ORIGIN" value="43"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="564"/>
 		<item key="DIALOG_HEIGHT" value="696"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
@@ -165,7 +165,7 @@
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
 	</section>
 	<section name="NewInterfaceCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="214"/>
+		<item key="DIALOG_X_ORIGIN" value="65"/>
 		<item key="DIALOG_Y_ORIGIN" value="165"/>
 		<item key="DIALOG_WIDTH" value="607"/>
 		<item key="DIALOG_HEIGHT" value="543"/>
@@ -175,7 +175,7 @@
 		<item key="showtypes" value="true"/>
 	</section>
 	<section name="DialogBounds_OverrideMethodDialog">
-		<item key="DIALOG_X_ORIGIN" value="195"/>
+		<item key="DIALOG_X_ORIGIN" value="144"/>
 		<item key="DIALOG_Y_ORIGIN" value="377"/>
 		<item key="DIALOG_WIDTH" value="561"/>
 		<item key="DIALOG_HEIGHT" value="513"/>
@@ -187,5 +187,11 @@
 		<item key="DIALOG_WIDTH" value="579"/>
 		<item key="DIALOG_HEIGHT" value="598"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.typehierarchy.QuickHierarchy">
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_WIDTH" value="450"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_HEIGHT" value="380"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 </section>

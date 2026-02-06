@@ -1,0 +1,21 @@
+package tw.brad.h2.entity;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class OrderDetailPK implements Serializable{
+	private int orderId;
+	private int productId;
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(orderId,productId);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+	
+	
+}

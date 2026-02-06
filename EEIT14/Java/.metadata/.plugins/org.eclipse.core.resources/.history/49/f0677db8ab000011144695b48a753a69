@@ -1,0 +1,9 @@
+package tw.brad.h1.entity;
+
+import java.time.LocalDateTime;
+
+public class Order {
+	private long id;
+	private String customer;
+	private LocalDateTime odate;
+}

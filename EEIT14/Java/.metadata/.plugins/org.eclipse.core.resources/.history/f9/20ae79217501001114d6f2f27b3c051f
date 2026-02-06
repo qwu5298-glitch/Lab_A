@@ -1,0 +1,12 @@
+package tw.brad.h2;
+
+import tw.brad.h2.entity.User;
+
+public class Brad07 {
+
+	public static void main(String[] args) {
+		User user = new User.U 
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package tw.brad.h1.tutor;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
+
+import tw.brad.h1.entity.Member;
+import tw.brad.h1.utils.HibernateUtil;
+
+public class Brad03 {
+	public static void main(String[] args) {
+		try(Session session = HibernateUtil.getSessionFactory().openSession()){
+			Transaction transaction = session.beginTransaction();
+			
+			String sql = """
+					SELECT * FROM member
+					 """;
+			NativeQuery<Member> query = 
+				session.createNativeQuery(sql, Member.class);
+			query.setParameter("email", "test1@brad.tw");
+			query.setParameter("passwd", "123456");
+			query.setParameter("name", "Test1");
+			
+			int n = query.executeUpdate();
+			
+			transaction.commit();
+			System.out.println(n);
+		}
+		
+	}
+}

@@ -1,0 +1,12 @@
+package tw.brad.h1.tutor;
+
+import tw.brad.h1.dao.MemberDao;
+
+public class Brad07 {
+
+	public static void main(String[] args) {
+		MemberDao dao =new MemberDao();
+
+	}
+
+}

@@ -3,7 +3,9 @@ package tw.brad.listener;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
-
+/*
+ * WebApp 等級 => Application
+ */
 @WebListener
 public class InitListener implements ServletContextListener{
 

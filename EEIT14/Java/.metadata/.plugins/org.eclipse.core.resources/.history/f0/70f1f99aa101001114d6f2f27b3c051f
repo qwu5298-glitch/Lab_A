@@ -1,0 +1,20 @@
+package tw.brad.h1.tutor;
+
+import java.util.Scanner;
+
+import tw.brad.h1.dao.SCDao;
+import tw.brad.h1.entity.Student;
+
+public class Brad16 {
+
+	public static void main(String[] args) {
+		SCDao = new SCDao();
+		Student s1;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Student ID:");
+		long sid = scanner.nextLong();
+		
+		s1 = dao
+	}
+
+}

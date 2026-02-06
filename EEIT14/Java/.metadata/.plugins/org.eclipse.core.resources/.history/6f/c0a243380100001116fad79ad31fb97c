@@ -1,0 +1,21 @@
+package tw.brad.h1.utils;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
+	private static SessionFactory sessionFactory;
+	
+	public static SessionFactory getSessionFactory() {
+		if(sessionFactory == null) {
+			Configuration config = new Configuration();
+			config.configure("hibernate.cfg.xml");
+			
+			config.addAnnotatedClass("");
+			
+			sessionFactory = config.buildSessionFactory();
+		}
+		
+		return sessionFactory;
+	}
+}
