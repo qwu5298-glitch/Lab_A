@@ -1,0 +1,9 @@
+package tw.brad.spring03.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tw.brad.spring03.entity.Hotel;
+
+public interface HotelRepository extends JpaRepository<Hotel, Long>{
+
+}

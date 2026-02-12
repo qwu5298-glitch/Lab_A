@@ -1,0 +1,5 @@
+package tw.brad.spring03.config;
+
+public class MyConfig {
+
+}

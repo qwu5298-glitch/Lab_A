@@ -1,0 +1,8 @@
+package tw.brad.spring03.dto;
+
+import lombok.Data;
+
+@Data
+public class MemberForm {
+	private String account;
+}

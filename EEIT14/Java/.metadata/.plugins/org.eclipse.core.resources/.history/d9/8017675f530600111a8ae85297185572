@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		</script>
+	</head>
+	<body>
+		<h1>Main Page</h1>
+		<hr />
+		<div id="welcome"></div>
+		<div id="Logout">Logout</div>
+		<hr />
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Tel</th>
+					<th>Address</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</body>
+</html>

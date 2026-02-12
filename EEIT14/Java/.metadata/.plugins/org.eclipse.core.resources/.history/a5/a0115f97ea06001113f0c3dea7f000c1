@@ -1,0 +1,24 @@
+package tw.brad.spring03.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import tw.brad.spring03.entity.Hotel;
+import tw.brad.spring03.repository.HotelRepository;
+
+@Service
+public class HotelService {
+	@Autowired
+	private HotelRepository hotelRepository;
+	
+	public Page<Hotel> getHotels(int page, int rpp) {
+		
+		Pageable pageable = PageRequest.of(page, rpp); // page => 0-base
+		Page<Hotel> hotelPage = hotelRepository.findAll(pageable);
+		
+		return hotelPage;
+	}
+}

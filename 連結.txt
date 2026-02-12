@@ -9,3 +9,6 @@ Teams 會議室連結: https://reurl.cc/vL947e
 Java:
 https://github.com/bradchao/eeit14
 brad@brad.tw
+talend api
+figma
+wireframe

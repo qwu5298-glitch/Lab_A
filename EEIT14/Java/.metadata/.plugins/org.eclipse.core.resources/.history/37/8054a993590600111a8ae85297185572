@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			// 撈 profile / hotel
+			$(document).ready(function(){
+				// 檢查 Session
+				$.ajax({
+					url : "/api/members/status",
+					method: 'POST',
+					dataType: 'json'
+				})
+				.done(function(data){
+					if (data.success){
+						
+					}else{
+						location.href = 'login.html';
+					}
+				})
+				.fail(function(){ location.href = 'login.html'});
+				
+				$('#logout').click(function(){});
+				
+				function loadHotel(){
+					
+				}
+				
+				loadHotel();
+				
+				$('#prev').click(() => {});
+				$('#next').click(() => {});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="companyName">Title</h1>
+		<h3 id="companyTel">Tel</h3>
+		<h2>Main Page</h2>
+		<hr />
+		<div id="welcome"></div>
+		<div id="logout">Logout</div>
+		<hr />
+		<button id="prev">Prev</button> | <span id="page">3</span> | <button id="next">Next</button>
+		<table id="hotelTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Tel</th>
+					<th>Address</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>	
+	</body>
+</html>

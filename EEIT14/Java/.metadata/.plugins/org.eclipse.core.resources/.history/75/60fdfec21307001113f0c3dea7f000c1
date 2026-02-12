@@ -1,0 +1,12 @@
+package tw.brad.spring04.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import tw.brad.spring04.service.MemberService;
+
+public class MemberController {
+	@Autowired
+	private MemberService service;
+	
+	
+}

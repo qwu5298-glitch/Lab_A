@@ -1,0 +1,16 @@
+package tw.brad.spring04.dto;
+
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import tw.brad.spring04.entity.Order;
+
+@Getter
+@AllArgsConstructor
+public class CustomerDto {
+	private String customerId;
+	private String companyName;
+	private List<OrderDto> orders;
+}

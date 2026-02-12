@@ -1,0 +1,9 @@
+package tw.brad.spring04.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tw.brad.spring04.entity.Member;
+
+public interface MemberRepo extends JpaRepository<Member, Long>{
+
+}

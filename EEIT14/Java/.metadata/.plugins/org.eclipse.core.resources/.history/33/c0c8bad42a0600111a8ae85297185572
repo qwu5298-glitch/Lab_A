@@ -1,0 +1,11 @@
+package tw.brad.spring03.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import tw.brad.spring03.entity.Member;
+
+public interface MemberRepository extends JpaRepository<Member, Long>{
+    @Query("SELECT m.id id FROM Member m WHERE m.email = :email")
+    boolean existsByEmail(String email);
+    
+}

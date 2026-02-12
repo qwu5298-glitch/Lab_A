@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Register Page</h1>
+		<hr />
+		<form id="regForm">
+			Email: <input id="email" required="required">
+				<span id="mesg" style="color: red;"></span><br />
+			Password: <input id="passwd" type="password" required="required"><br />
+			Name: <input id="name" required="required"><br />
+			<input type="submit" value="Register" />
+			<span id="result"></span>
+		</form>
+	</body>
+</html>

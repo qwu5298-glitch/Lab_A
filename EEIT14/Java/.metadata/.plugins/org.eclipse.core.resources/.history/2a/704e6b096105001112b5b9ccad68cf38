@@ -1,0 +1,55 @@
+package com.example.spring1.apis;
+
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.spring1.dto.Member;
+import com.example.spring1.utils.BCrypt;
+
+import jakarta.validation.Valid;
+
+@RestController
+@RequestMapping("/brad09")
+public class Brad09 {
+	
+	@Autowired
+	private NamedParameterJdbcTemplate jdbc;
+
+	@PostMapping("/test1")
+	public void test1(@RequestBody Member member) {
+		System.out.println(member.getEmail());
+		System.out.println(member.getPasswd());
+		System.out.println(member.getName());
+	}
+	
+	@PostMapping(value={"/members","/members/{isGetId}"})
+	public void addMember(@RequestBody @Valid Member member) {
+//		System.out.println(member.getEmail());
+//		System.out.println(member.getPasswd());
+//		System.out.println(member.getName());
+		
+		String sql = """
+				INSERT INTO member
+				(email,passwd,name)
+				VALUES
+				(:email, :passwd, :name)
+				""";
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("email", member.getEmail());
+		map.put("passwd", BCrypt.hashpw(member.getPasswd(), BCrypt.gensalt()));
+		map.put("name", member.getName());
+		
+		int n = jdbc.update(sql, map);
+		System.out.println(n);
+	}
+	
+	
+	
+	
+}

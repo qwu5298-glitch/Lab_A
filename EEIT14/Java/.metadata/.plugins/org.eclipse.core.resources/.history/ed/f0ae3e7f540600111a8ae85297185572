@@ -1,0 +1,71 @@
+package tw.brad.spring03.service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
+import org.springframework.stereotype.Service;
+
+import tw.brad.spring03.entity.Member;
+import tw.brad.spring03.repository.MemberRepository;
+import tw.brad.spring03.util.BCrypt;
+
+@Service
+public class MemberService {
+	@Autowired
+	private MemberRepository repository;
+	
+	public boolean checkEmail(String email) {
+		return repository.existsByEmail(email);
+	}
+	
+	public boolean register(Member member) {
+		if (repository.existsByEmail(member.getEmail())) {
+			return false;
+		}
+		
+		member.setPasswd(BCrypt.hashpw(member.getPasswd(), BCrypt.gensalt()));
+		Member m = repository.save(member);
+		System.out.println(m.getId());
+		return m != null;
+	}
+	
+	public boolean login(String email, String passwd) {
+		Member member = repository.findByEmail(email).orElse(null);
+		if (member != null && BCrypt.checkpw(passwd, member.getPasswd())) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean loginV2(String email, String passwd) {
+		Member member = new Member();
+		member.setEmail(email);
+		Example<Member> ex = Example.of(member);
+		if (repository.exists(ex)) {
+			List<Member> members = repository.findAll(ex);
+			Member dbMember = members.get(0);
+			if (BCrypt.checkpw(passwd, dbMember.getPasswd())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public Member loginV3(String email, String passwd) {
+		Member member = repository.findByEmail(email).orElse(null);
+		if (member != null && BCrypt.checkpw(passwd, member.getPasswd())) {
+			return member;
+		}
+		return null;
+	}
+	
+	
+	
+}

@@ -1,0 +1,14 @@
+package com.example.spring1.config;
+
+import javax.sql.DataSource;
+
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class JdbcConfig {
+
+	public DataSource iiiDataSource() {
+		return DataSourceBuilder.create().build();
+	}
+}

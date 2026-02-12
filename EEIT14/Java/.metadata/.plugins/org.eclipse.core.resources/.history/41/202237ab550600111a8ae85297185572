@@ -1,0 +1,85 @@
+package tw.brad.spring03.controller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.servlet.http.HttpSession;
+import tw.brad.spring03.entity.Member;
+import tw.brad.spring03.service.MemberService;
+
+@RestController
+@RequestMapping("/api/members")
+public class MemberController {
+
+	@Autowired
+	private MemberService service;
+	
+	/*
+	 * request: /exist?email=xxx
+	 * response: true/false
+	 */
+	@GetMapping("/exist")
+	public ResponseEntity<Boolean> checkEmail(@RequestParam String email) {
+		boolean isExist = service.checkEmail(email);
+		return ResponseEntity.ok(isExist);
+	}
+	
+	/*
+	 * request: Member => {}
+	 * response: {"success": true/false}
+	 */
+	@PostMapping("/register")
+	public ResponseEntity<Map<String,Boolean>> register(@RequestBody Member member) {
+		
+		boolean isSuccess = service.register(member);
+		
+		Map<String,Boolean> map = Map.of("success", isSuccess);
+		return ResponseEntity.ok(map);
+	}
+	
+	/*
+	 * request: {email:xxx,passwd:xxx}
+	 * response: {"success": true/false}
+	 */
+	@PostMapping("/login")
+	public ResponseEntity<Map<String,Boolean>> login(
+			@RequestBody Map<String,String> body){
+		String email = body.get("email");
+		String passwd = body.get("passwd");
+		
+//		boolean isSuccess = service.login(email, passwd);
+		boolean isSuccess = service.loginV2(email, passwd);
+		
+		Map<String,Boolean> map = Map.of("success", isSuccess);
+		return ResponseEntity.ok(map);		
+	}
+
+	@PostMapping("/loginV3")
+	public ResponseEntity<Map<String,Boolean>> login(
+			@RequestBody Map<String,String> body,
+			HttpSession session){
+		String email = body.get("email");
+		String passwd = body.get("passwd");
+
+		Member member = service.loginV3(email, passwd);
+		
+		Map<String,Boolean> map;
+		if (member != null) {
+			session.setAttribute("member", member);
+			map = Map.of("success", true);
+		}else {
+			session.invalidate();
+			map = Map.of("success", false);
+		}
+		
+		return ResponseEntity.ok(map);		
+	}	
+}

@@ -1,0 +1,7 @@
+package com.example.spring1.dto;
+
+public class OrderDetail {
+	private int id;
+	private String pname;
+	private double
+}

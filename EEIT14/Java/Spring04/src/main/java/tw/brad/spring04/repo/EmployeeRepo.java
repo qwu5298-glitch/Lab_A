@@ -1,0 +1,12 @@
+package tw.brad.spring04.repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tw.brad.spring04.entity.Employee;
+import tw.brad.spring04.projection.EmployeeProjection;
+
+public interface EmployeeRepo extends JpaRepository<Employee, Integer>{
+	List<EmployeeProjection> searchByTitleStartingWith(String start);
+}

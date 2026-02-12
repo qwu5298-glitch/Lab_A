@@ -1,0 +1,16 @@
+package tw.brad.spring03.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tw.brad.spring03.repository.HotelRepository;
+
+@Service
+public class HotelService {
+	@Autowired
+	private HotelRepository hotelRepository;
+	
+	public void getHotels(int page, int rpp) {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package tw.brad.tutor;
+
+public record Point(int x,int y) {
+
+}

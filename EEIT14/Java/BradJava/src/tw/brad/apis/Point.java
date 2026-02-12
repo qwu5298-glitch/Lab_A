@@ -3,7 +3,7 @@ package tw.brad.apis;
 import java.io.Serializable;
 
 public class Point implements Serializable{
-	private int x, y;
+	private final int x, y;
 
 	public Point(int x, int y) {
 		this.x = x; this.y = y;

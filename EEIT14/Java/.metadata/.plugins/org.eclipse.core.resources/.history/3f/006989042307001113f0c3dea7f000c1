@@ -1,0 +1,9 @@
+package tw.brad.spring04.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tw.brad.spring04.entity.Customer;
+
+public interface CustomerRepo extends JpaRepository<Customer, String>{
+
+}

@@ -1,0 +1,8 @@
+package tw.brad.spring04.dto;
+
+import java.math.BigDecimal;
+
+public class OrderDetailDto {
+	private BigDecimal prive;
+	private
+}

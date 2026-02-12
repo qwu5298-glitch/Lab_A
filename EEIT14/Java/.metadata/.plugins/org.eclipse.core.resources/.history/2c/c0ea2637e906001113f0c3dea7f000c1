@@ -1,0 +1,29 @@
+package tw.brad.spring03.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import tw.brad.spring03.entity.Hotel;
+import tw.brad.spring03.service.HotelService;
+
+@RestController
+@RequestMapping("/hotels")
+public class HotelController {
+
+	@Autowired
+	private HotelService hotelService;
+	
+	@GetMapping("")
+	public ResponseEntity<Page<Hotel>> queryHotelsByPage(
+			@RequestParam(defaultValue = "0") int page,
+			@RequestParam(defaultValue = "10") int rpp) {
+			
+		Page<Hotel> pageHotel = hotelService.getHotels(page, rpp);
+		return ResponseEntity.ok(pageHotel);
+	}
+}

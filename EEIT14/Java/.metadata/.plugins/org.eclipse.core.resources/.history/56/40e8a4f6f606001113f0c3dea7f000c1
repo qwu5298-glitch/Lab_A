@@ -1,0 +1,5 @@
+package tw.brad.spring03.dto;
+
+public class MemberForm {
+
+}

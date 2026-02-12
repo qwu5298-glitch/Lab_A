@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\User\eclipse-workspace\Spring02"/>
 			<item value="C:\Users\User\eclipse-workspace\hi1\src\main\java\tw\brad\h1\utils\HibernateUtil.java"/>
 			<item value="C:\Users\User\eclipse-workspace\BradWeb\src\main\webapp\views\web.xml"/>
 		</list>
@@ -46,14 +47,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="tw.brad"/>
-			<item value="com.mycompany.app"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="h2"/>
-			<item value="hi1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
