@@ -1,0 +1,16 @@
+package tw.brad.spring10.repo;
+
+import java.util.List;
+
+import org.springframework.data.jdbc.repository.query.Query;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tw.brad.spring10.entity.Employee;
+
+public interface EmployeeRepo extends JpaRepository<Employee, Integer>{
+
+	@Query(value = """
+			SELECT * FROM employees WHERE Salary < :high
+			""")
+	List<Employee> test1(Float high);
+}

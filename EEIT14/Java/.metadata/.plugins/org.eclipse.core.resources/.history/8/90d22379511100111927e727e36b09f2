@@ -1,0 +1,5 @@
+package tw.brad.spring08.websocket;
+
+public class WebSocketConfig {
+
+}

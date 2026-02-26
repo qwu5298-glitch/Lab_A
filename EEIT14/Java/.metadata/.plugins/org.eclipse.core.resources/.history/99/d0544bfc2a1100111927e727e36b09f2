@@ -1,0 +1,5 @@
+package tw.brad.spring06.annotation;
+
+public @interface BradAOP {
+
+}

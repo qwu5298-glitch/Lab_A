@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Register Page</h1>
+		<hr />
+		<form>
+			<div>
+				<label>帳號</label>
+				<input />
+			</div>
+			<div>
+				<label>密碼</label>
+				<input type="password"/>
+			</div>
+			<div>
+				<label></label>
+				<input>
+			</div>
+			<div>
+				<label></label>
+				<input>
+			</div>
+			<button type="submit">Register</button>
+		</form>
+	</body>
+</html>

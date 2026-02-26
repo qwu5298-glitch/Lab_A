@@ -1,0 +1,5 @@
+package tw.brad.spring06.dto;
+
+public class Register {
+
+}

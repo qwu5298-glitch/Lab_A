@@ -1,0 +1,5 @@
+package tw.brad.spring08.repo;
+
+public class MemberRepo {
+
+}

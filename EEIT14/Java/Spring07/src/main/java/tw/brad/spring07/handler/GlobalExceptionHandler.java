@@ -1,0 +1,20 @@
+package tw.brad.spring07.handler;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import tw.brad.spring07.exception.JwtAuthException;
+
+@RestControllerAdvice	// 全域攔截處理		
+public class GlobalExceptionHandler {
+
+	// 全域例外攔截處理
+	@ExceptionHandler(JwtAuthException.class)
+	public ResponseEntity<String> handleJwtExcetion(JwtAuthException e){
+		return ResponseEntity.status(HttpStatus.FORBIDDEN)
+				.body("權限被拒:" + e.getMessage());
+	}
+}

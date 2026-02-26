@@ -1,0 +1,14 @@
+package tw.brad.spring05.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tw.brad.spring05.entity.Member;
+import tw.brad.spring05.repo.MemberRepo;
+
+@Service
+public class MemberService {
+	@Autowired
+	private MemberRepo memberRepo;
+	public Member register 
+}

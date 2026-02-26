@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			table {border-collapse: collapse; width: 80%; margin: 2px auto;}
+			td {border: 1px solid #444; padding: 1px 2px; text-align: center;}
+			.odd-row{background-color: pink;}
+			.even-row{background-color: yellow;}
+		</style>
+	</head>
+	<body>
+		<h1>Page5</h1>
+		<table>
+			<tbody>
+				<tr th:each="area, status : ${areas}"
+					th:classappend="${ststus.odd?'odd-row':'even-row'}">
+					<td th:text="${status.index}">0</td>
+					<td th:text="${status.count}">1</td>
+					<td th:text="${area}">顯示區域</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

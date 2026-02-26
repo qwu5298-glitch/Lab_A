@@ -1,0 +1,28 @@
+package tw.brad.spring10.spec;
+
+import org.jspecify.annotations.Nullable;
+import org.springframework.data.jpa.domain.Specification;
+
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
+import tw.brad.spring10.entity.Employee;
+
+public class EmployeeSpec {
+	
+	public static Specification<Employee> salaryGreaterThan(Float low){
+		return new Specification<Employee>() {
+			
+			@Override
+			public @Nullable Predicate toPredicate(
+					Root<Employee> root, 
+					CriteriaQuery<?> query,
+					CriteriaBuilder builder) {
+				return builder.greaterThan(root.get("salary"), low);
+			}
+		};
+	}
+	
+	public 
+}

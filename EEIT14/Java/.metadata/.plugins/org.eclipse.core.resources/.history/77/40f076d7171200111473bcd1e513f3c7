@@ -1,0 +1,27 @@
+package tw.brad.spring09.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/")
+public class MemberController {
+	
+	@RequestMapping("/")
+	public String root() {
+		return "redirect/main";
+	}
+	
+	@RequestMapping("/login")
+	public String login(Model model) {
+		return "login";
+	}
+	
+	@GetMapping("/main")
+	public String main(Model model) {
+		model.addAttribute("title","會員主頁");
+		return "main";
+	}
+}

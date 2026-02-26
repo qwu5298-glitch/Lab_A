@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Home Page</h1>
+		<hr />
+		<a th:href="@{member/Logout}">Logout</a>
+		<hr />
+		<h2>Hello, <span th:text="${member.name}"></span></h2>
+		<div><img th:src="'data:image/*; base64, ' + ${member.icon}"></div>
+	</body>
+</html>

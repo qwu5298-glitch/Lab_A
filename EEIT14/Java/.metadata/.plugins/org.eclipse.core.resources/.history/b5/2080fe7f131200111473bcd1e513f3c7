@@ -1,0 +1,5 @@
+package tw.brad.spring09.entity;
+
+public class Member {
+
+}

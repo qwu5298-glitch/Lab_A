@@ -1,0 +1,8 @@
+package tw.brad.spring07.dto;
+
+import lombok.Data;
+
+@Data
+public class Login {
+	private String email, passwd;
+}

@@ -1,0 +1,5 @@
+package tw.brad.spring05.repo;
+
+public interface MemberRepo {
+
+}

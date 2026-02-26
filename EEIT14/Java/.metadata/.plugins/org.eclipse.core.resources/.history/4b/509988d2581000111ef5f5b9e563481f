@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Page1</h1>
+		<hr />
+		<h2 th:text="${companyName}">公司名稱</h2>
+		<div th:text="${userName}">Welcome, 使用者</div>
+	</body>
+</html>

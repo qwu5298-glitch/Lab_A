@@ -1,0 +1,5 @@
+package tw.brad.spring10.controller;
+
+public class EmployeeController {
+
+}

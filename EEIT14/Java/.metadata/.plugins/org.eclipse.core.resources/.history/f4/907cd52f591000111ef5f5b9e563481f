@@ -1,0 +1,5 @@
+package tw.brad.spring05.test;
+
+public class User {
+
+}

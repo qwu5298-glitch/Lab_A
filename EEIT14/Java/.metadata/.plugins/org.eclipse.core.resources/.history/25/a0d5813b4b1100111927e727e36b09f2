@@ -1,0 +1,5 @@
+package tw.brad.spring07.handler;
+
+public class GlobalExceptionHandler {
+
+}

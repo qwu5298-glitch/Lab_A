@@ -1,0 +1,5 @@
+package tw.brad.spring10.spec;
+
+public class EmployeeSpec {
+
+}

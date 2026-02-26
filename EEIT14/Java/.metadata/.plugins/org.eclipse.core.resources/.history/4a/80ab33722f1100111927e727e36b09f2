@@ -1,0 +1,11 @@
+package tw.brad.spring07.util;
+
+public class JwtToken {
+	public static String createToken(String subject) {
+		return null;
+	}
+	
+	public static String parseToken() {
+		return null;
+	}
+}

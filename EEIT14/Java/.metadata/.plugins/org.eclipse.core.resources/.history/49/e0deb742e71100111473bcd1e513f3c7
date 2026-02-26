@@ -1,0 +1,9 @@
+package tw.brad.spring08.websocket;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+
+public class StompConfig {
+
+}

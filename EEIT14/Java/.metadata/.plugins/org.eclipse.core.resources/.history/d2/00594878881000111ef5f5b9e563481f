@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Login Page</h1>
+		<hr />
+		<form method="post" th:action="@{/member/login}">
+			<input name="email" required="required"/><br />
+			<input type="password" name="passwd" required="required"/><br />
+			<button type="submit">Login</button>
+		</form>	
+	</body>
+</html>

@@ -1,0 +1,44 @@
+package tw.brad.spring07.controller;
+
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import tw.brad.spring07.dto.Login;
+import tw.brad.spring07.util.JwtToken;
+
+@RequestMapping("/api")
+@RestController
+public class ApiController {
+
+	@PostMapping("/login")
+	public ResponseEntity<Map<String, Object>> login(@RequestBody Login login) {
+		System.out.println(login.getEmail());
+		System.out.println(login.getPasswd());
+		if(login.getEmail().equals("brad@brad.tw")&& login.getPasswd().equals("12345678")) {
+			String data = String.format("%d:%s", 123, login.getEmail());
+			String token = JwtToken.createToken(data);
+			Map<String, Object> resp = Map.of(
+					"success",true,
+					"token",token
+					);
+			return ResponseEntity.ok(resp);
+		}else {
+			Map<String, Object> resp = Map.of(
+					"success",false
+					);
+			return ResponseEntity.ok(resp);		
+		}
+	}
+	
+	@GetMapping
+	public ResponseEntity<Map<String, Object>> main(){
+		return ResponseEntity.ok(Map.of("success",true,"data","Member Only"));
+	}
+	
+}

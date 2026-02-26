@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			.status{
+				color: #fff;
+				display: inline-block;
+				border-radius: 4px;
+				padding: 2px 4px
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Page2</h1>
+		<hr />
+		<div>
+			<div class="">狀態1</div>
+			<div class="">狀態2</div>
+			<div class="">狀態3</div>
+			<div class="">其他狀態</div>
+		</div>
+	</body>
+</html>

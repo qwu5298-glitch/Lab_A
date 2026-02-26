@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Login Page</h1>
+		<hr />
+		<div th:if="${error}" th:text="${error}" style="color: red"></div>
+		<div th:if="${logout}" th:text="${logout}" style="color: green"></div>
+		<form th:action="@{/doLogin}" method="post">
+			<div>
+				<label>帳號</label>
+				<input name="email" />
+			</div>
+			<div>
+				<label>密碼</label>
+				<input type="password" name="passwd" />
+			</div>
+			<div><button type="submit">登入</button></div>
+		</form>	
+	</body>
+</html>

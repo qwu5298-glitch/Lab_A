@@ -1,0 +1,8 @@
+package tw.brad.spring05.test;
+
+import lombok.Data;
+
+@Data
+public class User {
+
+}

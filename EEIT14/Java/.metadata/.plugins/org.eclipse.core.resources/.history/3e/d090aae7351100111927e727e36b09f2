@@ -1,0 +1,24 @@
+package tw.brad.spring07.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import tw.brad.spring07.util.JwtToken;
+
+@RestController
+@RequestMapping("/test")
+public class TestController {
+	
+	@RequestMapping("/test1")
+	public void test1() {
+		String token = JwtToken.createToken("1:brad@brad.tw");
+		System.out.println(token);
+	}
+	
+	@RequestMapping("/test2/{token}")
+	public void test(@PathVariable String token) {
+		String subject = JwtToken.parseToken(token);
+		System.out.println(subject);
+	}
+}

@@ -12,3 +12,5 @@ brad@brad.tw
 talend api
 figma
 wireframe
+stitch
+firebase

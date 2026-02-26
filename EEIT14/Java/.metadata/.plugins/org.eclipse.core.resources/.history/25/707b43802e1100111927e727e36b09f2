@@ -1,0 +1,5 @@
+package tw.brad.spring07.util;
+
+public class JwtToken {
+
+}

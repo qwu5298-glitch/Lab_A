@@ -22,6 +22,10 @@
 	<item key="org.eclipse.jdt.uiformatter_page.preference_tree_expansion" value="00.0..0.0.000.0.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0.0..00.0.0.0..00.0.0.0...00.0.0..000.0..0.0..000.0.0.0.0.0.0.0.0.0.0.0...00.0..1.."/>
 	<item key="org.eclipse.jdt.uiformatter_page.preference_scroll_position" value="0"/>
 	<item key="filters_last_used" value="filter_imports;"/>
+	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
+	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
+	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
+	<item key="TypeHierarchyViewPart.orientation" value="3"/>
 	<section name="JavaProjectWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="0"/>
 		<item key="DIALOG_Y_ORIGIN" value="0"/>
@@ -32,8 +36,8 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewPackageCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-149"/>
-		<item key="DIALOG_Y_ORIGIN" value="538"/>
+		<item key="DIALOG_X_ORIGIN" value="-164"/>
+		<item key="DIALOG_Y_ORIGIN" value="502"/>
 		<item key="DIALOG_WIDTH" value="525"/>
 		<item key="DIALOG_HEIGHT" value="434"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
@@ -42,8 +46,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-126"/>
-		<item key="DIALOG_Y_ORIGIN" value="373"/>
+		<item key="DIALOG_X_ORIGIN" value="-247"/>
+		<item key="DIALOG_Y_ORIGIN" value="307"/>
 		<item key="DIALOG_WIDTH" value="599"/>
 		<item key="DIALOG_HEIGHT" value="653"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
@@ -166,8 +170,8 @@
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
 	</section>
 	<section name="NewInterfaceCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="65"/>
-		<item key="DIALOG_Y_ORIGIN" value="165"/>
+		<item key="DIALOG_X_ORIGIN" value="-3"/>
+		<item key="DIALOG_Y_ORIGIN" value="394"/>
 		<item key="DIALOG_WIDTH" value="607"/>
 		<item key="DIALOG_HEIGHT" value="543"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
@@ -209,6 +213,31 @@
 			<item key="isCaseSensitive" value="false"/>
 			<item key="includeMask" value="11"/>
 			<list key="workingSets">
+			</list>
+		</section>
+	</section>
+	<section name="NewRecordCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="64"/>
+		<item key="DIALOG_Y_ORIGIN" value="386"/>
+		<item key="DIALOG_WIDTH" value="567"/>
+		<item key="DIALOG_HEIGHT" value="579"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="NewRecordWizardPage">
+		<item key="create_unimplemented" value="false"/>
+	</section>
+	<section name="NewAnnotationWizardPage">
+		<item key="add_documented" value="false"/>
+		<section name="AddRetention">
+			<item key="enabled" value="true"/>
+			<list key="selectedEnums">
+				<item value="RUNTIME"/>
+			</list>
+		</section>
+		<section name="AddTarget">
+			<item key="enabled" value="true"/>
+			<list key="selectedEnums">
+				<item value="METHOD"/>
 			</list>
 		</section>
 	</section>

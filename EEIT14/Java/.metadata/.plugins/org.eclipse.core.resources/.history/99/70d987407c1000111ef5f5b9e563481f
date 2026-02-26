@@ -1,0 +1,36 @@
+package tw.brad.spring05.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import tw.brad.spring05.dto.MemberForm;
+
+@Controller
+@RequestMapping("/member")
+public class MemberController {
+
+	@GetMapping("/register")
+	public String register(Model model) {
+		model.addAttribute("memberForm", new MemberForm());
+		return "register";
+	}
+	
+	@PostMapping("/register")
+	public String doRegister(@ModelAttribute MemberForm memberForm,
+			Model model) {
+		
+		return "login";
+		return "redirect:/member/login";
+		return "register";
+		
+	}
+	
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+}

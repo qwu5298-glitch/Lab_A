@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Page3</h1>
+		<hr />
+		<form action="">
+			<div>
+				<label>Email</label>
+				<input type="text" required="required" />
+				<span>Email錯誤訊息</span>
+			</div>
+			<div>
+				<label>Password</label>
+				<input type="password" required="required" />
+				<span>Password錯誤訊息</span>
+			</div>
+			<div>
+				<label>Name</label>
+				<input type="text" required="required" />
+				<span>Name錯誤訊息</span>
+			</div>
+			<button type="submit">Register</button>
+		</form>	
+	</body>
+</html>

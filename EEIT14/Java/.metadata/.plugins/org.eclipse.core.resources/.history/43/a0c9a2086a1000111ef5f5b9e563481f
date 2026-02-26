@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Page5</h1>
+		<table>
+			<tbody>
+				<tr th:each="area, ${areas}">
+					<td th:text="${area}">顯示區域</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

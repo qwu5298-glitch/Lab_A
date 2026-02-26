@@ -1,0 +1,44 @@
+package tw.brad.spring06.aspect;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class MyAspect {
+
+	@Pointcut("execution(* tw.brad.spring06.controller..*(..))")
+	public void doTestControllerMethod() {}
+	
+	@Pointcut("execution(* tw.brad.spring06.controller..*(..))")
+	public void doAllControllerMethod() {}
+	
+	@Before("doTestControllerMethod()")
+	public void doBefore() {
+		System.out.println("doBefore");
+	}
+	
+	@After("doTestControllerMethod()")
+	public void doAfter() {
+		System.out.println("doAfter");
+	}
+	
+	@Around("doTestControllerMethod()")
+	public void doAround(ProceedingJoinPoint joinPoint) throws Throwable {
+		System.out.println("around1");
+		Object obj = joinPoint.proceed();
+		System.out.println("around2");
+	}
+	
+	@Around("doAllControllerMethod()")
+	public void doAllAround(ProceedingJoinPoint joinPoint) throws Throwable {
+		System.out.println("aroundAll1");
+		Object obj = joinPoint.proceed();
+		System.out.println("aroundAll2");
+	}
+}

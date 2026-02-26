@@ -1,0 +1,7 @@
+package tw.brad.spring07.exception;
+
+public class JwtAuthException extends RuntimeException{
+	public JwtAuthException(String mesg) {
+		
+	}
+}

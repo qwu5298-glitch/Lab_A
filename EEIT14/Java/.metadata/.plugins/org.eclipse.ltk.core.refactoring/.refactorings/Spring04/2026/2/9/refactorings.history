@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BCrypt.java&apos; to &apos;Spring05/src/main/java/tw.brad.spring05.util&apos;&#x0D;&#x0A;- Original project: &apos;Spring04&apos;&#x0D;&#x0A;- Destination element: &apos;Spring05/src/main/java/tw.brad.spring05.util&apos;&#x0D;&#x0A;- Original element: &apos;tw.brad.spring04.util.BCrypt.java&apos;" description="Copy compilation unit" destination="=Spring05/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;tw.brad.spring05.util" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;tw.brad.spring04.util{BCrypt.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1771826127080" units="1" version="1.0"/>
+</session>
