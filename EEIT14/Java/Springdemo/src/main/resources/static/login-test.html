@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>課程系統 - 真實 Google 登入測試</title>
+    <style>
+        body { font-family: sans-serif; padding: 50px; line-height: 1.6; }
+        .card { border: 1px solid #ccc; padding: 20px; border-radius: 8px; max-width: 400px; text-align: center; }
+        #result { margin-top: 20px; padding: 10px; background: #f4f4f4; border-radius: 4px; word-break: break-all; text-align: left; }
+        .g_id_signin { display: flex; justify-content: center; margin-top: 20px; }
+    </style>
+    <!-- 1. 必須引入 Google SDK 腳本 -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+    <div class="card">
+        <h2>課程預約系統</h2>
+        <p>請使用 Google 帳號登入</p>
+        
+        <!-- 2. Google SDK 配置 (ClientID 已填入) -->
+        <div id="g_id_onload"
+             data-client_id="480236938522-m1o3grs9iontr5vq10av1j3id81h9ung.apps.googleusercontent.com"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false">
+        </div>
+        
+        <!-- 3. 顯示官方登入按鈕 -->
+        <div class="g_id_signin" data-type="standard"></div>
+
+        <div id="result">等待登入操作...</div>
+    </div>
+
+    <script>
+        // 4. 【核心】處理 Google 回傳的真實 Token
+        async function handleCredentialResponse(response) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerText = '已取得 Google Token，正發送到後端驗證...';
+
+            // 準備發送到後端的資料 (包含你要求的 clientId)
+            const payload = {
+                idToken: response.credential, // 這是一串超長的真實 JWT
+                provider: 1,                  // 1 代表 Google
+                clientId: "480236938522-m1o3grs9iontr5vq10av1j3id81h9ung.apps.googleusercontent.com"
+            };
+
+            try {
+                // 發送到後端 (使用你的 ngrok 網址)
+                const res = await fetch('https://subjugable-uncreditably-ignacia.ngrok-free.dev/api/social-login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true' // 跳過 ngrok 警告
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    localStorage.setItem("token", data.token);
+                    resultDiv.style.color = 'green';
+                    resultDiv.innerHTML = `<b>登入成功！</b><br>UserID: ${data.userId}<br>JWT Token: <small>${data.token}</small>`;
+                } else {
+                    const errorText = await res.text();
+                    resultDiv.style.color = 'red';
+                    resultDiv.innerText = '後端驗證失敗: ' + errorText;
+                }
+            } catch (error) {
+                resultDiv.style.color = 'red';
+                resultDiv.innerText = '網路連線錯誤: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

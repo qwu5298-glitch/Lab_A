@@ -1,0 +1,12 @@
+package tw.brad.springdemo.entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Data
+public class ShoppingCart {
+	private Long Shopid ;
+	private String
+	private Integer 
+}

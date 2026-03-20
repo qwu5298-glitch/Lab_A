@@ -1,0 +1,10 @@
+package tw.brad.spring11.repo;
+
+import java.lang.reflect.Member;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MemberRepo extends JpaRepository<Member, Integer>{
+	Optional<Member> existsByEmail(String email);
+}

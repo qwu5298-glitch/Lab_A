@@ -1,0 +1,6 @@
+package tw.brad.spring11.service;
+
+@ExtendW
+public class MemberServiceTest {
+
+}

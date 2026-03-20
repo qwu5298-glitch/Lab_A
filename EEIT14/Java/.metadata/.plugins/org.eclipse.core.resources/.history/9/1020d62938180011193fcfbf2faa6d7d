@@ -1,0 +1,5 @@
+package tw.brad.springdemo.entity;
+
+public class ShoppingCart {
+
+}

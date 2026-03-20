@@ -1,0 +1,51 @@
+package com.example.WebSocket.controller;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.WebSocket.util.EcpayUtil;
+
+@RestController
+@RequestMapping("/ecpay")
+public class EcpayController {
+
+    @PostMapping(
+        value = "/checkout",
+        produces = "text/html;charset=UTF-8"
+    )
+    public String checkout() {
+        String merchantID = "3002607";
+        String hashKey = "5294y06JbISpM5x9";
+        String hashIV  = "v77hoKGq4kWxNNIS";
+
+        Map<String, String> params = new LinkedHashMap<>();
+        params.put("MerchantID", "3002607");
+        params.put("MerchantTradeNo", "TEST" + System.currentTimeMillis());
+        params.put("MerchantTradeDate",
+                LocalDateTime.now().format(
+                        DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
+        params.put("PaymentType", "aio");
+        params.put("TotalAmount", "100");
+        params.put("TradeDesc", "測試交易");
+        params.put("ItemName", "測試商品");
+        params.put("ReturnURL", "https://你的domain/ecpay/return");
+        params.put("ClientBackURL", "https://你的domain/order/result");
+        params.put("ChoosePayment", "ALL");
+
+        String checkMacValue =
+                EcpayUtil.generateCheckMacValue(params, hashKey, hashIV);
+        params.put("CheckMacValue", checkMacValue);
+
+        return EcpayUtil.genAutoSubmitForm(
+                "https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5",
+                params
+        );
+    }
+}

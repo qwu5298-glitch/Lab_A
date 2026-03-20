@@ -1,0 +1,16 @@
+package tw.brad.springdemo.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name="learning")
+@Data
+public class ShoppingCart {
+	private Long Shopid ;
+	private String CoursesName;
+	private Integer CoursesPrice;
+	private Integer TotalPrice;
+	
+}

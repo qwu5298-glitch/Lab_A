@@ -1,0 +1,5 @@
+package tw.brad.springdemo.util;
+
+public class CheckMacValueUtil {
+
+}

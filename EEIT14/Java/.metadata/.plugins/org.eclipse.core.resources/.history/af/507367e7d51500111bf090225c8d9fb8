@@ -1,0 +1,5 @@
+package tw.brad.spring11.service;
+
+public class MemberService {
+
+}

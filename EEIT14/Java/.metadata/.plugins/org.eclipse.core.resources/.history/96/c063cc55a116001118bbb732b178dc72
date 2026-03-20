@@ -1,0 +1,27 @@
+import ecpay.payment.integration.AllInOne;
+import ecpay.payment.integration.domain.AioCheckOutALL;
+
+public class ECPayService {
+    
+    public String createOrder() {
+        // 1. 初始化 AllInOne (參數為空字串代表使用預設的測試金鑰與網址)
+        // 預設 MerchantID: 2000132, HashKey: 5294y06JbYq6u5p3, HashIV: v77hoKGq4kWxJvUe
+        AllInOne all = new AllInOne("");
+
+        // 2. 建立訂單物件
+        AioCheckOutALL obj = new AioCheckOutALL();
+        obj.setMerchantTradeNo("Order" + System.currentTimeMillis()); // 訂單編號不可重複
+        obj.setMerchantTradeDate("2024/02/26 15:45:00");              // 格式需為 yyyy/MM/dd HH:mm:ss
+        obj.setTotalAmount("100");                                    // 訂單金額
+        obj.setTradeDesc("測試訂單");                                  // 交易描述
+        obj.setItemName("範例商品 100元 x1");                          // 商品名稱
+        obj.setReturnURL("https://yourdomain.com");          // 付款成功後的 Server 端回傳位址
+        obj.setOrderResultURL("https://yourdomain.com");      // 付款完成後前端跳轉位址
+        obj.setNeedExtraPaidInfo("N");
+
+        // 3. 呼叫 SDK 產生整段 HTML 表單 (包含 CheckMacValue 與自動 Submit 的 JS)
+        String form = all.aioCheckOut(obj, null);
+        
+        return form;
+    }
+}

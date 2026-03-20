@@ -1,0 +1,10 @@
+package com.example.WebSocket.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.WebSocket.entity.Orders;
+
+
+public interface OrdersRepo extends JpaRepository<Orders, Long>{
+
+}

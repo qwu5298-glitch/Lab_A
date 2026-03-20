@@ -1,0 +1,25 @@
+package com.example.WebSocket.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.WebSocket.entity.Shoppingcart;
+import com.example.WebSocket.repo.ShoppingcartRepo;
+import com.example.WebSocket.util.BCrypt;
+
+
+
+public class ShoppingcartService {
+	@Autowired
+	private ShoppingcartRepo repo;
+	
+	public Shoppingcart register(String a, String passwd, String name) {
+		
+		
+		Member member = new Member();
+		member.setEmail(a);
+		member.setPasswd(BCrypt.hashpw(passwd, BCrypt.gensalt()));
+		member.setName(name);
+		Member savedMember = repo.save(member);
+		return savedMember;
+	}
+}

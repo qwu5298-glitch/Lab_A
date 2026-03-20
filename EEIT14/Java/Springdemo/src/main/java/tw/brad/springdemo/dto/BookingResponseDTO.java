@@ -1,0 +1,13 @@
+package tw.brad.springdemo.dto;
+
+import java.time.LocalDate;
+
+public record BookingResponseDTO(
+	    String studentName,
+	    Long bookingId,
+	    String tutorName,
+	    Integer subject,       
+	    LocalDate date,
+	    Byte hour,      
+	    Byte status     
+	) {}

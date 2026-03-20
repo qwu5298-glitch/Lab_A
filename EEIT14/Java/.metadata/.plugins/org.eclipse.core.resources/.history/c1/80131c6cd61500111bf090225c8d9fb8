@@ -1,0 +1,18 @@
+package tw.brad.spring11.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tw.brad.spring11.entity.Member;
+import tw.brad.spring11.repo.MemberRepo;
+
+@Service
+public class MemberService {
+	@Autowired
+	private MemberRepo repo;
+	
+	public Member register(String email, String passwd) {
+		if(repo.existsByEmail(email) thro)
+	}
+	
+}

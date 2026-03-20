@@ -1,0 +1,6 @@
+package tw.brad.spring11.entity;
+
+public class Member {
+	private Integer email;
+	private String passwd;
+}

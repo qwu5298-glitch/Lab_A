@@ -1,0 +1,51 @@
+package tw.brad.spring11.repo;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase;
+import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase.Replace;
+import org.springframework.boot.jpa.test.autoconfigure.TestEntityManager;
+
+import tw.brad.spring11.entity.Member;
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+public class MemberRepoTest {
+
+	@Autowired
+	private MemberRepo memberRepo;
+	
+	@Autowired
+	private TestEntityManager entityManager;
+	
+	private Member testMember;
+	
+	@BeforeEach
+	void setUp() {
+		testMember = new Member();
+				
+		testMember.setEmail("brad@brad.tw");
+		testMember.setPasswd("12345678");
+		testMember.setName("Brad");
+		
+		entityManager.persist(testMember);
+		entityManager.flush();
+	}
+	
+	@Test
+	void testFindByEmail_Found() {
+		
+	}
+	
+	@Test
+	void testFindByEmail_True() {
+		
+	}
+	
+	@Test
+	void testFindByEmail_False() {
+		
+	}
+}

@@ -1,0 +1,8 @@
+package tw.brad.spring11.service;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@Extendwith
+public class MemberServiceTest {
+
+}
